@@ -1,9 +1,8 @@
 <?php
     if($_SERVER["REQUEST_METHOD"] == "GET"){
     ?>
-    <div class="container">
+    <div class="welcome-container">
         <div class="welcome-message">
-            <img src="static/images/logo-1.png" alt="background">
             <h1>Welcome message</h1>
             <p>Company Slogan</p>
         </div>
