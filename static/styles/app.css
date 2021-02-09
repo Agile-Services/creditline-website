@@ -20,9 +20,23 @@ main{
 .nav-item{
     color: green;
     margin: 20px;
-    transition: 0.5s color;
+    border: 0px solid black;
+    border-radius: 5%;
+    -webkit-transition:  all 0.3s ease-out;
+    -moz-transition:  all 0.3s ease-out;
+    -o-transition:  all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .nav-item:hover{
-    color: #000;
+    color: #fff;
+    background-color: #009900;
+}
+
+
+.welcome-message img{
+    position: absolute;
+    opacity: 1;
+    z-index: -1;
 }
