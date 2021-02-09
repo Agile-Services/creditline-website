@@ -6,6 +6,11 @@ nav{
     height: 100px;
 }
 
+main{
+    background-color: #009900;
+    color: #fff;;
+}
+
 .navbar-collapse{
     justify-content: center;
     padding-top: 10px;
@@ -13,5 +18,11 @@ nav{
 }
 
 .nav-item{
+    color: green;
     margin: 20px;
+    transition: 0.5s color;
+}
+
+.nav-item:hover{
+    color: #000;
 }
