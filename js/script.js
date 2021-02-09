@@ -31,7 +31,6 @@ window.onload = function(){
     })
 
 
-
     function getPage(url, method){
         this.fetch(url,{
             method: method
