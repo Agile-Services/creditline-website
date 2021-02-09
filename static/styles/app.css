@@ -22,11 +22,11 @@ main{
     margin: 20px;
     border: 0px solid black;
     border-radius: 5%;
-    -webkit-transition:  all 0.3s ease-out;
-    -moz-transition:  all 0.3s ease-out;
-    -o-transition:  all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    -webkit-transition:  all 0.2s ease-out;
+    -moz-transition:  all 0.2s ease-out;
+    -o-transition:  all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
 
 .nav-item:hover{
