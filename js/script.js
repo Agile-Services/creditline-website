@@ -8,8 +8,15 @@ window.onload = function(){
     httpRequest.send();
     })*/
 
-    var navBarLinks = this.document.querySelectorAll("header nav div div a");
-    this.console.log(navBarLinks);
+    getPage('../php/home.php', 'GET');
+
+    const logoLink = this.document.querySelector("header nav a");
+    const navBarLinks = this.document.querySelectorAll("header nav div div a");
+
+    logoLink.addEventListener('click',() => {
+        getPage('../php/home.php', 'GET');
+    })
+
     navBarLinks.item(0).addEventListener('click', () => {
         getPage('../php/personalLoansPage.php', 'GET');
     })

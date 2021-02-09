@@ -3,11 +3,6 @@
     ?>
     <div class="main-content">
         <!--This is where the form will load-->
-        <p> Our Personal loan takes the form of a Payday loans, which is available to both private and public sector employees, with flexible payment plans and low interest rate.
-            Our payday loan is disbursed within 48 hours after complete document submission and approval. The loan is repaid through salary deduction or a bank standing order.
-            Requirements for Payday Loan:
-        </p>
-
         <div class="service_1">
             <img src="#" alt="#">
             <div class="service-body">
