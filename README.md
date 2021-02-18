@@ -13,6 +13,14 @@ Tasks: Build out sites (HTML)
   
 Build out forms (HTML)
 
+For the Business and Personal laons there are multiple forms;
+    1 loan-purpose form
+    2 general-info form
+    3 contact-info form
+    4 emploment-details-form
+
+  In that same ordeer. There is however only one form for partner plan and pawn.
+
   * Loans Form
   * Partner Plan From
   * Pawn Form
