@@ -12,7 +12,7 @@
 
         </ol>
 
-        <button class="btn">Apply</button>
+        <button class="btn btn-primary">Apply</button>
     </div>
     <?php
     } elseif($_SERVER["REQUEST_METHOD"] == "POST"){

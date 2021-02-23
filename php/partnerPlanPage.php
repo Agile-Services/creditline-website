@@ -17,7 +17,7 @@
             <li>Membership discount on graphics courtesy of Sophisticated Dreamz Design Studio</li>
         </ol>
 
-        <button id="partnerPlanApply" class="btn">Apply</button>
+        <button id="partnerPlanApply" class="btn btn-primary">Apply</button>
     </div>
     <?php
     } elseif($_SERVER["REQUEST_METHOD"] == "POST"){
