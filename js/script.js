@@ -18,7 +18,17 @@ window.onload = function(){
     })
 
     navBarLinks.item(0).addEventListener('click', () => {
-        getPage('../php/personalLoansPage.php', 'GET');
+        const result = getPage('../php/personalLoansPage.php', 'GET');
+        this.console.log(result);
+        result.then(()=>{
+            this.document.getElementById("personalLoansApply").addEventListener('click', () => {
+                getPage('../php/forms/partnerPlan-form.php', 'GET');
+            if (document.title != "CreditLine | Partner Plan") {
+                document.title = "CreditLine | Partner Plan";
+            }
+            //$('meta[name="description"]').attr("content", newDescription);
+        })
+        })
     })
 
     navBarLinks.item(1).addEventListener('click', () => {
@@ -26,7 +36,17 @@ window.onload = function(){
     })
 
     navBarLinks.item(2).addEventListener('click', () => {
-        getPage('../php/partnerPlanPage.php', 'GET');
+        const result = getPage('../php/partnerPlanPage.php', 'GET');
+        this.console.log(result);
+        result.then(()=>{
+            this.document.getElementById("partnerPlanApply").addEventListener('click', () => {
+                getPage('../php/forms/partnerPlan-form.php', 'GET');
+            if (document.title != "CreditLine | Partner Plan") {
+                document.title = "CreditLine | Partner Plan";
+            }
+            //$('meta[name="description"]').attr("content", newDescription);
+        })
+        })
     })
 
     navBarLinks.item(3).addEventListener('click', () => {
@@ -38,16 +58,19 @@ window.onload = function(){
     })
 
 
-    function getPage(url, method){
-        this.fetch(url,{
+    async function getPage(url, method){
+        const result = await this.fetch(url,{
             method: method
         }).then(response => response.text())
         .then(data => {
             this.document.querySelector('main div').innerHTML = data;
+            return 0;
         })
         .catch(error => {
             this.alert(error);
+            return -1;
         });
+        return result;
     }
 }
 

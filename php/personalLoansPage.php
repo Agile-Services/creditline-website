@@ -21,7 +21,7 @@
             <li>3 last Pay slips/ Bank statement</li>
         </ul>
 
-        <button class="btn">Apply</button>
+        <button id="personalLoansApply" class="btn">Apply</button>
     </div>
     <?php
     } elseif($_SERVER["REQUEST_METHOD"] == "POST"){
