@@ -1,7 +1,12 @@
 <?php
     if($_SERVER["REQUEST_METHOD"] == "GET"){
+        session_start();
+        if (empty($_SESSION['token'])) {
+            $_SESSION['token'] = bin2hex(random_bytes(32));
+        }
     ?>
     <form action="#">
+        <input type="hidden" name="token" value="<?= $_SESSION['token'] ?>" />
         <div>
             <label for="cars">Title</label>
             <input list="Title" placeholder="Mr.">
@@ -828,6 +833,14 @@
     </form> 
     <?php
     } elseif($_SERVER["REQUEST_METHOD"] == "POST"){
-        // do something
+        if (!empty($_POST['token'])) {
+            if (hash_equals($_SESSION['token'], $_POST['token'])) {
+                // Proceed to process the form data
+            } else {
+                // Log this as a warning and keep an eye on these attempts
+                unset($_SESSION["token"]);
+                die("CSRF token validation failed");
+            }
+        }
     }
 ?>
