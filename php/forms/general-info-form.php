@@ -823,7 +823,7 @@
         <label for="signature">Signature of Applicant</label>
         <input type="text" id="sig" name="sig" placeholder="J.Brown" value=""><br><br>
 
-        <button id="btn">Submit</button>
+        <button id="generalInfoSubmit" class="btn btn-primary" type="button">Next</button>
         
     </form> 
     <?php

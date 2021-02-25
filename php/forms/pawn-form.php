@@ -335,7 +335,7 @@
 
         </div>
 
-        <button id="btn">Submit</button>
+        <button id="pawnSubmit" class="btn btn-success" type="button">Submit</button>
     </form>
     <?php
     } elseif($_SERVER["REQUEST_METHOD"] == "POST"){

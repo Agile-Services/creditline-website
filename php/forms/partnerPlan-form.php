@@ -641,7 +641,7 @@
             <input type="file" id="id" name="id"><br><br>
         </div>
 
-        <button id="btn">Submit</button>
+        <button id="partnerPlanSubmit" class="btn btn-primary" type="button">Submit</button>
 
     </form>
     <?php

@@ -22,7 +22,7 @@
             <li>Previous Year's Income Statement</li>
         </ul>
 
-        <button class="btn btn-primary">Apply</button>
+        <button id="LoansApply" class="btn btn-primary">Apply</button>
 
     </div>
     <?php

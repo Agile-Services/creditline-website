@@ -321,7 +321,8 @@
         <label for="emergency_contact_sig">Signature</label><br>
         <input type="text" id="emergency_contact_sig" name="emergency_contact_" placeholder="J.Brown" value="">
     </div>
-
+    
+    <button id="contactDetailsSubmit" class="btn btn-primary" type="button">Next</button>
 
     </form>
     <?php

@@ -311,7 +311,7 @@
         </div>
 
 
-        <button id="btn">Submit</button>
+        <button id="empDetailsSubmit" class="btn btn-success">Submit</button>
 
     </form>
     <?php

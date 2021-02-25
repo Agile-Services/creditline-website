@@ -12,7 +12,7 @@
         <label for="loan_amt">Loan Amount</label>
         <input type="text" for="loan_amt" id="loan_amt" value=""><br><br>
 
-        <button id="btn">Submit</button>
+        <button class="btn btn-primary" id="loanPurposeSubmit" type="button">Next</button>
     </form>
     <?php
     } elseif($_SERVER["REQUEST_METHOD"] == "POST"){
