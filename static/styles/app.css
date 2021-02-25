@@ -3,7 +3,7 @@ nav{
     box-shadow: 0px 5px 8px -5px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 5px 8px -5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 5px 8px -5px rgba(0,0,0,0.75);
-    height: 100px;
+    /*height: 100px;*/
 }
 
 footer{
@@ -48,6 +48,8 @@ footer div div:nth-child(3) ul li p{
 #instagram:hover{
     background: -webkit-linear-gradient(45deg, rgb(203, 255, 33), rgb(136, 93, 255), rgb(255, 49, 49));
     -webkit-background-clip: text;
+    background-clip: text;
+    -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
