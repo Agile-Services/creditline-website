@@ -1,7 +1,7 @@
 <?php
     if($_SERVER["REQUEST_METHOD"] == "GET"){
     ?>
-    <div class="welcome-container">
+    <div class="welcome-container text-center">
         <div class="welcome-message">
             <h1>Welcome message</h1>
             <p>Company Slogan</p>
@@ -43,7 +43,7 @@
             <title>Layer 1</title>
             <ellipse cx="252.999998" cy="53.000001" fill="url(#svg_4)" id="svg_1" rx="216.999995" ry="15" stroke="#000000" stroke-opacity="0" stroke-width="5"/>
             </g>
-            </svg>-->
+            </svg>
         </div>
 
         <div class="ad">

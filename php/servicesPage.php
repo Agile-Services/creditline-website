@@ -1,7 +1,10 @@
 <?php
     if($_SERVER["REQUEST_METHOD"] == "GET"){
     ?>
-    <div class="main-content">
+    <div class="services-heading text-center">
+            <h1>Services</h1>
+    </div>
+    <div class="main-content container">
         <!--This is where the form will load-->
         <div class="service_1">
             <img src="#" alt="#">

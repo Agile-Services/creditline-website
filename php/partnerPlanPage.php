@@ -1,7 +1,10 @@
 <?php
     if($_SERVER["REQUEST_METHOD"] == "GET"){
     ?>
-    <div class="main-content">
+    <div class="partner-plan-heading text-center">
+        <h1>Partner Plan</h1>
+    </div>
+    <div class="main-content container">
         <input type="hidden" id="custId" name="page_Id" value="partner_form">
         <!--This hidden field will be used to idenitfy which form is to be loaded from the server-->
 
@@ -17,7 +20,9 @@
             <li>Membership discount on graphics courtesy of Sophisticated Dreamz Design Studio</li>
         </ol>
 
-        <button id="partnerPlanApply" class="btn btn-primary">Apply</button>
+        <div class="text-center mt-5">
+            <button id="partnerPlanApply" class="btn btn-primary btn-lg">Apply</button>
+        </div>
     </div>
     <?php
     } elseif($_SERVER["REQUEST_METHOD"] == "POST"){
