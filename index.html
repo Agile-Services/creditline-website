@@ -10,7 +10,8 @@
     <link rel="text/javascript" href="https://kit.fontawesome.com/253b4caf0c.js" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="./static/styles/app.css">
 </head>
@@ -20,11 +21,13 @@
         <nav>
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="./static/images/logo-1.png" width="300" height="69" class="d-inline-block align-top" alt="company logo">
+                    <img src="./static/images/logo_new.svg" width="375" height="75" class="d-inline-block align-top" alt="company logo">
                 </a>
-                
-                <div class="navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="nav navbar-nav d-flex justify-content-end">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
+                    <div class="nav navbar-nav">
                         <a class="nav-item nav-link" href="#">Personal Loans</a>
                         <a class="nav-item nav-link" href="#">Business Loans</a>
                         <a class="nav-item nav-link" href="#">Partner Plan</a>
