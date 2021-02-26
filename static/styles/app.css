@@ -2,12 +2,15 @@ body{
     width: 100%;
 }
 
-nav{
+header{
     background-color: #fff;
     box-shadow: 0px 5px 8px -5px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 5px 8px -5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 5px 8px -5px rgba(0,0,0,0.75);
-    /*height: 100px;*/
+}
+
+header a{
+    position: relative;
 }
 
 footer{
@@ -16,6 +19,12 @@ footer{
     box-shadow: 0px -2px 8px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px -2px 8px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px -2px 8px 0px rgba(0,0,0,0.75);
+}
+
+@media (max-width: 700px){
+    footer{
+        width: fit-content;
+    }
 }
 
 footer div div:nth-child(3){
@@ -41,12 +50,11 @@ footer div div:nth-child(3) ul li p{
     -o-transition:  all 0.2s ease-out;
     -ms-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
-    transition: -webkit-background-clip 0.3 ease-out;
 }
 
 #facebook:hover{
-    color: rgb(22, 111, 255);
-    text-shadow: 1px 1px 10px #fff;
+    color: rgb(74, 134, 230);
+    text-shadow: 1px 1px 2px #fff;
 }
 
 #instagram:hover{
@@ -58,19 +66,23 @@ footer div div:nth-child(3) ul li p{
 }
 
 #linkedin:hover{
-    color: rgb(115, 105, 255);
+    color:  rgb(93, 96, 231);
     text-shadow: 1px 1px 1px #fff;
 
 }
 
-
+@media (max-width: 700px){
+.navbar{
+    min-width: fit-content;
+}
+}
 .navbar-collapse{
     justify-content: center;
     padding-top: 10px;
     font-size: large;
 }
 
-.nav-item{
+.nav-link{
     color: green;
     margin: 20px;
     border: 0px solid black;
@@ -82,18 +94,18 @@ footer div div:nth-child(3) ul li p{
     transition: all 0.2s ease-out;
 }
 
-.nav-item:hover{
+.nav-link:hover{
     color: #fff;
     background-color: #009900;
 }
 
-.nav-item:focus{
+.nav-link:focus{
     color: #000;
 }
 
 .welcome-container{
     display: grid;
-    grid-template: 100px 500px 200px 1fr 1fr 2fr 1fr/ 1fr;
+    grid-template: 1fr 7fr 4fr 4fr 4fr 7fr 2fr/ 1fr;
 }
 
 .welcome-message{

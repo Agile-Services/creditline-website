@@ -10,8 +10,8 @@ window.onload = function(){
 
     getPage('../php/home.php', 'GET');
 
-    const logoLink = this.document.querySelector("header nav a");
-    const navBarLinks = this.document.querySelectorAll("header nav div div a");
+    const logoLink = this.document.querySelector("header a");
+    const navBarLinks = this.document.querySelectorAll("header div ul li");
 
     logoLink.addEventListener('click',() => {
         getPage('../php/home.php', 'GET');
