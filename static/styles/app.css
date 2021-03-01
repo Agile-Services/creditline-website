@@ -1,6 +1,6 @@
-body{
+/* body{
     width: 100%;
-}
+} */
 
 header{
     background-color: #fff;
@@ -71,11 +71,11 @@ footer div div:nth-child(3) ul li p{
 
 }
 
-@media (max-width: 700px){
+/* @media (max-width: 700px){
 .navbar{
     min-width: fit-content;
 }
-}
+} */
 .navbar-collapse{
     justify-content: center;
     padding-top: 10px;
@@ -124,9 +124,6 @@ footer div div:nth-child(3) ul li p{
 
 
 .tags{
-    grid-area: 4 / 1 / 5 / 2;
-    display: grid;
-    grid-template: 60% 40% / 1fr 1fr 1fr;
     background-color: #fff;
     color: #009900;
 }

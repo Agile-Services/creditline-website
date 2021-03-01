@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <title>CreditLine | Home </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -10,8 +10,8 @@
     <link rel="text/javascript" href="https://kit.fontawesome.com/253b4caf0c.js" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="./static/styles/app.css">
 </head>
@@ -19,12 +19,12 @@
 <body>
     <header class="navbar navbar-expand sticky-top flex-column flex-md-row bd-navbar">
         <a class="navbar-brand h-100 mr-0 mr-md-2" href="#">
-            <img src="./static/images/logo_new.svg" class="d-inline-block align-top" alt="company logo">
+            <img src="./static/images/logo_new.svg" class="img-fluid" alt="company logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-nav-scroll collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
+        <div class="container-fluid navbar-nav-scroll collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav bd-navbar-nav flex-row">
                 <li class="nav-item"><a class="nav-link" href="#">Personal Loans</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Business Loans</a></li>
@@ -41,8 +41,8 @@
     </main>
                 <!--Footer section contains the contact information for the company along with social media links-->
     <!--Icons for the social media links are loaded using fontawsome-->
-    <footer>
-        <div class="container">
+    <footer class="container-fluid">
+        <div class="container-fluid row">
             <div class="col-md-4 text-center">
                 <h5>Contact</h5> 
                 <p>Email:</p>
