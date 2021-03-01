@@ -83,7 +83,7 @@ footer div div:nth-child(3) ul li p{
 }
 
 .nav-link{
-    color: green;
+    color: green!important;
     margin: 20px;
     border: 0px solid black;
     border-radius: 5%;
