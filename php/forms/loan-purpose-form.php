@@ -13,7 +13,7 @@
             <label for="loan_type">Type of Loan</label>
             <input type="hidden" name="token" value="<?= $_SESSION['token'] ?>" />
                 <input list="Title">
-                <datalist id="Title">
+                <datalist id="loan_type">
                     <option value="Payday Loan"></option>
                     <option value="Business Loan"></option>
             </datalist><br><br>

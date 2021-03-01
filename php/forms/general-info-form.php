@@ -14,7 +14,7 @@
             <div>
                 <label for="cars">Title</label>
                 <input list="Title" placeholder="Mr.">
-                <datalist id="Title">
+                <datalist id="title">
                     <option value="Mr."></option>
                     <option value="Mrs."></option>
                     <option value="Ms."></option>
@@ -48,7 +48,7 @@
     
                 <label for="marital-status">Marital Status:</label>
                 <input list="marital-status" placeholder="Single">
-                <datalist id="marital-status">
+                <datalist id="marital_status">
                     <option value="Single"></option>
                     <option value="Married"></option>
                     <option value="Seperated"></option>
@@ -56,15 +56,15 @@
             </div>
     
             <div>
-                <label for="fname">Mother's Maiden Name:</label><br>
-                <input type="text" id="fname" name="fname" placeholder="Mother's Maiden Name" value=""><br><br>
+                <label for="mothers_maiden">Mother's Maiden Name:</label><br>
+                <input type="text" id="mothers_maiden" name="mothers_maiden" placeholder="Mother's Maiden Name" value=""><br><br>
     
-                <label for="mname">Number of Dependents:</label><br>
-                <input type="number" id="mname" name="mname" placeholder="Number of Dependents" value=""><br><br>
+                <label for="dependents">Number of Dependents:</label><br>
+                <input type="number" id="dependents" name="dependents" placeholder="Number of Dependents" value=""><br><br>
     
                 <label for="country">Country of Citizenship</label>
                 <input list="country" placeholder="Country of Citizenship">
-                <datalist id="country">
+                <datalist id="citizenship">
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
@@ -313,7 +313,7 @@
     
                 <label for="country">Country of Residence</label>
                 <input list="country" placeholder="Country of Residence">
-                <datalist id="country" name="country">
+                <datalist id="residence" name="country">
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
@@ -565,20 +565,20 @@
             <div>
                 <label for="cars">Identification Type</label>
                 <input list="ID" placeholder="Identification Type">
-                <datalist id="ID" name="ID">
+                <datalist id="id_type" name="ID">
                 <option value="Driver's License"></option>
                 <option value="Passport"></option>
                 <option value="National I.D"></option>
                 </datalist><br><br>
     
-                <label for="fname">Identification Number:</label><br>
-                <input type="text" id="fname" name="fname" placeholder="Identification Number" value=""><br><br>
+                <label for="id">Identification Number:</label><br>
+                <input type="text" id="id_num" name="id" placeholder="Identification Number" value=""><br><br>
     
-                <label for="mname">Expiration Date:</label><br>
-                <input type="date" id="mname" name="mname" value=""><br><br>
+                <label for="expire">Expiration Date:</label><br>
+                <input type="date" id="id_expire" name="expire" value=""><br><br>
     
                 <label for="country">Country of Issue</label>
-                <input list="country" placeholder="Country of Issue">
+                <input list="issued_country" placeholder="Country of Issue">
                 <datalist id="country" name="country">
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
@@ -832,7 +832,7 @@
             <label for="signature">Signature of Applicant</label>
             <input type="text" id="sig" name="sig" placeholder="J.Brown" value=""><br><br>
     
-            <button id="generalInfoSubmit" class="btn btn-primary" type="button">Next</button>
+            <button id="generalInfoSubmit" class="btn btn-primary" type="general_form_button">Next</button>
             
         </form>
     </div> 
