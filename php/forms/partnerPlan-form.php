@@ -44,14 +44,14 @@
             </div>
     
             <div>
-                <label for="lname">City/Town</label><br>
-                <input type="text" id="business_number" name="business_number" placeholder="Business Number" value=""><br><br>
+                <label for="city">City/Town</label><br>
+                <input type="text" id="city" name="city" placeholder="City/Town" value=""><br><br>
     
-                <label for="lname">Residential Area/District</label><br>
-                <input type="text" id="other_number" name="other_number" placeholder="Other Number" value=""><br><br>
+                <label for="area">Residential Area/District</label><br>
+                <input type="text" id="area" name="area" placeholder="Residential Area/District" value=""><br><br>
     
-                <label for="lname">Post Office/Zip Code</label><br>
-                <input type="email" id="email" name="email" placeholder="Email Address" value=""><br><br>
+                <label for="post">Post Office/Zip Code</label><br>
+                <input type="text" id="post" name="post" placeholder="Post Office/Zip Code" value=""><br><br>
     
                 <label for="country">Country</label><br>
                 <input list="country" placeholder="Country of Citizenship">
@@ -322,25 +322,25 @@
             <div>
     
                 <label for="address1">Street Address Line 1</label><br>
-                <input type="text" id="address1" name="address1" placeholder="Stresst Address Line 1" value=""><br><br>
+                <input type="text" id="work_address1" name="work_address1" placeholder="Stresst Address Line 1" value=""><br><br>
     
                 <label for="address2">Street Address Line 2</label><br>
-                <input type="text" id="address2" name="address2" placeholder="Stresst Address Line 2" value=""><br><br>
+                <input type="text" id="work_address2" name="work_address2" placeholder="Stresst Address Line 2" value=""><br><br>
             </div>
     
             <div>
-                <label for="lname">City/Town</label><br>
-                <input type="text" id="business_number" name="business_number" placeholder="Business Number" value=""><br><br>
+                <label for="city">City/Town</label><br>
+                <input type="text" id="work_city" name="work_city" placeholder="City/Town" value=""><br><br>
     
-                <label for="lname">Residential Area/District</label><br>
-                <input type="text" id="other_number" name="other_number" placeholder="Other Number" value=""><br><br>
+                <label for="work_area">Residential Area/District</label><br>
+                <input type="text" id="work_area" name="work_area" placeholder="Residential Area/District" value=""><br><br>
     
-                <label for="lname">Post Office/Zip Code</label><br>
-                <input type="email" id="email" name="email" placeholder="Email Address" value=""><br><br>
+                <label for="work_post">Post Office/Zip Code</label><br>
+                <input type="text" id="work_post" name="work_post" placeholder="Post Office/Zip Code" value=""><br><br>
     
-                <label for="country">Country</label><br>
+                <label for="work_country">Country</label><br>
                 <input list="country" placeholder="Country of Citizenship">
-                <datalist id="country">
+                <datalist id="work_country">
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
@@ -590,18 +590,18 @@
     
             <div>
     
-                <label for="business_number"> Business Number</label><br>
-                <input type="text" id="business_number" name="business_number" placeholder="Business Number" value=""><br><br>
+                <label for="work_business_number"> Business Number</label><br>
+                <input type="text" id="work_business_number" name="work_business_number" placeholder="Business Number" value=""><br><br>
                 
             </div>
     
             <div>
                 <label for="employement_status">Employment Status</label><br><br>
-                <input type="checkbox" id="employed" name="employed" value="Employed">
+                <input type="checkbox" id="employement_status" name="employed" value="Employed">
                 <label for="Employed">Employed</label><br>
-                <input type="checkbox" id="part-Time" name="part-Time" value="Part-Time">
+                <input type="checkbox" id="employement_status-Time" name="part-Time" value="Part-Time">
                 <label for="Part">Part-Time</label><br>
-                <input type="checkbox" id="self-employed" name="self-employed" value="Self-Employed">
+                <input type="checkbox" id="self-employement_status" name="self-employed" value="Self-Employed">
                 <label for="Self">Self-Employed</label><br><br>
     
             </div>
@@ -614,11 +614,11 @@
                 <input type="text" id="plan_amt" name="plan_amt"><br><br>
     
                 <label for="payment_plan">Payment Plan</label><br><br>
-                <input type="checkbox" id="weekly" name="weekly" value="weekly">
+                <input type="checkbox" id="payment_plan" name="weekly" value="weekly">
                 <label for="weekly">Weekly</label><br>
-                <input type="checkbox" id="fort_nightly" name="fort_nightly" value="fort_nightly">
+                <input type="checkbox" id="payment_plan" name="fort_nightly" value="fort_nightly">
                 <label for="fort_nightly">Fortnightly</label><br>
-                <input type="checkbox" id="monthly" name="monthly" value="monthly">
+                <input type="checkbox" id="payment_plan" name="monthly" value="monthly">
                 <label for="monthly">Monthly</label><br><br>
     
                 <label for="payment_method">Payment Method</label><br><br>
