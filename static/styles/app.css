@@ -42,6 +42,11 @@ footer div div:nth-child(3) ul li{
     list-style: none;
     color: #fff;
     font-size: 25px;
+    -webkit-transition:  all 0.2s ease-out;
+    -moz-transition:  all 0.2s ease-out;
+    -o-transition:  all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
 
 footer div div:nth-child(3) ul li p{
@@ -55,6 +60,7 @@ footer div div:nth-child(3) ul li p{
 #facebook:hover{
     color: rgb(74, 134, 230);
     text-shadow: 1px 1px 2px #fff;
+    animation: iconPulse 2s infinite;
 }
 
 #instagram:hover{
@@ -63,19 +69,29 @@ footer div div:nth-child(3) ul li p{
     background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: iconPulse 2s infinite;
+}
+
+@keyframes iconPulse {
+	0% {
+		transform: scale(1);
+    }
+    
+    50%{
+        transform: scale(1.05);
+    }
+
+	100% {
+		transform: scale(1);
+	}
 }
 
 #linkedin:hover{
     color:  rgb(93, 96, 231);
     text-shadow: 1px 1px 1px #fff;
-
+    animation: iconPulse 2s infinite;
 }
 
-/* @media (max-width: 700px){
-.navbar{
-    min-width: fit-content;
-}
-} */
 .navbar-collapse{
     justify-content: center;
     padding-top: 10px;
@@ -95,8 +111,9 @@ footer div div:nth-child(3) ul li p{
 }
 
 .nav-link:hover{
-    color: #fff;
+    color: #fff!important;
     background-color: #009900;
+    animation: iconPulse 2s infinite;
 }
 
 .nav-link:focus{
@@ -243,3 +260,45 @@ footer div div:nth-child(3) ul li p{
     font-size: 300%;
     font-weight: 400;
   }
+
+  .application-heading{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    align-content: center;
+    justify-content: center;
+    margin: 0;
+    height: 300px;
+    position: relative;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-image: url(../images/backsplash.jpg);
+}
+
+.application-heading h1{
+    margin: 0;
+    color: #009900;
+    text-shadow: 2px 2px 3px #fff;
+}
+
+#applyNow{
+    transform: scale(1);
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1.5);
+		box-shadow: 0 0 0 0 rgba(22, 144, 0, 0.7);
+	}
+
+	50% {
+		transform: scale(2);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(1.5);
+		box-shadow: 0 0 0 0 rgba(22, 144, 0, 0.349);
+	}
+}

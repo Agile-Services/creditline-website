@@ -5,6 +5,9 @@
             $_SESSION['token'] = bin2hex(random_bytes(32));
         }
     ?>
+    <div class="application-heading text-center">
+        <h1>Application</h1>
+    </div>
     <div class="main-content container">
         <form>
     
