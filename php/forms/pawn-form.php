@@ -37,21 +37,21 @@
             <div>
                 <thead>Address</thead>
                 <label for="address1">Street Address Line 1</label><br>
-                <input type="text" id="address1" name="address1" placeholder="Stresst Address Line 1" Address 1" value=""><br><br>
+                <input type="text" id="address1" name="address1" placeholder="Stresst Address Line 1" value=""><br><br>
     
                 <label for="address2">Street Address Line 2</label><br>
                 <input type="text" id="address2" name="address2" placeholder="Stresst Address Line 2" value=""><br><br>
             </div>
     
             <div>
-                <label for="lname">City/Town</label><br>
-                <input type="text" id="business_number" name="business_number" placeholder="Business Number" value=""><br><br>
+                <label for="city">City/Town</label><br>
+                <input type="text" id="city" name="city" placeholder="City/Town" value=""><br><br>
     
-                <label for="lname">Residential Area/District</label><br>
-                <input type="text" id="other_number" name="other_number" placeholder="Other Number" value=""><br><br>
+                <label for="area">Residential Area/District</label><br>
+                <input type="text" id="area" name="area" placeholder="Residential Area/District" value=""><br><br>
     
-                <label for="lname">Post Office/Zip Code</label><br>
-                <input type="email" id="email" name="email" placeholder="Email Address" value=""><br><br>
+                <label for="post">Post Office/Zip Code</label><br>
+                <input type="post" id="post" name="post" placeholder="Post Office/Zip Code" value=""><br><br>
     
                 <label for="country">Country</label><br>
                 <input list="country" placeholder="Country of Citizenship">
@@ -304,7 +304,7 @@
             </div>
     
             <div>
-                <label for="bank">Upload Image of Tax Registration Number (TRN)</label>
+                <label for="trn">Upload Image of Tax Registration Number (TRN)</label>
                 <input type="file" id="trn" name="trn"><br><br>
     
                 <label for="id">Upload Image of Identification</label><br>
