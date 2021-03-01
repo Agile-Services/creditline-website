@@ -151,3 +151,17 @@
         httpRequest.send();
     });
 
+    //loan purpose form
+    var btn3 = document.getElementById("loanPurposeSubmit");
+    var loan_type;
+    var loan_amt;
+
+    btn3.addEventListener('click',function(el){
+        el.preventDefault();
+        loan_amt = document.getElementById("loan_amt").value;
+        loan_type = document.getElementById("loan_type").value;
+    });
+
+
+    //general info form
+    
