@@ -7,7 +7,9 @@ window.onload = function(){
     httpRequest.open('PUSH',url+"?form="+formRequest);
     httpRequest.send();
     })*/
-
+    $('.navbar-collapse a').click(function(){
+        $(".navbar-collapse").collapse('hide');
+    });
     getPage('../php/home.php', 'GET');
 
     const logoLink = this.document.querySelector("header a");
