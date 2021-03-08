@@ -251,7 +251,7 @@ footer div div:nth-child(3) ul li p{
 }
 
 .main-content{
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin-top: 10em;
     margin-bottom: 10em;
     line-height: 2em;
@@ -301,4 +301,8 @@ footer div div:nth-child(3) ul li p{
 		transform: scale(1.5);
 		box-shadow: 0 0 0 0 rgba(22, 144, 0, 0.349);
 	}
+}
+
+.col label{
+    font-weight: bold;
 }

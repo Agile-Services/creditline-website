@@ -13,7 +13,7 @@ window.onload = function(){
     getPage('../php/home.php', 'GET');
 
     const logoLink = this.document.querySelector("header a");
-    const navBarLinks = this.document.querySelectorAll("header div ul li");
+    const navBarLinks = this.document.querySelectorAll("header div ul li a");
 
     logoLink.addEventListener('click',() => {
         let result = getPage('../php/home.php', 'GET');

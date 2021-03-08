@@ -10,18 +10,24 @@
     </div>
     <div class="main-content container">
         <form>
-            <label for="loan_type">Type of Loan</label>
-            <input type="hidden" name="token" value="<?= $_SESSION['token'] ?>" />
-                <input list="Title">
-                <datalist id="loan_type">
-                    <option value="Payday Loan"></option>
-                    <option value="Business Loan"></option>
-            </datalist><br><br>
+            <div class="form-row">
+                <div class="col w-25">
+                    <label for="loan_type">Type of Loan</label>
+                    <select class="w-25 h-50" type="hidden" name="token" value="<?= $_SESSION['token'] ?>" />
+                        <option value="Payday Loan">Payday</option>
+                        <option value="Business Loan">Business</option>
+                    </select><br><br>
+                </div>
+            </div>
     
-            <label for="loan_amt">Loan Amount</label>
-            <input type="text" for="loan_amt" id="loan_amt" value=""><br><br>
-    
-            <button class="btn btn-primary" id="loanPurposeSubmit" type="button">Next</button>
+            <div class="form-row">
+                <div class="col w-25">
+                    <label for="loan_amt">Loan Amount</label>
+                    <input class="w-25" type="text" for="loan_amt" id="loan_amt" value=""><br><br>
+                </div>
+            </div>
+            
+            <div class="text-center"><button class="btn btn-success" id="loanPurposeSubmit" type="button">Next</button></div>
         </form>
     </div>
     <?php

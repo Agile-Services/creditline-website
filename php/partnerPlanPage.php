@@ -21,7 +21,7 @@
         </ol>
 
         <div class="text-center mt-5">
-            <button id="partnerPlanApply" class="btn btn-primary btn-lg">Apply</button>
+            <button id="partnerPlanApply" class="btn btn-success btn-lg">Apply</button>
         </div>
     </div>
     <?php
