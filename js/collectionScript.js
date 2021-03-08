@@ -51,11 +51,11 @@
             alert("Product Image was not uploaded");
         }
 
-        var httpRequest = new XMLHttpRequest();
-        var url = "validate.php";
-        httpRequest.open('POST',url,true);
-        httpRequest.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
-        httpRequest.send();
+        //var httpRequest = new XMLHttpRequest();
+        //var url = "validate.php";
+        //httpRequest.open('POST',url,true);
+        //httpRequest.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+        //httpRequest.send();
     });
 
     //method to check if field is empty
@@ -146,9 +146,9 @@
 
         var httpRequest = new XMLHttpRequest();
         var url = "validate.php";
-        httpRequest.open('POST',url,true);
-        httpRequest.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
-        httpRequest.send();
+      //  httpRequest.open('POST',url,true);
+      //  httpRequest.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+      //  httpRequest.send();
     });
 
     //loan purpose form
