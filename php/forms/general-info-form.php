@@ -863,7 +863,7 @@
                 <div class="col m-3"></div>
                 <div class="col m-3"></div>
             </div>
-            <div class="text-center"><button id="generalInfoSubmit" class="btn btn-success" type="general_form_button">Next</button></div>
+            <div class="text-center"><button id="generalInfoSubmit" class="btn btn-success" type="button">Next</button></div>
             
         </form>
     </div> 

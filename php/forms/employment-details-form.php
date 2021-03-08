@@ -345,7 +345,7 @@
             </div>
     
     
-            <div class="text-center"><button id="empDetailsSubmit" class="btn btn-success">Submit</button></div>
+            <div class="text-center"><button id="empDetailsSubmit" class="btn btn-success" type="button">Submit</button></div>
     
         </form>
     </div>
