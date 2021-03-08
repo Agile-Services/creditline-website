@@ -8,6 +8,22 @@
     <div class="application-heading text-center">
         <h1>Application</h1>
     </div>
+    <div id="application-panel">
+        <div id="top"></div>
+        <div id="bottom"></div>
+        <div id="nums">
+            <p>&nbsp 1 &nbsp</p>
+            <p>&nbsp 2 &nbsp</p>
+            <p>&nbsp 3 &nbsp</p>
+            <p>&nbsp 4 &nbsp</p>
+        </div>
+        <div id="desc">
+            <p>Loan-Purpose</p>
+            <p>General Information</p>
+            <p>Contact Details</p>
+            <p>Employment Details</p>
+        </div>
+    </div>
     <div class="main-content container">
         <form>
             <div class="form-row">

@@ -306,3 +306,75 @@ footer div div:nth-child(3) ul li p{
 .col label{
     font-weight: bold;
 }
+
+#application-panel{
+    position: relative;
+    height: 1em;
+    margin: 3em;
+    padding: 2em;
+}
+
+#top{
+    background-color: #009900;
+    height: .5em;
+}
+
+#bottom{
+    background-color: #000;
+    height: .5em;
+}
+
+#application-panel #nums p{
+    font-size: large;
+    font-weight: bold;
+    padding: 15px;
+    color: #fff;
+    background-color: #009900;
+    border-radius: 50%;
+    -webkit-transition:  all 0.2s ease-out;
+    -moz-transition:  all 0.2s ease-out;
+    -o-transition:  all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+#application-panel #nums p:hover{
+    color: #009900;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#nums{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    padding: .5em;
+}
+
+#nums p{
+    margin-left: 210px;
+}
+
+
+#desc{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+}
+
+#desc p:nth-child(1){
+    margin-left: 180px;
+}
+
+#desc p:nth-child(2){
+    margin-left: 155px;
+}
+
+#desc p:nth-child(3){
+    margin-left: 145px;
+}
+
+#desc p:nth-child(4){
+    margin-left: 145px;
+}
