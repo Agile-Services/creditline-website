@@ -16,7 +16,7 @@
         </ol>
 
         <div class="text-center mt-5">
-            <button id="pawnApply" class="btn btn-primary btn-lg" type="button">Apply</button>
+            <button id="pawnApply" class="btn btn-success btn-lg" type="button">Apply</button>
         </div>
     </div>
     <?php
