@@ -11,17 +11,11 @@
     <div id="application-panel">
         <div id="top"></div>
         <div id="bottom"></div>
-        <div id="nums">
-            <p>&nbsp 1 &nbsp</p>
-            <p>&nbsp 2 &nbsp</p>
-            <p>&nbsp 3 &nbsp</p>
-            <p>&nbsp 4 &nbsp</p>
-        </div>
-        <div id="desc">
-            <p>Loan-Purpose</p>
-            <p>General Information</p>
-            <p>Contact Details</p>
-            <p>Employment Details</p>
+        <div id="nums" class="container-fluid">
+            <div><p>&nbsp 1 &nbsp</p><em>Loan-Purpose</em></div>
+            <div><p>&nbsp 2 &nbsp</p><em>General Infomation</em></div>
+            <div><p>&nbsp 3 &nbsp</p><em>Contact Details</em></div>
+            <div><p>&nbsp 4 &nbsp</p><em>Employment Details</em></div>
         </div>
     </div>
     <div class="main-content container">
