@@ -28,6 +28,10 @@ window.onload = function(){
                     }
             });
         });
+
+        this.document.getElementById("applyNow").addEventListener('click', () => {
+            apply_loan("Apply | Creditline", result)
+        })
         
         function addClass(element, className) {
             const arrayClasses = element.className.split(" ");
@@ -199,6 +203,57 @@ window.onload = function(){
                     })
                 })
             })
+        })
+    } 
+
+    function apply_loan(title, result){
+        result.then(()=>{
+            if (document.title != title) {
+                document.title = title;
+            }
+            result = getPage('../php/formBody.php', 'GET');
+            result.then(() => {
+                result = getFormPage('../php/forms/loan-purpose-form.php', 'GET');
+                this.console.log(result)
+                result.then(() => {
+                    if (document.title != "CreditLine | Loan Purpose") {
+                        document.title = "CreditLine | Loan Purpose";
+                    }
+                    //$('meta[name="description"]').attr("content", newDescription);
+                    this.document.getElementById("loanPurposeSubmit").addEventListener('click', () => {
+                        result = getFormPage('../php/forms/general-info-form.php', 'GET');
+                        this.console.log(result);
+                        result.then(() => {
+                            if (document.title != "CreditLine | General Info") {
+                                document.title = "CreditLine | General Info";
+                            }
+                            //$('meta[name="description"]').attr("content", newDescription);
+                            this.document.getElementById("generalInfoSubmit").addEventListener('click', () => {
+                                result = getFormPage('../php/forms/contact-details-form.php', 'GET');
+                                result.then(() => {
+                                    if (document.title != "CreditLine | Contact Details") {
+                                        document.title = "CreditLine | Contact Details";
+                                    }
+                                    //$('meta[name="description"]').attr("content", newDescription);
+                                    this.document.getElementById("contactDetailsSubmit").addEventListener('click', () => {
+                                        result = getFormPage('../php/forms/employment-details-form.php', 'GET');
+                                        result.then(() => {
+                                            if (document.title != "CreditLine | Employment Details") {
+                                                document.title = "CreditLine | Employment Details";
+                                            }
+                                            //$('meta[name="description"]').attr("content", newDescription);
+                                            this.document.getElementById("empDetailsSubmit").addEventListener('click', () => {
+                                                result = getFormPage('../php/forms/employment-details-form.php', 'POST');
+                                                
+                                            })
+                                        })
+                                    })
+                                })
+                            })
+                        })
+                    })
+                })
+           })
         })
     }
 }
