@@ -544,3 +544,8 @@ footer div div:nth-child(3) ul li p{
       font-size: .5rem;
     }
  }
+
+ .testimonials h1{
+    font-size: 48px;
+    text-shadow: 1px 1px 3px rgba(124, 124, 124, 0.75);
+ }

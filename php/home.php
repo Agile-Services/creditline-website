@@ -94,7 +94,7 @@
 
 
         <div class="testimonials">
-            <h2>Testimonailas</h2>
+            <h1 class="text-success font-weight-bold">Our Valued Customers</h1>
             <p>tag1</p>
             <p>tag2</p>
             <p>tag2</p>
