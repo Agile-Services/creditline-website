@@ -12,10 +12,10 @@
         <div id="top"></div>
         <div id="bottom"></div>
         <div id="nums" class="container-fluid">
-            <div><p>&nbsp 1 &nbsp</p><em>Loan-Purpose</em></div>
-            <div><p>&nbsp 2 &nbsp</p><em>General Infomation</em></div>
-            <div><p>&nbsp 3 &nbsp</p><em>Contact Details</em></div>
-            <div><p>&nbsp 4 &nbsp</p><em>Employment Details</em></div>
+            <div><p class="num">&nbsp 1 &nbsp</p><em class="desc">Loan-Purpose</em></div>
+            <div><p class="num">&nbsp 2 &nbsp</p><em class="desc">General Infomation</em></div>
+            <div><p class="num">&nbsp 3 &nbsp</p><em class="desc">Contact Details</em></div>
+            <div><p class="num">&nbsp 4 &nbsp</p><em class="desc">Employment Details</em></div>
         </div>
     </div>
     <div class="main-content container">

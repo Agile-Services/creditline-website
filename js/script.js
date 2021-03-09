@@ -10,7 +10,32 @@ window.onload = function(){
     $('.navbar-collapse a').click(function(){
         $(".navbar-collapse").collapse('hide');
     });
-    getPage('../php/home.php', 'GET');
+    let result = getPage('../php/home.php', 'GET');
+    this.console.log(result)
+    result.then(()=>{
+            document.addEventListener("scroll", function(event) {
+                let animatedBoxes = Array.prototype.slice.call(document.querySelectorAll(".tag"));
+                animatedBoxes.push.apply(animatedBoxes, Array.prototype.slice.call(document.querySelectorAll(".carousel")));
+                console.log(animatedBoxes.length);
+                console.log(animatedBoxes);
+                const windowOffsetTop = window.innerHeight + window.scrollY;
+        
+                Array.prototype.forEach.call(animatedBoxes, (animatedBox) => {
+                    const animatedBoxOffsetTop = animatedBox.offsetTop;
+        
+                    if (windowOffsetTop >= animatedBoxOffsetTop) {
+                        addClass(animatedBox, "appear");
+                    }
+            });
+        });
+        
+        function addClass(element, className) {
+            const arrayClasses = element.className.split(" ");
+            if (arrayClasses.indexOf(className) === -1) {
+                element.className += " " + className;
+            }
+        }
+    })
 
     const logoLink = this.document.querySelector("header a");
     const navBarLinks = this.document.querySelectorAll("header div ul li a");
