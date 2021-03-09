@@ -108,6 +108,21 @@ window.onload = function(){
         return result;
     }
 
+    async function getFormPage(url, method){
+        const result = await this.fetch(url,{
+            method: method
+        }).then(response => response.text())
+        .then(data => {
+            this.document.querySelector(".main-content.container").innerHTML = data;
+            return 0;
+        })
+        .catch(error => {
+            this.alert(error);
+            return -1;
+        });
+        return result;
+    }
+
     function p_and_b_loan(title, result){
         result.then(()=>{
             if (document.title != title) {
@@ -115,38 +130,41 @@ window.onload = function(){
             }
             //$('meta[name="description"]').attr("content", newDescription);
             this.document.getElementById("LoansApply").addEventListener('click', () => {
-                result = getPage('../php/forms/loan-purpose-form.php', 'GET');
-                this.console.log(result)
-                result.then(() => {
-                    if (document.title != "CreditLine | Loan Purpose") {
-                        document.title = "CreditLine | Loan Purpose";
-                    }
-                    //$('meta[name="description"]').attr("content", newDescription);
-                    this.document.getElementById("loanPurposeSubmit").addEventListener('click', () => {
-                        result = getPage('../php/forms/general-info-form.php', 'GET');
-                        this.console.log(result);
-                        result.then(() => {
-                            if (document.title != "CreditLine | General Info") {
-                                document.title = "CreditLine | General Info";
-                            }
-                            //$('meta[name="description"]').attr("content", newDescription);
-                            this.document.getElementById("generalInfoSubmit").addEventListener('click', () => {
-                                result = getPage('../php/forms/contact-details-form.php', 'GET');
-                                result.then(() => {
-                                    if (document.title != "CreditLine | Contact Details") {
-                                        document.title = "CreditLine | Contact Details";
-                                    }
-                                    //$('meta[name="description"]').attr("content", newDescription);
-                                    this.document.getElementById("contactDetailsSubmit").addEventListener('click', () => {
-                                        result = getPage('../php/forms/employment-details-form.php', 'GET');
-                                        result.then(() => {
-                                            if (document.title != "CreditLine | Employment Details") {
-                                                document.title = "CreditLine | Employment Details";
-                                            }
-                                            //$('meta[name="description"]').attr("content", newDescription);
-                                            this.document.getElementById("empDetailsSubmit").addEventListener('click', () => {
-                                                result = getPage('../php/forms/employment-details-form.php', 'POST');
-                                                
+                result = getPage('../php/formBody.php', 'GET');
+                result.then(()=>{
+                    result = getFormPage('../php/forms/loan-purpose-form.php', 'GET');
+                    this.console.log(result)
+                    result.then(() => {
+                        if (document.title != "CreditLine | Loan Purpose") {
+                            document.title = "CreditLine | Loan Purpose";
+                        }
+                        //$('meta[name="description"]').attr("content", newDescription);
+                        this.document.getElementById("loanPurposeSubmit").addEventListener('click', () => {
+                            result = getFormPage('../php/forms/general-info-form.php', 'GET');
+                            this.console.log(result);
+                            result.then(() => {
+                                if (document.title != "CreditLine | General Info") {
+                                    document.title = "CreditLine | General Info";
+                                }
+                                //$('meta[name="description"]').attr("content", newDescription);
+                                this.document.getElementById("generalInfoSubmit").addEventListener('click', () => {
+                                    result = getFormPage('../php/forms/contact-details-form.php', 'GET');
+                                    result.then(() => {
+                                        if (document.title != "CreditLine | Contact Details") {
+                                            document.title = "CreditLine | Contact Details";
+                                        }
+                                        //$('meta[name="description"]').attr("content", newDescription);
+                                        this.document.getElementById("contactDetailsSubmit").addEventListener('click', () => {
+                                            result = getFormPage('../php/forms/employment-details-form.php', 'GET');
+                                            result.then(() => {
+                                                if (document.title != "CreditLine | Employment Details") {
+                                                    document.title = "CreditLine | Employment Details";
+                                                }
+                                                //$('meta[name="description"]').attr("content", newDescription);
+                                                this.document.getElementById("empDetailsSubmit").addEventListener('click', () => {
+                                                    result = getFormPage('../php/forms/employment-details-form.php', 'POST');
+                                                    
+                                                })
                                             })
                                         })
                                     })
