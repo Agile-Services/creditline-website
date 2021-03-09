@@ -49,17 +49,24 @@
             </div>
         </div>
 
-        <div class="ad">
+        <div class="ad1 row">
+            <section class="col">
+                <p class="text-center font-weight-bold">We provide fast, affordable financing that meets your needs:</p>
+                <ul class="text-center font-weight-bold">
+                    <li>No hidden fees</li>
+                    <li>No prepayment penalties</li>
+                    <li>No origination fees</li>
+                </ul>
+            </section>
+            <div class="col"><img class="" src="../static/images/kevin-sanon-Qo-ddP65zmM-unsplash.jpg" alt="photo of kevin"></div>
+        </div>
+
+        <div class="tags">
             <p>tag2</p>
             <img src="#" alt="#">
         </div>
 
-        <div class="ad">
-            <p>tag2</p>
-            <img src="#" alt="#">
-        </div>
-
-        <div class="reference">
+        <div class="ad2">
             <p>tag2</p>
             <img src="#" alt="#">
         </div>

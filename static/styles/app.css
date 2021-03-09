@@ -211,6 +211,42 @@ footer div div:nth-child(3) ul li p{
     grid-area: 2 / 1 / 2 / 3;
 }
 
+.ad1{
+    margin: 5%;
+}
+
+.ad1 section{
+    padding: 5%;
+    color: #009900;
+    text-shadow: 1px 1px 2px rgb(187, 187, 187);
+    font-size: x-large;
+    
+}
+
+.ad1 section ul{
+    
+}
+
+@media screen and (min-width: 601px) {
+    .ad1 img{
+        height: 500px;
+        width: auto;
+        border-radius: 2%;
+        box-shadow: 0px 0px 5px 1px rgb(122, 122, 122);
+        margin-left: 5%;
+    }
+    }
+
+@media screen and (max-width: 600px) {
+    .ad1 img{
+        height: 400px;
+        width: 250px;
+        border-radius: 2%;
+        box-shadow: 0px 0px 5px 1px rgb(122, 122, 122);
+        margin-left: 5%;
+    }
+}
+
 .personal-loans-heading{
     display: flex;
     flex-direction: column;
