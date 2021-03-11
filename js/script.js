@@ -7,12 +7,32 @@ window.onload = function(){
     httpRequest.open('PUSH',url+"?form="+formRequest);
     httpRequest.send();
     })*/
+
+    function addClass(element, className) {
+        const arrayClasses = element.className.split(" ");
+        if (arrayClasses.indexOf(className) === -1) {
+            element.className += " " + className;
+        }
+    }
+
+    function removeClass(element, className) {
+        const arrayClasses = element.className.split(" ");
+        console.log(arrayClasses);
+        arrayClasses.pop(arrayClasses.indexOf(className));
+        console.log(arrayClasses);
+
+    }
+
     $('.navbar-collapse a').click(function(){
         $(".navbar-collapse").collapse('hide');
     });
     let result = getPage('../php/home.php', 'GET');
     this.console.log(result)
     result.then(()=>{
+            this.document.getElementById("applyNow").addEventListener('click', () => {
+                apply_loan("Apply | Creditline", result)
+            })
+
             document.addEventListener("scroll", function(event) {
                 let animatedBoxes = Array.prototype.slice.call(document.querySelectorAll(".tag"));
                 animatedBoxes.push.apply(animatedBoxes, Array.prototype.slice.call(document.querySelectorAll(".carousel")));
@@ -41,17 +61,6 @@ window.onload = function(){
                     }
                 });
         });
-
-        this.document.getElementById("applyNow").addEventListener('click', () => {
-            apply_loan("Apply | Creditline", result)
-        })
-        
-        function addClass(element, className) {
-            const arrayClasses = element.className.split(" ");
-            if (arrayClasses.indexOf(className) === -1) {
-                element.className += " " + className;
-            }
-        }
     })
 
     const logoLink = this.document.querySelector("header a");
@@ -63,6 +72,9 @@ window.onload = function(){
             if (document.title != "Home | CreditLine") {
                 document.title = "Home | CreditLine";
             }
+            this.document.getElementById("applyNow").addEventListener('click', () => {
+                apply_loan("Apply | Creditline", result)
+            })
         })
     })
 
@@ -140,7 +152,12 @@ window.onload = function(){
             method: method
         }).then(response => response.text())
         .then(data => {
-            this.document.querySelector('main div').innerHTML = data;
+            let space = this.document.querySelector('main div.active-page');
+            let newspace = space.cloneNode(true);
+            space.parentNode.replaceChild(newspace, space);
+            removeClass(newspace, "appearRight");
+            newspace.innerHTML = data;
+            addClass(newspace, "appearRight");
             return 0;
         })
         .catch(error => {
@@ -155,8 +172,14 @@ window.onload = function(){
             method: method
         }).then(response => response.text())
         .then(data => {
-            this.document.querySelector(".main-content.container").innerHTML = data;
+            let space = this.document.querySelector('.main-content.container');
+            let newspace = space.cloneNode(true);
+            space.parentNode.replaceChild(newspace,space);
+            removeClass(newspace, "appearRight");
+            newspace.innerHTML = data;
+            addClass(newspace, "appearRight");
             return 0;
+            
         })
         .catch(error => {
             this.alert(error);
