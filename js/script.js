@@ -16,8 +16,8 @@ window.onload = function(){
             document.addEventListener("scroll", function(event) {
                 let animatedBoxes = Array.prototype.slice.call(document.querySelectorAll(".tag"));
                 animatedBoxes.push.apply(animatedBoxes, Array.prototype.slice.call(document.querySelectorAll(".carousel")));
-                console.log(animatedBoxes.length);
-                console.log(animatedBoxes);
+                
+                let leftAnimatedBoxes = Array.prototype.slice.call(document.querySelectorAll(".ad1"));
                 const windowOffsetTop = window.innerHeight + window.scrollY;
         
                 Array.prototype.forEach.call(animatedBoxes, (animatedBox) => {
@@ -26,7 +26,20 @@ window.onload = function(){
                     if (windowOffsetTop >= animatedBoxOffsetTop) {
                         addClass(animatedBox, "appear");
                     }
-            });
+                });
+
+                let i = 0;
+                Array.prototype.forEach.call(leftAnimatedBoxes, (animatedBox) => {
+                    const animatedBoxOffsetTop = animatedBox.offsetTop;
+        
+                    if (windowOffsetTop >= animatedBoxOffsetTop && i <= 0) {
+                        addClass(animatedBox, "appearLeft");
+                        i = i + 1;
+                    } else if(windowOffsetTop >= animatedBoxOffsetTop && i > 0) {
+                        addClass(animatedBox, "appearRight");
+                        i = i - 1;
+                    }
+                });
         });
 
         this.document.getElementById("applyNow").addEventListener('click', () => {
