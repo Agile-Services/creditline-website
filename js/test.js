@@ -131,26 +131,23 @@ var checkExist_partner = setInterval(function() {
 
 var checkExist_loan_purpose = setInterval(function() {
     if (document.getElementById('loanPurposeSubmit')) {
+        clearInterval(checkExist_loan_purpose);
         console.log("Loan Purpose Form Exists!");
-        if (document.getElementById('loanPurposeSubmit').onclick = true){
-          function myfunction(){
+        document.getElementById('loanPurposeSubmit').addEventListener("click",function myfunction(){
             type = document.getElementById("type").value;
             amt = document.getElementById("loan_amt").value;
             sessionStorage.setItem("Loan Type",type);
-            sessionStorage.setItem("Amount",amt);
-        }
-        myfunction();
+            sessionStorage.setItem("Loan Amount",amt);
+        });
     }
-    }
-}, 1000);// check every 100ms
+    }, 1000);// check every 100ms
 
 //get general form information
 var checkExist_general_info = setInterval(function() {
     if (document.getElementById('generalInfoSubmit')) {
         console.log("General Info Form Exists!");
-
-        if (document.getElementById('generalInfoSubmit').onclick = true){
-            function myfunction(el){
+        clearInterval(checkExist_general_info);
+        document.getElementById('generalInfoSubmit').addEventListener("click",function myfunction(el){
        
             title = document.getElementById("title").value;
             sessionStorage.setItem("Title",title);
@@ -202,18 +199,17 @@ var checkExist_general_info = setInterval(function() {
 
             sig = document.getElementById("sig").value;
             sessionStorage.setItem("Signature",sig);
+        })
         }
-        }
-        myfunction();
-    }
-}, 1000);// check every 100ms
+    }, 1000);// check every 100ms
 
 //get contact information
 var checkExist_employment = setInterval(function() {
     if (document.getElementById('contactDetailsSubmit')) {
-        console.log("Contact Form Exists!");      
+        console.log("Contact Form Exists!"); 
+        clearInterval(checkExist_employment);     
         if (document.getElementById('contactDetailsSubmit').onclick = true){
-            function myfunction(el){
+            function myfunction(){
        
             mphome = document.getElementById("mobile_number").value;
             sessionStorage.setItem("Mobile",mphome);
@@ -266,31 +262,46 @@ var checkExist_employment = setInterval(function() {
             eother = document.getElementById("emergency_contact_other_number").value;
             sessionStorage.setItem("E-Contact Other Number",eother);
         }
-        }
+        
         myfunction();
 
-//         function validateForm()
-//         {
-//         var fields = ["name, phone", "compname", "mail", "compphone", "adres", "zip"]
-
-//         var i, l = fields.length;
-//         var fieldname;
-//         for (i = 0; i < l; i++) {
-//             fieldname = fields[i];
-//             if (document.forms["register"][fieldname].value === "") {
-//             alert(fieldname + " can not be empty");
-//             return false;
-//             }
-//         }
-//         return true;
-// }
-
-    }
+    }}
 }, 1000);// check every 100ms
 
 var checkExist_contact = setInterval(function() {
     if (document.getElementById('empDetailsSubmit')) {
-        console.log("Exists!");
+        console.log("Employment Form Exists!");
+        clearInterval(checkExist_contact);
+        document.getElementById('empDetailsSubmit').addEventListener("click",function(){
+            
+            // employer_name = document.getElementById("employer_name").value;
+            // job_title = document.getElementById("job_title").value;sessionStorage.getItem("autosave")
+            elements = document.getElementsByClassName("formVal");
+            formData = new FormData();
+            for(var i=0; i<elements.length; i++)
+            {
+                formData.append(elements[i].name, elements[i].value);
+            }
+            var name;
+            var val;
+            for(i=0;  i<Object.keys(sessionStorage).length; i++){
+                name = Object.keys(sessionStorage)[i]
+                val = sessionStorage.getItem(name);
+                formData.append(name,val);
+                console.log(name,val);
+            }
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function()
+            {
+                if(xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                {
+                    alert(xmlHttp.responseText);
+                }
+            }
+            xmlHttp.open("post", "php/verify.php"); 
+            xmlHttp.send(formData); 
+         
 
-    }
+    });
+}
 }, 1000);// check every 100ms
