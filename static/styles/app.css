@@ -141,10 +141,10 @@ footer div div:nth-child(3) ul li p{
     background-position: 50%;
     padding-top: 10vw;
     padding-bottom: 10vw;
-    animation: appear 1.5s ease-in-out 1;
+    /* animation: appear 1.5s ease-in-out 1;
     -moz-animation: appear 1.5s ease-in-out 1;
     -webkit-animation: appear 1.5s ease-in-out 1;
-    -o-animation: appear 1.5s ease-in-out 1;
+    -o-animation: appear 1.5s ease-in-out 1; */
 }
 
 .welcome-message h1{
