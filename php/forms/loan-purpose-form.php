@@ -9,7 +9,7 @@
             <div class="form-row">
                 <div class="col w-25">
                     <label for="loan_type">Type of Loan</label>
-                    <select class="w-25 h-50" type="hidden" name="token" value="<?= $_SESSION['token'] ?>" />
+                    <select class="w-25 h-50" id="type" type="hidden" name="token" value="<?= $_SESSION['token'] ?>" />
                         <option value="Payday Loan">Payday</option>
                         <option value="Business Loan">Business</option>
                     </select><br><br>

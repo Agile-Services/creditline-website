@@ -10,7 +10,7 @@
         <div class="form-row">
             <div class="col m-3">
                 <label for="cars">Title</label>
-                <select class="form-control" list="Title" placeholder="Mr.">
+                <select class="form-control" list="Title" id="title" placeholder="Mr.">
                     <option value="Mr.">Mr.</option>
                     <option value="Mrs.">Mrs.</option>
                     <option value="Ms.">Ms.</option>
@@ -36,7 +36,7 @@
         <div class="form-row">
             <div class="col m-3">
                 <label for="gender">Gender</label>
-                <select class="form-control" list="gender" placeholder="Male">
+                <select class="form-control" list="gender" id="gender" placeholder="Male">
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                         <option value="Other">Other</option>
@@ -56,7 +56,7 @@
 
             <div class="col m-3">
                 <label for="marital-status">Marital Status:</label>
-                <select class="form-control" list="marital-status" placeholder="Single">
+                <select class="form-control" list="marital-status" id="marital-status" placeholder="Single">
                     <option value="Single">Single</option>
                     <option value="Married">Married</option>
                     <option value="Seperated">Separated</option>
@@ -77,7 +77,7 @@
 
             <div class="col m-3">
                 <label for="country">Country of Citizenship</label>
-                <select class="form-control" list="country" placeholder="Country of Citizenship">
+                <select class="form-control" list="country" id="citizenship" placeholder="Country of Citizenship">
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
@@ -327,7 +327,7 @@
 
             <div class="col m-3">
                 <label for="country">Country of Residence</label>
-                <select class="form-control" list="country" placeholder="Country of Residence">
+                <select class="form-control" list="country" id="resident_country"placeholder="Country of Residence">
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
@@ -580,8 +580,8 @@
         <div class="form-row">
             <div class="col m-3">
                 <label for="cars">Identification Type</label>
-                <input class="form-control" list="ID" placeholder="Identification Type">
-                <datalist id="id_type" name="ID">
+                <input class="form-control" list="ID" id="id_type" placeholder="Identification Type">
+                <datalist name="ID">
                 <option value="Driver's License"></option>
                 <option value="Passport"></option>
                 <option value="National I.D"></option>
@@ -600,7 +600,7 @@
 
             <div class="col m-3">
                 <label for="country">Country of Issue</label>
-                <select class="form-control" list="issued_country" placeholder="Country of Issue">
+                <select class="form-control" list="issued_country" id="country_of_issue" placeholder="Country of Issue">
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>

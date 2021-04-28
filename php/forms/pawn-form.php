@@ -5,17 +5,24 @@
             $_SESSION['token'] = bin2hex(random_bytes(32));
         }
     ?>
+
+
+        
     <div class="application-heading text-center">
         <h1>Application</h1>
     </div>
     <div class="main-content container">
-        <form>
+        <form class="needs-validation"  action="php/verify.php" method="post">
             <h2 class="text-success">Contact Details</h2><br>
             <div class="form-row">
-                <div class="col">
+                <div class="col-md-4 mb-3">
                     <input type="hidden" name="token" value="<?= $_SESSION['token'] ?>" />
                     <label for="fname">First name:</label><br>
-                    <input type="text" id="fname" name="fname" placeholder="First Name" value=""><br><br>
+                    <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" value="" required>
+                    <div class="valid-feedback">
+                    Looks good!
+                </div>
+                    <br><br>
                 </div>
     
                 <div class="col">
@@ -79,7 +86,7 @@
     
                 <div class="col">
                     <label for="country">Country</label><br>
-                    <select list="country" placeholder="Country of Citizenship">
+                    <select id="country" list="country" placeholder="Country of Citizenship">
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Åland Islands">Åland Islands</option>
                         <option value="Albania">Albania</option>
@@ -379,18 +386,23 @@
     
             <h2 class="text-success">Product Pictures</h2><br>
             <div class="form-row">
-                <div class="col custom-file">
-                    <label class="custom-file-label" for="product_img">Upload Images of Product</label><br>
-                    <input class="custom-file-input" type="file" id="product_img" name="product_img"><br><br>
-                </div>    
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Upload Images of Product</label>
+                <input type="file" class="form-control-file" id="product_img">
+            </div>   
             </div><br>
+
+            
 
             <label for="signature">Signature</label><br>
                 <input type="text" id="signature" name="signature" placeholder="J.Brown"><br><br>
 
-            <div class="text-center"><button id="pawnSubmit" class="btn btn-success btn-lg" type="button">Submit</button></div>
+            <div class="text-center"><button id="pawnSubmit" class="btn btn-success btn-lg" type="submit">Submit</button></div>
         </form>
+        <script type="text/javascript" src="js/collectionScript.js"></script>  
+
     </div>
+
     <?php
     } elseif($_SERVER["REQUEST_METHOD"] == "POST"){
         if (!empty($_POST['token'])) {

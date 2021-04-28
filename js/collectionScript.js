@@ -5,38 +5,7 @@
     btn.addEventListener('click',function(el){
         el.preventDefault();
 
-        var fname = document.getElementById("fname").value;
-        var middle_name = document.getElementById("mname").value;
-        var lname = document.getElementById("lname").value;
-        var mobile = document.getElementById("moble_number").value;
-        var home_number = document.getElementById("home_number").value;
-        var email = document.getElementById("email").value;
-        var address_line_1 = document.getElementById("address1").value;
-        var address_line_2 = document.getElementById("address2").value;
-        var city = document.getElementById("city");
-        var district = document.getElementById("area");
-        var post = document.getElementById("post").value;
-        var business_number = document.getElementById("business_number").value;
-        var other_number = document.getElementById("other").value;
-        var posttal = document.getElementById("post").value;
-        var country = document.getElementById("country").value;
-        var trn_image = document.getElementById("trn").value;
-        var id_image = document.getElementById("id").value;
-        var description = document.getElementById("product_description").value;
-        var make = document.getElementById("make").value;
-        var model = document.getElementById("model").value;
-        var serial_number = document.getElementById("serial_num").value;
-        var invoice = document.getElementById("invoice").value;
-        var product_image = document.getElementById("product_img").value;
-        var sig = document.getElementById("signature").value;
-
-        var lst = [fname,middle_name,lname,mobile,home_number,email,address_line_1,
-            address_line_2,posttal,country,description,city,district,post,
-            make,model,serial_number,sig];
         
-        for(i=0;i<lst.length;i++){
-            check(i);
-        }
 
         if (trn_image==null){
             alert("TRN was not uploaded");
@@ -166,10 +135,12 @@
         for(i=0;i<lst.length;i++){
             check(i);
         }
+       
     });
 
 
     //general info form
+
     var btn4 = document.getElementById("general_form_button");
     var title;
     var fname;

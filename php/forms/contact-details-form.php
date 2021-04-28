@@ -50,22 +50,22 @@
     <div class="form-row">
         <div class="col">
             <label for="lname">City/Town</label><br>
-            <input type="text" id="business_number" name="business_number" placeholder="Business Number" value=""><br><br>
+            <input type="text" id="district" name="business_number" placeholder="City/Town" value=""><br><br>
         </div>
 
         <div class="col">
             <label for="lname">Residential Area/District</label><br>
-            <input type="text" id="other_number" name="other_number" placeholder="Other Number" value=""><br><br>
+            <input type="text" id="rarea" name="other_number" placeholder="Residential Area/District" value=""><br><br>
         </div>
 
         <div class="col">
             <label for="lname">Post Office/Zip Code</label><br>
-            <input type="email" id="email" name="email" placeholder="Email Address" value=""><br><br>
+            <input type="text" id="zip" name="email" placeholder="Post Office/Zip Code" value=""><br><br>
         </div>
 
         <div class="col">
             <label for="country">Country of Citizenship</label><br>
-            <select list="country" placeholder="Country">
+            <select list="country" id="citi" placeholder="Country">
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
                 <option value="Albania">Albania</option>

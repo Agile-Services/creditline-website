@@ -78,7 +78,7 @@
     
                 <div class="col">
                     <label for="country">Country</label><br>
-                    <select list="country" placeholder="Country of Citizenship">
+                    <select id="country" list="country" placeholder="Country of Citizenship">
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Åland Islands">Åland Islands</option>
                         <option value="Albania">Albania</option>

@@ -5,62 +5,62 @@
             $_SESSION['token'] = bin2hex(random_bytes(32));
         }
     ?>
-    <form>
+    <form id="emp_form">
         <h2 class="text-success">Employment Details</h2>
         <div class="form-row">
             <div class="col">
                 <input type="hidden" name="token" value="<?= $_SESSION['token'] ?>" />
                 <label for="employer_name">Name of Employer</label><br>
-                <input type="text" id="employer_name" name="employer_name" placeholder="Name of Employer" value=""><br><br>
+                <input type="text" class='formVal' id="employer_name" name="employer_name" placeholder="Name of Employer" value=""><br><br>
             </div>
 
             <div class="col">
                 <label for="job_title">Job Title</label><br>
-                <input type="text" id="job_title" name="job_title" placeholder="Job Title" value=""><br><br>
+                <input type="text" class='formVal' id="job_title" name="job_title" placeholder="Job Title" value=""><br><br>
     
             </div>
             <div class="col">
                 <label for="start_date">Start Date</label><br>
-                <input type="date" id="start_date" name="start_date" placeholder="DD/MM/YYYY" value=""><br><br>
+                <input type="date" class='formVal' id="start_date" name="start_date" placeholder="DD/MM/YYYY" value=""><br><br>
     
             </div>
             <div class="col">
                 <label for="end_date">End Date</label><br>
-                <input type="date" id="end_date" name="end_date" placeholder="DD/MM/YYYY" value=""><br><br>
+                <input type="date" class='formVal' id="end_date" name="end_date" placeholder="DD/MM/YYYY" value=""><br><br>
             </div>
         </div>
     
         <div class="form-row">
             <div class="col">
                 <label for="address1">Street Address Line 1</label><br>
-                <input class="w-100" type="text" id="address1" name="address1" placeholder="Stresst Address Line 1" Address 1" value=""><br><br>
+                <input class="w-100" type="text"  class='formVal'id="address1" name="address1" placeholder="Stresst Address Line 1" Address 1" value=""><br><br>
             </div>
 
             <div class="col">
                 <label for="address2">Street Address Line 2</label><br>
-                <input class="w-100" type="text" id="address2" name="address2" placeholder="Stresst Address Line 2" value=""><br><br>
+                <input class="w-100" type="text"  class='formVal'id="address2" name="address2" placeholder="Stresst Address Line 2" value=""><br><br>
             </div>
         </div>
 
         <div class="form-row">
             <div class="col">
                 <label for="lname">City/Town</label><br>
-                <input type="text" id="business_number" name="business_number" placeholder="Business Number" value=""><br><br>
+                <input type="text" class='formVal' id="business_number" name="business_number" placeholder="City/Town" value=""><br><br>
             </div>
 
             <div class="col">
                 <label for="lname">Residential Area/District</label><br>
-                <input type="text" id="other_number" name="other_number" placeholder="Other Number" value=""><br><br>
+                <input type="text" class='formVal' id="other_number" name="other_number" placeholder="Residential Area" value=""><br><br>
             </div>
 
             <div class="col">
                 <label for="lname">Post Office/Zip Code</label><br>
-                <input type="email" id="email" name="email" placeholder="Email Address" value=""><br><br>
+                <input type="text" class='formVal' id="email" name="email" placeholder="Zip Code" value=""><br><br>
     
             </div>
             <div class="col">
                 <label for="country">Country</label><br>
-                <select list="country" placeholder="Country of Citizenship">
+                <select list="country" class='formVal' placeholder="Country of Citizenship">
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
@@ -313,7 +313,7 @@
 
             <div class="col">
                 <label for="business_number"> Business Number</label><br>
-                <input type="text" id="business_number" name="business_number" placeholder="Business Number" value=""><br><br>
+                <input type="text" class='formVal' id="business_number" name="business_number" placeholder="Business Number" value=""><br><br>
             </div>
             
         </div>
@@ -321,7 +321,7 @@
         <div class="form-row">
             <div class="col">
                 <label for="employement_status">Employment Status</label><br>
-                <input type="checkbox" id="employed" name="employed" value="Employed">
+                <input type="checkbox" class='formVal' id="employed" name="employed" value="Employed">
                 <label style="font-weight: normal;" for="vehicle1">Employed</label><br>
                 <input type="checkbox" id="part-Time" name="part-Time" value="Part-Time">
                 <label style="font-weight: normal;" for="vehicle2">Part-Time</label><br>
@@ -335,7 +335,7 @@
             
             <div class="col">
                 <label for="emergency_contact_sig">Signature</label><br>
-                <input type="text" id="emergency_contact_sig" name="emergency_contact_" placeholder="J.Brown" value=""><br><br>
+                <input type="text" class='formVal' id="emergency_contact_sig" name="emergency_contact_" placeholder="J.Brown" value=""><br><br>
             </div>
 
         </div>
