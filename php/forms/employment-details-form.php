@@ -331,14 +331,14 @@
 
         </div>
 
-        <div class="form-row">
+        <!-- <div class="form-row">
             
             <div class="col">
                 <label for="emergency_contact_sig">Signature</label><br>
                 <input type="text" class='formVal' id="emergency_contact_sig" name="emergency_contact_" placeholder="J.Brown" value=""><br><br>
             </div>
 
-        </div>
+        </div> -->
 
 
         <div class="text-center"><button id="empDetailsSubmit" class="btn btn-success" type="button">Submit</button></div>

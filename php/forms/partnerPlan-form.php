@@ -701,7 +701,11 @@
             <div class="form-row">
                 <div class="col custom-file">
                     <label class="custom-file-label" for="bank">Upload Image of Tax Registration Number (TRN)</label>
-                    <input class="custom-file-input" type="file" id="trn" name="trn"><br><br>
+                    <input class="custom-file-input" type="file" id="trn" name="trn"  onchange="
+                    var file = this.files[0];  
+                    var filename = file.name;
+                    var label = document.querySelector(`[for='${this.id}']`);
+                    label.innerHTML = filename"><br><br>
                 </div>
                 <div class="col"></div>
             </div>
@@ -709,7 +713,11 @@
             <div class="form-row">
                 <div class="col custom-file">
                     <label class="custom-file-label" for="id">Upload Image of Identification</label><br>
-                    <input class="custom-file-input" type="file" id="id" name="id"><br><br>
+                    <input class="custom-file-input" type="file" id="id" name="id"  onchange="
+                    var file = this.files[0];  
+                    var filename = file.name;
+                    var label = document.querySelector(`[for='${this.id}']`);
+                    label.innerHTML = filename"><br><br>
                 </div>
                 <div class="col"></div>
             </div><br><br>

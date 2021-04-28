@@ -1,14 +1,8 @@
+// For Kyle,
+// Remember to put the required attribute before the input tags on forms.
+// Also use oninvalid for custom validation methods.
 window.onload = function(){
-    /*
-    var btn = document.getElementById("btn");
-    btn.addEventListener("click",function(){
-    var url = "PHP-folder/verify.php";
-    var formRequest = document.getElementById("page_Id").value;
-    httpRequest.open('PUSH',url+"?form="+formRequest);
-    httpRequest.send();
-    })*/
-
-    function addClass(element, className) {
+        function addClass(element, className) {
         const arrayClasses = element.className.split(" ");
         if (arrayClasses.indexOf(className) === -1) {
             element.className += " " + className;
@@ -158,6 +152,7 @@ window.onload = function(){
             removeClass(newspace, "appearRight");
             newspace.innerHTML = data;
             addClass(newspace, "appearRight");
+            scrollTop();
             return 0;
         })
         .catch(error => {
@@ -178,6 +173,7 @@ window.onload = function(){
             removeClass(newspace, "appearRight");
             newspace.innerHTML = data;
             addClass(newspace, "appearRight");
+            scrollTop();
             return 0;
             
         })
@@ -205,8 +201,14 @@ window.onload = function(){
                         }
                         //$('meta[name="description"]').attr("content", newDescription);
                         this.document.getElementById("loanPurposeSubmit").addEventListener('click', () => {
-                            result = getFormPage('../php/forms/general-info-form.php', 'GET');
-                            this.console.log(result);
+                            var amount = document.getElementById("loan_amt").value;
+                            if(amount == ""){
+                                console.log("Amount is" + amount);
+                            } else {
+                                result = getFormPage('../php/forms/general-info-form.php', 'GET');
+                                this.console.log(result);
+                            }
+                            
                             result.then(() => {
                                 if (document.title != "CreditLine | General Info") {
                                     document.title = "CreditLine | General Info";
@@ -292,4 +294,19 @@ window.onload = function(){
            })
         })
     }
+    var scrollTop = function() {
+        window.scroll({
+            top: 0, 
+            left: 0, 
+            behavior: 'smooth'
+          });
+    };
+
+    var changeFilename = (Myfile) => {
+        var file = myFile.files[0];  
+        var filename = file.name;
+        var label = document.getElementById(Myfile.id)
+        label.innerHTML = filename
+    }
 }
+

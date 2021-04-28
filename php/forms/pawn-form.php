@@ -15,10 +15,10 @@
         <form class="needs-validation"  action="php/verify.php" method="post">
             <h2 class="text-success">Contact Details</h2><br>
             <div class="form-row">
-                <div class="col-md-4 mb-3">
+                <div class="col col-md-4 mb-3">
                     <input type="hidden" name="token" value="<?= $_SESSION['token'] ?>" />
                     <label for="fname">First name:</label><br>
-                    <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" value="" required>
+                    <input type="text" id="fname" name="fname" placeholder="First Name" value="" required>
                     <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -338,7 +338,11 @@
             <div class="form-row">
                 <div class="col custom-file">
                     <label class="custom-file-label" for="trn">Upload Image of Tax Registration Number (TRN)</label>
-                    <input class="custom-file-input" type="file" id="trn" name="trn"><br><br>
+                    <input class="custom-file-input" type="file" id="trn" name="trn"  onchange="
+                    var file = this.files[0];  
+                    var filename = file.name;
+                    var label = document.querySelector(`[for='${this.id}']`);
+                    label.innerHTML = filename"><br><br>
                 </div>
                 <div class="col"></div>
             </div>
@@ -346,7 +350,12 @@
             <div class="form-row">
                 <div class="col custom-file">
                     <label class="custom-file-label" for="id">Upload Image of Identification</label><br>
-                    <input class="custom-file-input" type="file" id="id" name="id"><br><br>
+                    <input class="custom-file-input" type="file" id="id" name="id" onchange="
+                    var file = this.files[0];  
+                    var filename = file.name;
+                    var label = document.querySelector(`[for='${this.id}']`);
+                    label.innerHTML = filename"
+                    ><br><br>
                 </div>
                 <div class="col"></div>
             </div><br><br>
@@ -379,7 +388,11 @@
                     <p class="font-weight-bold">Upload Proof of Purchase</p>
                     <div class="custom-file">
                         <label class="custom-file-label" for="invoice"></label><br>
-                        <input class="custom-file-input" type="file" id="invoice" name="invoice"><br><br>
+                        <input class="custom-file-input" type="file" id="invoice" name="invoice" onchange="
+                        var file = this.files[0];  
+                        var filename = file.name;
+                        var label = document.querySelector(`[for='${this.id}']`);
+                        label.innerHTML = filename"><br><br>
                     </div>
                 </div>
             </div>
@@ -400,7 +413,7 @@
             <div class="text-center"><button id="pawnSubmit" class="btn btn-success btn-lg" type="submit">Submit</button></div>
         </form>
         <script type="text/javascript" src="js/collectionScript.js"></script>  
-
+        <script type="text/javascript" src="js/script.js"></script>
     </div>
 
     <?php

@@ -851,14 +851,14 @@
         </div>
         
 
-        <div class="form-row">
+        <!-- <div class="form-row">
             <div class="col m-3">
                 <label for="signature">Signature of Applicant</label>
                 <input class="form-control" type="text" id="sig" name="sig" placeholder="J.Brown" value=""><br><br>
             </div>
             <div class="col m-3"></div>
             <div class="col m-3"></div>
-        </div>
+        </div> -->
         <div class="text-center"><button id="generalInfoSubmit" class="btn btn-success" type="button">Next</button></div>
         
     </form>

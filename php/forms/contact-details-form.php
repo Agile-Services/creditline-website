@@ -30,10 +30,12 @@
             <input type="text" id="other_number" name="other_number" placeholder="Other Number" value=""><br><br>
         </div>
     </div>
-        <div class="">
+    <div class="form-row">
+        <div class="col">
             <label for="email"> Email Address</label><br>
             <input type="email" id="email" name="email" placeholder="Email Address" value=""><br><br>
         </div><br><br>
+    </div>
 
     <h2 class="text-success">Residential Address</h2>
     <div class="form-row">
@@ -358,12 +360,12 @@
             <input type="email" id="emergency_contact_email" name="emergency_contact_email" placeholder="Email Address" value=""><br><br>
         </div>
     </div>
-    <div class="form-row">
+    <!-- <div class="form-row">
         <div class="col">
             <label for="emergency_contact_sig">Signature</label><br>
             <input type="text" id="emergency_contact_sig" name="emergency_contact_" placeholder="J.Brown" value="">
         </div>
-    </div>
+    </div> -->
     <br>
     
     <div class="text-center">
