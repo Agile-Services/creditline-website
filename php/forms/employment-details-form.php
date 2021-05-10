@@ -24,10 +24,6 @@
                 <input type="date" class='formVal' id="start_date" name="start_date" placeholder="DD/MM/YYYY" value=""><br><br>
     
             </div>
-            <div class="col">
-                <label for="end_date">End Date</label><br>
-                <input type="date" class='formVal' id="end_date" name="end_date" placeholder="DD/MM/YYYY" value=""><br><br>
-            </div>
         </div>
     
         <div class="form-row">
@@ -45,22 +41,22 @@
         <div class="form-row">
             <div class="col">
                 <label for="lname">City/Town</label><br>
-                <input type="text" class='formVal' id="business_number" name="business_number" placeholder="City/Town" value=""><br><br>
+                <input type="text" class='formVal' id="city" name="city" placeholder="City/Town" value=""><br><br>
             </div>
 
             <div class="col">
                 <label for="lname">Residential Area/District</label><br>
-                <input type="text" class='formVal' id="other_number" name="other_number" placeholder="Residential Area" value=""><br><br>
+                <input type="text" class='formVal' id="rarea" name="rarea" placeholder="Residential Area" value=""><br><br>
             </div>
 
             <div class="col">
                 <label for="lname">Post Office/Zip Code</label><br>
-                <input type="text" class='formVal' id="email" name="email" placeholder="Zip Code" value=""><br><br>
+                <input type="text" class='formVal' id="zip" name="zip" placeholder="Zip Code" value=""><br><br>
     
             </div>
             <div class="col">
                 <label for="country">Country</label><br>
-                <select list="country" class='formVal' placeholder="Country of Citizenship">
+                <select list="country" class='formVal' id="country" placeholder="Country of Citizenship">
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
@@ -321,11 +317,11 @@
         <div class="form-row">
             <div class="col">
                 <label for="employement_status">Employment Status</label><br>
-                <input type="checkbox" class='formVal' id="employed" name="employed" value="Employed">
+                <input type="checkbox" class='formVal' id="status" name="employed" value="Employed">
                 <label style="font-weight: normal;" for="vehicle1">Employed</label><br>
-                <input type="checkbox" id="part-Time" name="part-Time" value="Part-Time">
+                <input type="checkbox" id="status" name="part-Time" value="Part-Time">
                 <label style="font-weight: normal;" for="vehicle2">Part-Time</label><br>
-                <input type="checkbox" id="self-employed" name="self-employed" value="Self-Employed">
+                <input type="checkbox" id="status" name="self-employed" value="Self-Employed">
                 <label style="font-weight: normal;" for="vehicle3">Self-Employed</label><br><br>
             </div>
 

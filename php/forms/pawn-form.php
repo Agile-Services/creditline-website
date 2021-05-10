@@ -12,13 +12,13 @@
         <h1>Application</h1>
     </div>
     <div class="main-content container">
-        <form class="needs-validation"  action="php/verify.php" method="post">
+        <form class="needs-validation"  action="php/verify.php" Content-Type="multipart/form-data" method="post">
             <h2 class="text-success">Contact Details</h2><br>
             <div class="form-row">
                 <div class="col col-md-4 mb-3">
                     <input type="hidden" name="token" value="<?= $_SESSION['token'] ?>" />
                     <label for="fname">First name:</label><br>
-                    <input type="text" id="fname" name="fname" placeholder="First Name" value="" required>
+                    <input type="text" id="fname" name="fname" placeholder="First Name" value="">
                     <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -336,13 +336,9 @@
             </div>
     
             <div class="form-row">
-                <div class="col custom-file">
-                    <label class="custom-file-label" for="trn">Upload Image of Tax Registration Number (TRN)</label>
-                    <input class="custom-file-input" type="file" id="trn" name="trn"  onchange="
-                    var file = this.files[0];  
-                    var filename = file.name;
-                    var label = document.querySelector(`[for='${this.id}']`);
-                    label.innerHTML = filename"><br><br>
+                <div class="col">
+                    <label for="trn">Tax Registration Number (TRN)</label>
+                      <input type="text" id="trn" name="trn" placeholder="123-456-789" value="">
                 </div>
                 <div class="col"></div>
             </div>
@@ -404,13 +400,14 @@
                 <input type="file" class="form-control-file" id="product_img">
             </div>   
             </div><br>
+            
 
             
 
             <label for="signature">Signature</label><br>
                 <input type="text" id="signature" name="signature" placeholder="J.Brown"><br><br>
 
-            <div class="text-center"><button id="pawnSubmit" class="btn btn-success btn-lg" type="submit">Submit</button></div>
+            <div class="text-center"><button id="pawnSubmit" class="btn btn-success btn-lg" type="button">Submit</button></div>
         </form>
         <script type="text/javascript" src="js/collectionScript.js"></script>  
         <script type="text/javascript" src="js/script.js"></script>

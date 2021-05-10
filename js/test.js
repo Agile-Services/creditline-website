@@ -6,48 +6,8 @@ var checkExist = setInterval(function() {
         
         document.getElementById('pawnSubmit').onclick = function(el){
         
-            fname = document.getElementById("fname");
-            lname = document.getElementById("lname");
-            mname = document.getElementById("mname");
-            mobile = document.getElementById("mobile_number");
-            home = document.getElementById("home_number");
-            email = document.getElementById("email");
-            address1 = document.getElementById("address1");
-            address2 = document.getElementById("address2");
-            city = document.getElementById("city");
-            area = document.getElementById("area");
-            post = document.getElementById("post");
-            country = document.getElementById("country");
-            description = document.getElementById("product_description");
-            make = document.getElementById("make");
-            model = document.getElementById("model")
-            serial_num = document.getElementById("serial_num");
-            invoice = document.getElementById("invoice");
-            picture = document.getElementById("product_img");
-            sig = document.getElementById("signature");
-            trn = document.getElementById("trn");
-            id = document.getElementById("id");
 
-            text_lst = [fname,lname,mname,mobile,home,email,address1,address2,city,area,post,country,description,make,model,serial_num,invoice,sig];
-            file_lst = [trn,id,picture];
-
-            for(i in text_lst){
-                if(i.value == ""){
-                    i.style.borderColor = "red";
-                    el.preventDefault()
-                } 
-            }
-
-            // for(i in file_lst){
-            //     if(i.files.length == 0){
-            //         i.style.borderColor = "red";
-            //         el.preventDefault()
-            //     }
-            // }
-            
-            if(lname.value == ""){
-                alert("empty"); 
-            }
+ 
             clearInterval(checkExist);
         }
     }
@@ -58,70 +18,8 @@ var checkExist = setInterval(function() {
 var checkExist_partner = setInterval(function() {
     if (document.getElementById('partnerPlanSubmit')) {
         console.log("Partner Plan form Exists!");
-        document.getElementById('partnerPlanSubmit').onclick = function(el){
+        document.getElementById('partnerPlanSubmit').onclick = function(el){   
             
-            fname = document.getElementById("fname");
-            lname = document.getElementById("lname");
-            mname = document.getElementById("mname");
-            mobile = document.getElementById("mobile_number");
-            home = document.getElementById("home_number");
-            email = document.getElementById("email");
-            address1 = document.getElementById("address1");
-            address2 = document.getElementById("address2");
-            city = document.getElementById("city");
-            area = document.getElementById("area");
-            post = document.getElementById("post");
-            country = document.getElementById("country");
-            business_number = document.getElementById("business_number");
-            employer_name = document.getElementById("employer_name");
-            job_title = document.getElementById("job_title");
-            start_date = document.getElementById("start_date");
-            end_date = document.getElementById("end_date");
-            work_address_line_1 = document.getElementById("work_address1");
-            work_address_line_2 = document.getElementById("work_address2");
-            work_city = document.getElementById("work_city");
-            work_area = document.getElementById("work_area");
-            work_post = document.getElementById("work_post");
-            other_number = document.getElementById("other");
-            posttal = document.getElementById("post");
-            country = document.getElementById("country");
-            work_country = document.getElementById("work_country");
-            trn_image = document.getElementById("trn");
-            id_image = document.getElementById("id");
-            work_number = document.getElementById("work_business_number");
-            emp_status = document.getElementById("employement_status");
-            draw_date = document.getElementById("draw_Date");
-            plan_amt = document.getElementById("plan_amt");
-            payment_plan = document.getElementById("");
-            payment_method = document.getElementById("");
-            bank = document.getElementById("bank");
-            acc_number = document.getElementById("acc_num");
-
-
-            text_lst = [fname,lname,mname,mobile,home,email,address1,address2,city,area,post,country,business_number,
-                employer_name,job_title,start_date,end_date,work_address_line_1,work_address_line_2,
-                work_city,work_area,work_post,other_number,posttal,country,work_country,work_number,emp_status,
-                draw_date,plan_amt,payment_plan,payment_method,bank,acc_number
-    ];
-            file_lst = [trn_image,id_image];
-
-            for(i in text_lst){
-                if(i.value == ""){
-                    i.style.borderColor = "red";
-                    el.preventDefault()
-                } 
-            }
-
-            // for(i in file_lst){
-            //     if(i.files.length == 0){
-            //         i.style.borderColor = "red";
-            //         el.preventDefault()
-            //     }
-            // }
-            
-            if(lname.value == ""){
-                alert("empty"); 
-            }
             clearInterval(checkExist);
 
                  }
@@ -170,7 +68,7 @@ var checkExist_general_info = setInterval(function() {
             pob = document.getElementById("pob").value;
             sessionStorage.setItem("POB",pob);
 
-            marital_status = document.getElementById("marital-status").value;
+            marital_status = document.getElementById("marital_status").value;
             sessionStorage.setItem("Marital Status",marital_status);
 
             mothers_maiden = document.getElementById("mothers_maiden").value;
@@ -196,9 +94,6 @@ var checkExist_general_info = setInterval(function() {
 
             country_of_issue = document.getElementById("country_of_issue").value;
             sessionStorage.setItem("country_of_issue",country_of_issue);
-
-            sig = document.getElementById("sig").value;
-            sessionStorage.setItem("Signature",sig);
         })
         }
     }, 1000);// check every 100ms

@@ -9,7 +9,7 @@
         <h1>Application</h1>
     </div>
     <div class="main-content container">
-        <form>
+        <form id="partnerPlan_form" action="php/verify.php" method="post" enctype="multipart/form-data">
             <h2 class="text-success">Contact Details</h2><br>
             <div class="form-row">
                 <div class="col">
@@ -642,11 +642,11 @@
             <div class="form-row">
                 <div class="col">
                     <label for="employement_status">Employment Status</label><br><br>
-                    <input type="checkbox" id="employement_status" name="employed" value="Employed">
+                    <input type="checkbox" id="employement_status" class="employed" name="employed" value="Employed">
                     <label style="font-weight: normal;" for="Employed">Employed</label><br>
-                    <input type="checkbox" id="employement_status-Time" name="part-Time" value="Part-Time">
+                    <input type="checkbox" id="employement_status-Time" class="part_time" name="part-Time" value="Part-Time">
                     <label style="font-weight: normal;" for="Part">Part-Time</label><br>
-                    <input type="checkbox" id="self-employement_status" name="self-employed" value="Self-Employed">
+                    <input type="checkbox" id="self-employement_status" class="self_employed" name="self-employed" value="Self-Employed">
                     <label style="font-weight: normal;" for="Self">Self-Employed</label><br><br>
                 </div>
             </div>
@@ -664,19 +664,19 @@
     
                 <div class="col">
                     <label for="payment_plan">Payment Plan</label><br><br>
-                    <input type="checkbox" id="payment_plan" name="weekly" value="weekly">
+                    <input type="checkbox" id="payment_plan" class="weekly" name="weekly" value="weekly">
                     <label style="font-weight: normal;" for="weekly">Weekly</label><br>
-                    <input type="checkbox" id="payment_plan" name="fort_nightly" value="fort_nightly">
+                    <input type="checkbox" id="payment_plan" class="fort_nightly" name="fort_nightly" value="fort_nightly">
                     <label style="font-weight: normal;" for="fort_nightly">Fortnightly</label><br>
-                    <input type="checkbox" id="payment_plan" name="monthly" value="monthly">
+                    <input type="checkbox" id="payment_plan" class="montly" name="monthly" value="monthly">
                     <label style="font-weight: normal;" for="monthly">Monthly</label><br><br>
                 </div>
     
                 <div class="col">
                     <label for="payment_method">Payment Method</label><br><br>
-                    <input type="checkbox" id="bank_transfer" name="bank_transfer" value="bank_transfer">
+                    <input type="checkbox" id="bank_transfer" class="bank_transfer" name="bank_transfer" value="bank_transfer">
                     <label style="font-weight: normal;" for="bank_transfer">Bank Transfer</label><br>
-                    <input type="checkbox" id="cash" name="cash" value="cash">
+                    <input type="checkbox" id="cash" class="cash" name="cash" value="cash">
                     <label style="font-weight: normal;" for="cash">Cash</label><br><br>
                 </div>
     
@@ -700,14 +700,9 @@
     
             <div class="form-row">
                 <div class="col custom-file">
-                    <label class="custom-file-label" for="bank">Upload Image of Tax Registration Number (TRN)</label>
-                    <input class="custom-file-input" type="file" id="trn" name="trn"  onchange="
-                    var file = this.files[0];  
-                    var filename = file.name;
-                    var label = document.querySelector(`[for='${this.id}']`);
-                    label.innerHTML = filename"><br><br>
+                    <label for="bank">Tax Registration Number (TRN)</label>
+                    <input type="text" id="trn" name="trn" >
                 </div>
-                <div class="col"></div>
             </div>
             <br>
             <div class="form-row">

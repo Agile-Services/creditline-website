@@ -5,7 +5,7 @@
             $_SESSION['token'] = bin2hex(random_bytes(32));
         }
     ?>
-    <form action="#">
+    <form action="#" id="general_info_form">
         <input type="hidden" name="token" value="<?= $_SESSION['token'] ?>" />
         <div class="form-row">
             <div class="col m-3">
@@ -56,7 +56,7 @@
 
             <div class="col m-3">
                 <label for="marital-status">Marital Status:</label>
-                <select class="form-control" list="marital-status" id="marital-status" placeholder="Single">
+                <select class="form-control" list="marital-status" id="marital_status" placeholder="Single">
                     <option value="Single">Single</option>
                     <option value="Married">Married</option>
                     <option value="Seperated">Separated</option>
