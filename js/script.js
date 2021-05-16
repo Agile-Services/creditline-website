@@ -348,6 +348,7 @@ window.onload = function(){
                         //$('meta[name="description"]').attr("content", newDescription);
                         this.document.getElementById("loanPurposeSubmit").addEventListener('click', () => {
                             var amount = document.getElementById("loan_amt");
+                            var loan_type = document.getElementById("type");
                             if(amount.value == ""){
                                 amount.style.borderColor = "red";
                             } else {
