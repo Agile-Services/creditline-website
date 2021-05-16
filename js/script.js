@@ -115,73 +115,174 @@ window.onload = function(){
                         var work_address_line_2 = document.getElementById("work_address2");
                         var work_city = document.getElementById("work_city");
                         var trn = document.getElementById("trn");
-                        var id_image = document.getElementById("id");
                         var work_number = document.getElementById("work_business_number");
-                        var emp_status = document.getElementById("employement_status");
+                        var emp_status;
                         var draw_date = document.getElementById("draw_Date");
                         var plan_amt = document.getElementById("plan_amt");
                         var payment_plan = document.getElementById("");
-                        var payment_method = document.getElementById("");
+                        var payment_method;
                         var bank = document.getElementById("bank");
                         var acc_number = document.getElementById("acc_num");
+                        var cash = document.getElementById("cash");
+                        var bank_transfer = document.getElementById("bank_transfer");
+                        var weekly = document.getElementById("weekly");
+                        var fortnight = document.getElementById("fort_nightly");
+                        var monthly = document.getElementById("monthly");
+                        var full_time = document.getElementById("employement_status");
+                        var part_time = document.getElementById("employement_status_Time")
+                        var self_employed = document.getElementById("self_employement_status")
 
-                        if(fname.value == ""){
-                            fname.style.borderColor = "red";
-                        }
-                        else if(mname.value == ""){
-                            mname.style.borderColor = "red";
-                        }
-                        else if(lname.value == ""){
-                            lname.style.borderColor = "red";
-                        }
-                        else if(mobile.value == ""){
-                            mobile.style.borderColor = "red";
-                        }
-                        else if(email.value == ""){
-                            email.style.borderColor = "red";
-                        }
-                        else if(address1.value == ""){
-                            address1.style.borderColor = "red";
-                        }
-                        else if(address2.value == ""){
-                            address2.style.borderColor = "red";
-                        }
-                        else if(city.value == ""){
-                            city.style.borderColor = "red";
-                        }
-                        else if(employer_name.value == ""){
-                            employer_name.style.borderColor = "red";
-                        }
-                        else if(job_title.value == ""){
-                            job_title.style.borderColor = "red";
-                        }
-                        else if(start_date.value == ""){
-                            start_date.style.borderColor = "red";
-                        }
-                        else if(work_address_line_1.value == ""){
-                            work_address_line_1.style.borderColor = "red";
-                        }
-                        else if(work_address_line_2.value == ""){
-                            work_address_line_2.style.borderColor = "red";
-                        }
-                        else if(work_city.value == ""){
-                            work_city.style.borderColor = "red";
-                        }
-                        else if(trn.value == ""){
-                            trn.style.borderColor = "red";
-                        }
-                        else if(work_number.value == ""){
-                            work_number.style.borderColor = "red";
-                        }
-                        else if(draw_date.value == ""){
-                            draw_date.style.borderColor = "red";
-                        }
-                        else if(plan_amt.value == ""){
-                            plan_amt.style.borderColor = "red";
-                        }
-                        else{
-                            result = getPage('../php/forms/partnerPlan-form.php', 'POST');
-                        }
+                        // if(cash.checked == false && bank_transfer.checked == false){
+                        //     document.getElementById("error1").innerHTML = "Please mark one of the checkboxs";  
+                        // }
+                        // else if(cash.checked == true && bank_transfer.checked == true){
+                        //     document.getElementById("error1").innerHTML = "Please mark only one of the checkboxs";  
+                        // }
+                        // else if(cash.checked == true && bank_transfer.checked == false){
+                        //     payment_method=cash.value;
+                        // }
+                        // else if(cash.checked == false && bank_transfer.checked == true){
+                        //     payment_method=bank_transfer.value;
+                        // }
+
+
+                        // if(weekly.checked == false && fortnight.checked == false && monthly.checked == false){
+                        //     return document.getElementById("error").innerHTML = "Please mark one of the checkboxs";  
+                        // }
+                        // else if(weekly.checked == true && fortnight.checked == true && monthly.checked == true){
+                        //     return document.getElementById("error").innerHTML = "Please mark only one of the checkboxs";  
+                        // }
+                        // else if(weekly.checked == true && fortnight.checked == false && monthly.checked == false){
+                        //     payment_plan=weekly.value;
+                        // }
+                        // else if(weekly.checked == false && fortnight.checked == true && monthly.checked == false){
+                        //     payment_plan=fortnight.value;
+                        // }
+                        // else if(weekly.checked == false && fortnight.checked == false && monthly.checked == true){
+                        //     payment_plan=monthly.value;
+                        // }
+
+                        // if(full_time.checked == false && part_time.checked == false && self_employed.checked == false){
+                        //     return document.getElementById("error2").innerHTML = "Please mark one of the checkboxs";  
+                        // }
+                        // else if(full_time.checked == true && part_time.checked == true && self_employed.checked == true){
+                        //     return document.getElementById("error2").innerHTML = "Please mark only one of the checkboxs";  
+                        // }
+                        // else if(full_time.checked == true && part_time.checked == false && self_employed.checked == false){
+                        //     emp_status=full_time.value;
+                        // }
+                        // else if(full_time.checked == false && part_time.checked == true && self_employed.checked == false){
+                        //     emp_status=part_time.value;
+                        // }
+                        // else if(full_time.checked == false && part_time.checked == false && self_employed.checked == true){
+                        //     emp_status=self_employed.value;
+                        // }
+
+
+                        // if(fname.value == ""){
+                        //     fname.style.borderColor = "red";
+                        // }
+                        // else if(mname.value == ""){
+                        //     mname.style.borderColor = "red";
+                        // }
+                        // else if(lname.value == ""){
+                        //     lname.style.borderColor = "red";
+                        // }
+                        // else if(mobile.value == ""){
+                        //     mobile.style.borderColor = "red";
+                        // }
+                        // else if(email.value == ""){
+                        //     email.style.borderColor = "red";
+                        // }
+                        // else if(address1.value == ""){
+                        //     address1.style.borderColor = "red";
+                        // }
+                        // else if(address2.value == ""){
+                        //     address2.style.borderColor = "red";
+                        // }
+                        // else if(city.value == ""){
+                        //     city.style.borderColor = "red";
+                        // }
+                        // else if(employer_name.value == ""){
+                        //     employer_name.style.borderColor = "red";
+                        // }
+                        // else if(job_title.value == ""){
+                        //     job_title.style.borderColor = "red";
+                        // }
+                        // else if(start_date.value == ""){
+                        //     start_date.style.borderColor = "red";
+                        // }
+                        // else if(work_address_line_1.value == ""){
+                        //     work_address_line_1.style.borderColor = "red";
+                        // }
+                        // else if(work_address_line_2.value == ""){
+                        //     work_address_line_2.style.borderColor = "red";
+                        // }
+                        // else if(work_city.value == ""){
+                        //     work_city.style.borderColor = "red";
+                        // }
+                        // else if(trn.value == ""){
+                        //     trn.style.borderColor = "red";
+                        // }
+                        // else if(work_number.value == ""){
+                        //     work_number.style.borderColor = "red";
+                        // }
+                        // else if(draw_date.value == ""){
+                        //     draw_date.style.borderColor = "red";
+                        // }
+                        // else if(plan_amt.value == ""){
+                        //     plan_amt.style.borderColor = "red";
+                        // }
+                        // else if( document.getElementById("id").fileslength == 0){
+                        // return document.getElementById("error3").innerHTML = "No Files have been selected";
+                        // }
+                        // else{
+                        var id = document.getElementById("id").files[0];
+                        console.log(id);
+                        var formData = new FormData();
+                        formData.set("id", id);
+                        formData.append("fname",fname.value);
+                        formData.append("mname",mname.value);
+                        formData.append("lname",lname.value);
+                        formData.append("address1",address1.value);
+                        formData.append("email",email.value);
+                        formData.append("address2",address2.value);
+                        formData.append("city",city.value);
+                        formData.append("employer_name",employer_name.value);
+                        formData.append("job_title",job_title.value);
+                        formData.append("start_date",start_date.value);
+                        formData.append("work_address_line_1",work_address_line_1.value);
+                        formData.append("work_address_line_2",work_address_line_2.value);
+                        formData.append("work_city",work_city.value);
+                        formData.append("trn",trn.value);
+                        formData.append("work_number",work_number.value);
+                        formData.append("draw_date",draw_date.value);
+                        formData.append("payment_plan",payment_plan);
+                        formData.append("payment_method",payment_method);
+                        formData.append("acc_number",acc_number.value);
+                        formData.append("bank",bank.value);
+                        formData.append("emp_status",emp_status);
+                        formData.append("mobile",mobile.value);
+                        formData.append("plan_amt",plan_amt.value);
+                        formData.append("area",document.getElementById("area").value);
+                        formData.append("post",document.getElementById("post").value);
+                        formData.append("country",document.getElementById("country").value);
+                        formData.append("work_area",document.getElementById("work_area").value);
+                        formData.append("work_post",document.getElementById("work_post").value);
+                        formData.append("work_country",document.getElementById("work_country").value);
+
+                        $.ajax({
+                            type: "POST",
+                            url: "php/verify.php",
+                            data: formData,
+                            processData: false,
+                            contentType: false
+                          }).done(function(response){
+                                console.log(response);
+                          });
+                   //  }
+                        result = getPage('../php/forms/partnerPlan-form.php', 'POST');
+                      //  }
        
                     })
                 })
@@ -267,9 +368,48 @@ window.onload = function(){
                         else if(sig.value == ""){
                             sig.style.borderColor = "red";
                         }
-                        else {        
-                            result = getPage('../php/forms/pawn-form.php', 'POST');
-                        }
+                        else { 
+                        
+                        var id = document.getElementById("id").files[0];
+                        console.log(id);
+                        var invoice = document.getElementById("invoice").files[0];
+                        console.log(invoice);
+                        var product_img = document.getElementById("product_img").files[0];
+                        console.log(product_img);
+                        var formData = new FormData();
+                        formData.set("invoice",invoice);
+                        formData.set("product_img",product_img);
+                        formData.append("fname",fname.value);
+                        formData.append("mname",mname.value);
+                        formData.append("lname",lname.value);
+                        formData.append("address1",address1.value);
+                        formData.append("email",email.value);
+                        formData.append("address2",address2.value);
+                        formData.append("city",city.value);
+                        formData.append("mobile",mobile.value);
+                        formData.append("description",description.value);
+                        formData.append("serial_num",serial_num.value);
+                        formData.append("trn",trn.value);
+                        formData.append("model",model.value);
+                        formData.append("make",make.value);
+                        formData.append("sig",sig.value);
+                        formData.set("id",id);
+
+                        for(var pair of formData.entries()) {
+                            console.log(pair[0]+ ', '+ pair[1]);
+                         }
+                            
+                        $.ajax({
+                            type: "POST",
+                            url: "php/verifyPawn.php",
+                            data: formData,
+                            processData: false,
+                            contentType: false
+                            }).done(function(response){
+                                console.log(response);
+                            });
+                        result = getPage('../php/forms/pawn-form.php', 'POST');
+                         }
                     
                     })
                 })

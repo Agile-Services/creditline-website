@@ -19,10 +19,13 @@ var checkExist_partner = setInterval(function() {
     if (document.getElementById('partnerPlanSubmit')) {
         console.log("Partner Plan form Exists!");
         document.getElementById('partnerPlanSubmit').onclick = function(el){   
+            console.log("1");
+           
+            };
             
             clearInterval(checkExist);
 
-                 }
+                 
             }
     }, 1000);// check every 100ms sessionStorage.setItem("lastname", "Smith");
 
