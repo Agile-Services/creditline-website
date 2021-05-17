@@ -348,6 +348,7 @@ window.onload = function(){
                         //$('meta[name="description"]').attr("content", newDescription);
                         this.document.getElementById("loanPurposeSubmit").addEventListener('click', () => {
                             var amount = document.getElementById("loan_amt");
+                            var loan_type = document.getElementById("type").value;
                             if(amount.value == ""){
                                 amount.style.borderColor = "red";
                             } else {
@@ -453,61 +454,113 @@ window.onload = function(){
                                                 E_mobile.style.borderColor = "red";
                                             }
                                             else{
-                                                result = getFormPage('../php/forms/employment-details-form.php', 'GET');
-                                            }
-
-                                          
-                                            result.then(() => {
-                                                if (document.title != "CreditLine | Employment Details") {
-                                                    document.title = "CreditLine | Employment Details";
+                                                if(loan_type === "Payday Loan"){
+                                                    result = getFormPage('../php/forms/employment-details-form.php', 'GET');
+                                                } else if(loan_type === "Business Loan"){
+                                                    result = getFormPage('../php/forms/business-details.php', 'GET');
                                                 }
-                                                //$('meta[name="description"]').attr("content", newDescription);
-                                                this.document.getElementById("empDetailsSubmit").addEventListener('click', () => {
+                                            }                                          
+                                            result.then(() => {
+                                                if (document.title != "CreditLine | Employment Details" && loan_type === "Payday Loan") {
+                                                    document.title = "CreditLine | Employment Details";
+                                                    this.document.getElementById("empDetailsSubmit").addEventListener('click', () => {
                                                     
-                                                    var employer = document.getElementById("employer_name");
-                                                    var title = document.getElementById("job_title");
-                                                    var start_date = document.getElementById("start_date");
-                                                    var address1 = document.getElementById("address1");
-                                                    var address2 = document.getElementById("address2");
-                                                    var city = document.getElementById("city");
-                                                    var country = document.getElementById("country");
-                                                    var num = document.getElementById("business_number");
-                                                    var status = document.getElementById("status");
-
-                                                    if(employer.value == ""){
-                                                        employer.style.borderColor = "red";
-                                                    }
-                                                    else if(title.value == ""){
-                                                        title.style.borderColor = "red";
-                                                    }
-                                                    else if(start_date.value == ""){
-                                                        start_date.style.borderColor = "red";
-                                                    }
-                                                    else if(address1.value == ""){
-                                                        address1.style.borderColor = "red";
-                                                    }
-                                                    else if(address2.value == ""){
-                                                        address2.style.borderColor = "red";
-                                                    }
-                                                    else if(city.value == ""){
-                                                        city.style.borderColor = "red";
-                                                    }
-                                                    else if(country.value == ""){
-                                                        country.style.borderColor = "red";
-                                                    }
-                                                    else if(num.value == ""){
-                                                        num.style.borderColor = "red";
-                                                    }
-                                                    else if(status.value == ""){
-                                                        status.style.borderColor = "red";
-                                                    }
-                                                    else{
-                                                        result = getFormPage('../php/forms/employment-details-form.php', 'POST');
-                                                    }
-
+                                                        var employer = document.getElementById("employer_name");
+                                                        var title = document.getElementById("job_title");
+                                                        var start_date = document.getElementById("start_date");
+                                                        var address1 = document.getElementById("address1");
+                                                        var address2 = document.getElementById("address2");
+                                                        var city = document.getElementById("city");
+                                                        var country = document.getElementById("country");
+                                                        var num = document.getElementById("business_number");
+                                                        var status = document.getElementById("status");
+    
+                                                        if(employer.value == ""){
+                                                            employer.style.borderColor = "red";
+                                                        }
+                                                        else if(title.value == ""){
+                                                            title.style.borderColor = "red";
+                                                        }
+                                                        else if(start_date.value == ""){
+                                                            start_date.style.borderColor = "red";
+                                                        }
+                                                        else if(address1.value == ""){
+                                                            address1.style.borderColor = "red";
+                                                        }
+                                                        else if(address2.value == ""){
+                                                            address2.style.borderColor = "red";
+                                                        }
+                                                        else if(city.value == ""){
+                                                            city.style.borderColor = "red";
+                                                        }
+                                                        else if(country.value == ""){
+                                                            country.style.borderColor = "red";
+                                                        }
+                                                        else if(num.value == ""){
+                                                            num.style.borderColor = "red";
+                                                        }
+                                                        else if(status.value == ""){
+                                                            status.style.borderColor = "red";
+                                                        }
+                                                        else{
+                                                            result = getFormPage('../php/forms/employment-details-form.php', 'POST');
+                                                        }
+                                                    })
+                                                } else if(loan_type === "Business Loan"){
+                                                    document.title = "Creditline | Business Details";
+                                                    this.document.getElementById("busDetailsSubmit").addEventListener('click', () => {
                                                     
-                                                    
-                                                })
+                                                        var business_name = document.getElementById("business_name");
+                                                        var date_est = document.getElementById("date_established");
+                                                        var desc = document.getElementById("businss_desc");
+                                                        var cert = document.getElementById("cert");
+                                                        var trn = document.getElementById("trn");
+                                                        var income = document.getElementById("income");
+                                                        var address1 = document.getElementById("address1");
+                                                        var address2 = document.getElementById("address2");
+                                                        var city = document.getElementById("city");
+                                                        var country = document.getElementById("country");
+                                                        var num = document.getElementById("business_number");
+                                                        
+    
+                                                        if(business_name.value == ""){
+                                                            business_name.style.borderColor = "red";
+                                                        }
+                                                        else if(date_est.value == ""){
+                                                            date_est.style.borderColor = "red";
+                                                        }
+                                                        else if(desc.value == ""){
+                                                            desc.style.borderColor = "red";
+                                                        }
+                                                        else if(cert.value == null){
+                                                            cert.style.borderColor = "red";
+                                                        }
+                                                        else if(trn.value == ""){
+                                                            trn.style.borderColor = "red";
+                                                        }
+                                                        else if(income.value == ""){
+                                                            income.style.borderColor = "red";
+                                                        }
+                                                        else if(address1.value == ""){
+                                                            address1.style.borderColor = "red";
+                                                        }
+                                                        else if(address2.value == ""){
+                                                            address2.style.borderColor = "red";
+                                                        }
+                                                        else if(city.value == ""){
+                                                            city.style.borderColor = "red";
+                                                        }
+                                                        else if(country.value == ""){
+                                                            country.style.borderColor = "red";
+                                                        }
+                                                        else if(num.value == ""){
+                                                            num.style.borderColor = "red";
+                                                        }
+                                                        else{
+                                                            result = getFormPage('../php/forms/business-details.php', 'POST');
+                                                        }   
+                                                    })
+                                                }
                                             })
                                         })
                                     })
