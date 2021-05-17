@@ -22,9 +22,9 @@
         </div>
     
         <div class="form-row">
-            <div class="col w-100">
+            <div class="col">
                 <label for="business_desc">Description of Business</label><br>
-                <textarea class='formVal' id="business_desc" name="business_desc" placeholder="Description of Business" rows=10><br><br>
+                <textarea class='formVal w-100' id="business_desc" name="business_desc" placeholder="Write a short description of what services your business offers." rows=10></textarea><br><br>
             </div>
         </div>
 
@@ -61,13 +61,6 @@
             <div class="col"></div>
         </div><br><br>
 
-        <div class="form-row">
-            <div class="col">
-                <label for="address1">Street Address Line 1</label><br>
-                <input class="w-100" type="text"  class='formVal'id="address1" name="address1" placeholder="Stresst Address Line 1" Address 1" value=""><br><br>
-            </div>
-        </div>
-
         <h2 class="text-success">Business Location</h2>
         <div class="form-row">
             <div class="col">
@@ -85,11 +78,6 @@
             <div class="col">
                 <label for="lname">City/Town</label><br>
                 <input type="text" class='formVal' id="city" name="city" placeholder="City/Town" value=""><br><br>
-            </div>
-
-            <div class="col">
-                <label for="lname">Residential Area/District</label><br>
-                <input type="text" class='formVal' id="rarea" name="rarea" placeholder="Residential Area" value=""><br><br>
             </div>
 
             <div class="col">
@@ -357,18 +345,6 @@
             
         </div>
 
-        <div class="form-row">
-            <div class="col">
-                <label for="employement_status">Employment Status</label><br>
-                <input type="checkbox" class='formVal' id="status" name="employed" value="Employed">
-                <label style="font-weight: normal;" for="vehicle1">Employed</label><br>
-                <input type="checkbox" id="status" name="part-Time" value="Part-Time">
-                <label style="font-weight: normal;" for="vehicle2">Part-Time</label><br>
-                <input type="checkbox" id="status" name="self-employed" value="Self-Employed">
-                <label style="font-weight: normal;" for="vehicle3">Self-Employed</label><br><br>
-            </div>
-
-        </div>
 
         <!-- <div class="form-row">
             
@@ -380,7 +356,7 @@
         </div> -->
 
 
-        <div class="text-center"><button id="empDetailsSubmit" class="btn btn-success" type="button">Submit</button></div>
+        <div class="text-center"><button id="busDetailsSubmit" class="btn btn-success" type="button">Submit</button></div>
 
     </form>
     <?php
