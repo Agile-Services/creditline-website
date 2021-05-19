@@ -9,7 +9,7 @@
         <h1>Application</h1>
     </div>
     <div class="main-content container">
-        <form id="partnerPlan_form" action="php/verify.php" method="post" enctype="multipart/form-data">
+        <form id="partnerPlan_form" enctype="multipart/form-data">
             <h2 class="text-success">Contact Details</h2><br>
             <div class="form-row">
                 <div class="col">
@@ -381,7 +381,7 @@
     
                 <div class="col">
                     <label for="work_country">Country</label><br>
-                    <select list="country" placeholder="Country of Citizenship">
+                    <select list="country" id="work_country" name="country" placeholder="Country of Citizenship">
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Åland Islands">Åland Islands</option>
                         <option value="Albania">Albania</option>
@@ -639,17 +639,19 @@
                 
             </div>
     
+            <h4 style="color:red" id="error2"></h4>
             <div class="form-row">
                 <div class="col">
                     <label for="employement_status">Employment Status</label><br><br>
                     <input type="checkbox" id="employement_status" class="employed" name="employed" value="Employed">
                     <label style="font-weight: normal;" for="Employed">Employed</label><br>
-                    <input type="checkbox" id="employement_status-Time" class="part_time" name="part-Time" value="Part-Time">
+                    <input type="checkbox" id="employement_status_Time" class="part_time" name="part-Time" value="Part-Time">
                     <label style="font-weight: normal;" for="Part">Part-Time</label><br>
-                    <input type="checkbox" id="self-employement_status" class="self_employed" name="self-employed" value="Self-Employed">
+                    <input type="checkbox" id="self_employement_status" class="self_employed" name="self-employed" value="Self-Employed">
                     <label style="font-weight: normal;" for="Self">Self-Employed</label><br><br>
                 </div>
             </div>
+            
     
             <div class="form-row">
                 <div class="col">
@@ -661,17 +663,20 @@
                     <label for="plan_amt">Plan Amount</label>
                     <input type="text" id="plan_amt" name="plan_amt"><br><br>
                 </div>
-    
+
+                <h4 style="color:red" id="error"></h4> 
                 <div class="col">
                     <label for="payment_plan">Payment Plan</label><br><br>
-                    <input type="checkbox" id="payment_plan" class="weekly" name="weekly" value="weekly">
+                    <input type="checkbox" id="weekly" class="weekly" name="weekly" value="weekly">
                     <label style="font-weight: normal;" for="weekly">Weekly</label><br>
-                    <input type="checkbox" id="payment_plan" class="fort_nightly" name="fort_nightly" value="fort_nightly">
+                    <input type="checkbox" id="fort_nightly" class="fort_nightly" name="fort_nightly" value="fort_nightly">
                     <label style="font-weight: normal;" for="fort_nightly">Fortnightly</label><br>
-                    <input type="checkbox" id="payment_plan" class="montly" name="monthly" value="monthly">
+                    <input type="checkbox" id="monthly" class="monthly" name="monthly" value="monthly">
                     <label style="font-weight: normal;" for="monthly">Monthly</label><br><br>
                 </div>
-    
+                
+
+                <h4 style="color:red" id="error1"></h4> 
                 <div class="col">
                     <label for="payment_method">Payment Method</label><br><br>
                     <input type="checkbox" id="bank_transfer" class="bank_transfer" name="bank_transfer" value="bank_transfer">
@@ -679,11 +684,12 @@
                     <input type="checkbox" id="cash" class="cash" name="cash" value="cash">
                     <label style="font-weight: normal;" for="cash">Cash</label><br><br>
                 </div>
+                
     
             </div>
     
             <!--Considering banking this part only visible or leaving like a tag to say only if paying by bank transfer-->
-    
+            <h4>Only required if bank transfer was choosen of means of payment</h4>
             <div class="form-row">
                 <div class="col">
                     <label for="bank">Bank</label><br>
@@ -699,13 +705,14 @@
             </div>
     
             <div class="form-row">
-                <div class="col custom-file">
+                <div class="col">
                     <label for="bank">Tax Registration Number (TRN)</label>
                     <input type="text" id="trn" name="trn" >
                 </div>
             </div>
             <br>
             <div class="form-row">
+            <h4 style="color:red" id="error3"></h4> 
                 <div class="col custom-file">
                     <label class="custom-file-label" for="id">Upload Image of Identification</label><br>
                     <input class="custom-file-input" type="file" id="id" name="id"  onchange="
@@ -724,7 +731,7 @@
                 });
             </script>
     
-            <div class="text-center"><button id="partnerPlanSubmit" class="btn btn-success btn-lg" type="button">Submit</button></div>
+            <div class="text-center"><button id="partnerPlanSubmit" class="btn btn-success btn-lg" name="submit" type="button">Submit</button></div>
     
         </form>
     </div>
