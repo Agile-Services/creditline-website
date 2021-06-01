@@ -64,8 +64,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
                 if(move_uploaded_file($fileTempname,$fileDestination)){
                     echo "Upload Successful";
-                    $message = "First Name: ".$name."\nMiddle Name: ".$mname."\nLast Name: ".$lname."\nTRN: ".$trn."\nMobile Number: ".$mobile.
-                    "\nEmail Address: ".$email."\nAddress: ".$address1." ".$address2." ".$city."\nJob Title: ".$job_title."\nStarted: ".$start_date."\nEmployed at: ".$employer_name."\nWork Address: ".$work_address1." ".$work_address2." ".$work_city."\nWork Number: ".$work_business_number."\nPlan Amount: ".$plan_amt."\nPayment Method: ".$payment_method."\nRequested Draw Date: ".$draw_Date;
+                    $message = "First Name: ".$name."<br>Middle Name: ".$mname."<br>Last Name: ".$lname."<br>TRN: ".$trn."<br>Mobile Number: ".$mobile.
+                    "<br>Email Address: ".$email."<br>Address: ".$address1." ".$address2." ".$city."<br>Job Title: ".$job_title."<br>Started: ".$start_date."<br>Employed at: ".$employer_name."<br>Work Address: ".$work_address1." ".$work_address2." ".$work_city."<br>Work Number: ".$work_business_number."<br>Plan Amount: ".$plan_amt."<br>Payment Method: ".$payment_method."<br>Requested Draw Date: ".$draw_Date;
 
                     //Instantiation and passing `true` enables exceptions
                     $mail = new PHPMailer(true);

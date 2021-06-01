@@ -327,16 +327,41 @@
 
         </div>
 
-        <!-- <div class="form-row">
-            
-            <div class="col">
-                <label for="emergency_contact_sig">Signature</label><br>
-                <input type="text" class='formVal' id="emergency_contact_sig" name="emergency_contact_" placeholder="J.Brown" value=""><br><br>
+        <div class="form-row">
+        <label for="pay">Upload Last 3 Payslips</label><br>
+        <div class="col m-3">
+                <label for="id">Pay Slip 1:</label><br>
+                <input type="file" id="pay_slip1" name="pay_slip1">
             </div>
 
-        </div> -->
+        <div class="col m-3">
+            <label for="expire">>Pay Slip 2:</label><br>
+            <input type="file" id="pay_slip2" name="pay_slip2">
+        </div>
 
+        </div>
 
+        <div class="col m-3">
+                <label for="id">Pay Slip 3:</label><br>
+                <input type="file" id="pay_slip3" name="pay_slip3">
+            </div>
+
+    </div>
+    <div class="form-row">
+            
+            <div class="col m-2">
+                    <label for="id">Job Letter:</label><br>
+                    <input type="file" id="job_letter" name="job_letter">
+                </div>
+    
+                <div class="col m-2">
+                    <label for="expire">Proof of Address (Bill in your name):</label><br>
+                    <input type="file" id="proof_of_address" name="proof_of_address">
+                </div>
+    
+            </div>
+    
+        </div>
         <div class="text-center"><button id="empDetailsSubmit" class="btn btn-success" type="button">Submit</button></div>
 
     </form>

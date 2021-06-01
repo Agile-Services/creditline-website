@@ -132,111 +132,111 @@ window.onload = function(){
                         var part_time = document.getElementById("employement_status_Time")
                         var self_employed = document.getElementById("self_employement_status")
 
-                        // if(cash.checked == false && bank_transfer.checked == false){
-                        //     document.getElementById("error1").innerHTML = "Please mark one of the checkboxs";  
-                        // }
-                        // else if(cash.checked == true && bank_transfer.checked == true){
-                        //     document.getElementById("error1").innerHTML = "Please mark only one of the checkboxs";  
-                        // }
-                        // else if(cash.checked == true && bank_transfer.checked == false){
-                        //     payment_method=cash.value;
-                        // }
-                        // else if(cash.checked == false && bank_transfer.checked == true){
-                        //     payment_method=bank_transfer.value;
-                        // }
+                        if(cash.checked == false && bank_transfer.checked == false){
+                            document.getElementById("error1").innerHTML = "Please mark one of the checkboxs";  
+                        }
+                        else if(cash.checked == true && bank_transfer.checked == true){
+                            document.getElementById("error1").innerHTML = "Please mark only one of the checkboxs";  
+                        }
+                        else if(cash.checked == true && bank_transfer.checked == false){
+                            payment_method=cash.value;
+                        }
+                        else if(cash.checked == false && bank_transfer.checked == true){
+                            payment_method=bank_transfer.value;
+                        }
 
 
-                        // if(weekly.checked == false && fortnight.checked == false && monthly.checked == false){
-                        //     return document.getElementById("error").innerHTML = "Please mark one of the checkboxs";  
-                        // }
-                        // else if(weekly.checked == true && fortnight.checked == true && monthly.checked == true){
-                        //     return document.getElementById("error").innerHTML = "Please mark only one of the checkboxs";  
-                        // }
-                        // else if(weekly.checked == true && fortnight.checked == false && monthly.checked == false){
-                        //     payment_plan=weekly.value;
-                        // }
-                        // else if(weekly.checked == false && fortnight.checked == true && monthly.checked == false){
-                        //     payment_plan=fortnight.value;
-                        // }
-                        // else if(weekly.checked == false && fortnight.checked == false && monthly.checked == true){
-                        //     payment_plan=monthly.value;
-                        // }
+                        if(weekly.checked == false && fortnight.checked == false && monthly.checked == false){
+                            return document.getElementById("error").innerHTML = "Please mark one of the checkboxs";  
+                        }
+                        else if(weekly.checked == true && fortnight.checked == true && monthly.checked == true){
+                            return document.getElementById("error").innerHTML = "Please mark only one of the checkboxs";  
+                        }
+                        else if(weekly.checked == true && fortnight.checked == false && monthly.checked == false){
+                            payment_plan=weekly.value;
+                        }
+                        else if(weekly.checked == false && fortnight.checked == true && monthly.checked == false){
+                            payment_plan=fortnight.value;
+                        }
+                        else if(weekly.checked == false && fortnight.checked == false && monthly.checked == true){
+                            payment_plan=monthly.value;
+                        }
 
-                        // if(full_time.checked == false && part_time.checked == false && self_employed.checked == false){
-                        //     return document.getElementById("error2").innerHTML = "Please mark one of the checkboxs";  
-                        // }
-                        // else if(full_time.checked == true && part_time.checked == true && self_employed.checked == true){
-                        //     return document.getElementById("error2").innerHTML = "Please mark only one of the checkboxs";  
-                        // }
-                        // else if(full_time.checked == true && part_time.checked == false && self_employed.checked == false){
-                        //     emp_status=full_time.value;
-                        // }
-                        // else if(full_time.checked == false && part_time.checked == true && self_employed.checked == false){
-                        //     emp_status=part_time.value;
-                        // }
-                        // else if(full_time.checked == false && part_time.checked == false && self_employed.checked == true){
-                        //     emp_status=self_employed.value;
-                        // }
+                        if(full_time.checked == false && part_time.checked == false && self_employed.checked == false){
+                            return document.getElementById("error2").innerHTML = "Please mark one of the checkboxs";  
+                        }
+                        else if(full_time.checked == true && part_time.checked == true && self_employed.checked == true){
+                            return document.getElementById("error2").innerHTML = "Please mark only one of the checkboxs";  
+                        }
+                        else if(full_time.checked == true && part_time.checked == false && self_employed.checked == false){
+                            emp_status=full_time.value;
+                        }
+                        else if(full_time.checked == false && part_time.checked == true && self_employed.checked == false){
+                            emp_status=part_time.value;
+                        }
+                        else if(full_time.checked == false && part_time.checked == false && self_employed.checked == true){
+                            emp_status=self_employed.value;
+                        }
 
 
-                        // if(fname.value == ""){
-                        //     fname.style.borderColor = "red";
-                        // }
-                        // else if(mname.value == ""){
-                        //     mname.style.borderColor = "red";
-                        // }
-                        // else if(lname.value == ""){
-                        //     lname.style.borderColor = "red";
-                        // }
-                        // else if(mobile.value == ""){
-                        //     mobile.style.borderColor = "red";
-                        // }
-                        // else if(email.value == ""){
-                        //     email.style.borderColor = "red";
-                        // }
-                        // else if(address1.value == ""){
-                        //     address1.style.borderColor = "red";
-                        // }
-                        // else if(address2.value == ""){
-                        //     address2.style.borderColor = "red";
-                        // }
-                        // else if(city.value == ""){
-                        //     city.style.borderColor = "red";
-                        // }
-                        // else if(employer_name.value == ""){
-                        //     employer_name.style.borderColor = "red";
-                        // }
-                        // else if(job_title.value == ""){
-                        //     job_title.style.borderColor = "red";
-                        // }
-                        // else if(start_date.value == ""){
-                        //     start_date.style.borderColor = "red";
-                        // }
-                        // else if(work_address_line_1.value == ""){
-                        //     work_address_line_1.style.borderColor = "red";
-                        // }
-                        // else if(work_address_line_2.value == ""){
-                        //     work_address_line_2.style.borderColor = "red";
-                        // }
-                        // else if(work_city.value == ""){
-                        //     work_city.style.borderColor = "red";
-                        // }
-                        // else if(trn.value == ""){
-                        //     trn.style.borderColor = "red";
-                        // }
-                        // else if(work_number.value == ""){
-                        //     work_number.style.borderColor = "red";
-                        // }
-                        // else if(draw_date.value == ""){
-                        //     draw_date.style.borderColor = "red";
-                        // }
-                        // else if(plan_amt.value == ""){
-                        //     plan_amt.style.borderColor = "red";
-                        // }
-                        // else if( document.getElementById("id").fileslength == 0){
-                        // return document.getElementById("error3").innerHTML = "No Files have been selected";
-                        // }
-                        // else{
+                        if(fname.value == ""){
+                            fname.style.borderColor = "red";
+                        }
+                        else if(mname.value == ""){
+                            mname.style.borderColor = "red";
+                        }
+                        else if(lname.value == ""){
+                            lname.style.borderColor = "red";
+                        }
+                        else if(mobile.value == ""){
+                            mobile.style.borderColor = "red";
+                        }
+                        else if(email.value == ""){
+                            email.style.borderColor = "red";
+                        }
+                        else if(address1.value == ""){
+                            address1.style.borderColor = "red";
+                        }
+                        else if(address2.value == ""){
+                            address2.style.borderColor = "red";
+                        }
+                        else if(city.value == ""){
+                            city.style.borderColor = "red";
+                        }
+                        else if(employer_name.value == ""){
+                            employer_name.style.borderColor = "red";
+                        }
+                        else if(job_title.value == ""){
+                            job_title.style.borderColor = "red";
+                        }
+                        else if(start_date.value == ""){
+                            start_date.style.borderColor = "red";
+                        }
+                        else if(work_address_line_1.value == ""){
+                            work_address_line_1.style.borderColor = "red";
+                        }
+                        else if(work_address_line_2.value == ""){
+                            work_address_line_2.style.borderColor = "red";
+                        }
+                        else if(work_city.value == ""){
+                            work_city.style.borderColor = "red";
+                        }
+                        else if(trn.value == ""){
+                            trn.style.borderColor = "red";
+                        }
+                        else if(work_number.value == ""){
+                            work_number.style.borderColor = "red";
+                        }
+                        else if(draw_date.value == ""){
+                            draw_date.style.borderColor = "red";
+                        }
+                        else if(plan_amt.value == ""){
+                            plan_amt.style.borderColor = "red";
+                        }
+                        else if( document.getElementById("id").fileslength == 0){
+                        return document.getElementById("error3").innerHTML = "No Files have been selected";
+                        }
+                        else{
                         var id = document.getElementById("id").files[0];
                         console.log(id);
                         var formData = new FormData();
@@ -282,7 +282,7 @@ window.onload = function(){
                           });
                    //  }
                         result = getPage('../php/forms/partnerPlan-form.php', 'POST');
-                      //  }
+                        }
        
                     })
                 })
@@ -394,10 +394,6 @@ window.onload = function(){
                         formData.append("make",make.value);
                         formData.append("sig",sig.value);
                         formData.set("id",id);
-
-                        for(var pair of formData.entries()) {
-                            console.log(pair[0]+ ', '+ pair[1]);
-                         }
                             
                         $.ajax({
                             type: "POST",
@@ -492,6 +488,9 @@ window.onload = function(){
                             if(amount.value == ""){
                                 amount.style.borderColor = "red";
                             } else {
+
+                                sessionStorage.setItem("Loan Type",loan_type);
+                                sessionStorage.setItem("Loan Amount",amount.value);
                                 result = getFormPage('../php/forms/general-info-form.php', 'GET');
                             }
                             
@@ -508,9 +507,10 @@ window.onload = function(){
                                     var pob = document.getElementById("pob");
                                     var mothers_maiden = document.getElementById("mothers_maiden");
                                     var num_of_dependents = document.getElementById("dependents");
-                                    var id_type = document.getElementById("id_type");
-                                    var id_num = document.getElementById("id_num");
-                                    var id_expiration = document.getElementById("id_expire");
+                                    var trn = document.getElementById("trn");
+                                    var id = document.getElementById("id").files[0];
+                                    var id2= document.getElementById("id2").files[0];
+                                
                             
                                     if(fname.value == ""){
                                         fname.style.borderColor = "red";
@@ -532,18 +532,75 @@ window.onload = function(){
                                     }  
                                     else if(num_of_dependents.value == ""){
                                         num_of_dependents.style.borderColor = "red";
-                                    }  
-                                    else if(id_type.value == ""){
-                                        id_type.style.borderColor = "red";
-                                    }  
-                                    else if(id_expiration.value == ""){
-                                        id_expiration.style.borderColor = "red";
-                                    }  
-                                    else if(id_num.value == ""){
-                                        id_num.style.borderColor = "red";
-                                    }  
+                                    }   
+                                    else if(typeof id === 'undefined'){
+                                        alert("No file selected for Business Income Statement");
+                                    }
+                                    else if(typeof id2 === 'undefined'){
+                                        alert("No file selected for Business Income Statement");
+                                    }
+                                    else if(trn.value == ""){
+                                        trn.style.borderColor = "red";
+                                    }
                                     else{
-                                        result = getFormPage('../php/forms/contact-details-form.php', 'GET');
+
+                                        var title = document.getElementById("title").value;
+                                        sessionStorage.setItem("Title",title);
+                            
+                                        var fname = document.getElementById("fname").value;
+                                        sessionStorage.setItem("First Name",fname);
+                            
+                                        var mname = document.getElementById("mname").value;
+                                        sessionStorage.setItem("Middle Name",mname);
+                            
+                                        var lname = document.getElementById("lname").value;
+                                        sessionStorage.setItem("Last Name",lname);
+                            
+                                        var gender = document.getElementById("gender").value;
+                                        sessionStorage.setItem("Gender",gender);
+                            
+                                        var dob = document.getElementById("dob").value;
+                                        sessionStorage.setItem("DOB",dob);
+                            
+                                        var pob = document.getElementById("pob").value;
+                                        sessionStorage.setItem("POB",pob);
+                            
+                                        var marital_status = document.getElementById("marital_status").value;
+                                        sessionStorage.setItem("Marital Status",marital_status);
+                            
+                                        var mothers_maiden = document.getElementById("mothers_maiden").value;
+                                        sessionStorage.setItem("Mother's Maiden",mothers_maiden);
+                            
+                                        var dependents = document.getElementById("dependents").value;
+                                        sessionStorage.setItem("Dependents",dependents);
+                            
+                                        var citizenship = document.getElementById("citizenship").value;
+                                        sessionStorage.setItem("Citizenship",citizenship);
+                            
+                                        var resident_country = document.getElementById("resident_country").value;
+                                        sessionStorage.setItem("Resident Country",resident_country);
+                            
+                                        var country_of_issue = document.getElementById("country_of_issue").value;
+                                        sessionStorage.setItem("country_of_issue",country_of_issue);
+
+                                        var trn = document.getElementById("trn").value;
+                                        sessionStorage.setItem("trn",trn);
+
+                                        var formData = new FormData();
+                                        formData.append("id",id);
+                                        formData.append("id2",id2);
+                                        
+                                        $.ajax({
+                                            type: "POST",
+                                            url: "php/id.php",
+                                            data: formData,
+                                            processData: false,
+                                            contentType: false
+                                            }).done(function(response){
+                                                console.log(response);
+                                            });
+                                        
+                                        var result = getFormPage('../php/forms/contact-details-form.php', 'GET');
                                     }    
                                     result.then(() => {
                                         if (document.title != "CreditLine | Contact Details") {
@@ -594,6 +651,58 @@ window.onload = function(){
                                                 E_mobile.style.borderColor = "red";
                                             }
                                             else{
+
+                                                var mphome = document.getElementById("mobile_number").value;
+                                                sessionStorage.setItem("Mobile",mphome);
+                                    
+                                                var hphone = document.getElementById("home_number").value;
+                                                sessionStorage.setItem("Home Phone",hphone);
+                                    
+                                                var bphone = document.getElementById("business_number").value;
+                                                sessionStorage.setItem("Business Number",bphone);
+                                    
+                                                var ophone = document.getElementById("other_number").value;
+                                                sessionStorage.setItem("Other Number",ophone);
+                                    
+                                                var email = document.getElementById("email").value;
+                                                sessionStorage.setItem("Email",email);
+                                    
+                                                var address1 = document.getElementById("address1").value;
+                                                sessionStorage.setItem("Address Line 1",address1);
+                                    
+                                                var address2 = document.getElementById("address2").value;
+                                                sessionStorage.setItem("Address Line 2",address2);
+                                    
+                                                var district = document.getElementById("district").value;
+                                                sessionStorage.setItem("City/Town",district);
+                                    
+                                                var rarea = document.getElementById("rarea").value;
+                                                sessionStorage.setItem("Residential Area",rarea);
+                                    
+                                                var zip = document.getElementById("zip").value;
+                                                sessionStorage.setItem("Postal Code",zip);
+                                    
+                                                var efname = document.getElementById("emergency_contact_fname").value;
+                                                sessionStorage.setItem("E-Contact First Name",efname);
+                                    
+                                                var emname = document.getElementById("emergency_contact_mname").value;
+                                                sessionStorage.setItem("E-Contact Middle Name",emname);
+                                    
+                                                var elname = document.getElementById("emergency_contact_lname").value;
+                                                sessionStorage.setItem("E-Contact Last Name",elname);
+                                    
+                                                var emobile = document.getElementById("emergency_contact_mobile_number").value;
+                                                sessionStorage.setItem("E-Contact Mobile Number",emobile);
+                                    
+                                                var ehome = document.getElementById("emergency_contact_home_number").value;
+                                                sessionStorage.setItem("E-Contact Home Number",ehome);
+                                    
+                                                var ebusiness = document.getElementById("emergency_contact_business_number").value;
+                                                sessionStorage.setItem("E-Contact Business Number",ebusiness);
+                                    
+                                                var eother = document.getElementById("emergency_contact_other_number").value;
+                                                sessionStorage.setItem("E-Contact Other Number",eother);
+
                                                 if(loan_type === "Payday Loan"){
                                                     result = getFormPage('../php/forms/employment-details-form.php', 'GET');
                                                 } else if(loan_type === "Business Loan"){
@@ -601,6 +710,7 @@ window.onload = function(){
                                                 }
                                             }                                          
                                             result.then(() => {
+                                                console.log(loan_type);
                                                 if (document.title != "CreditLine | Employment Details" && loan_type === "Payday Loan") {
                                                     document.title = "CreditLine | Employment Details";
                                                     this.document.getElementById("empDetailsSubmit").addEventListener('click', () => {
@@ -614,6 +724,14 @@ window.onload = function(){
                                                         var country = document.getElementById("country");
                                                         var num = document.getElementById("business_number");
                                                         var status = document.getElementById("status");
+                                                        var pay1 = document.getElementById("pay_slip1").files[0];
+                                                        var pay2 = document.getElementById("pay_slip2").files[0];
+                                                        var pay3 = document.getElementById("pay_slip3").files[0];
+                                                        var letter = document.getElementById("job_letter").files[0];
+                                                        var proof_of_addr = document.getElementById("proof_of_address").files[0]
+
+                                                        
+                                                        
     
                                                         if(employer.value == ""){
                                                             employer.style.borderColor = "red";
@@ -642,7 +760,58 @@ window.onload = function(){
                                                         else if(status.value == ""){
                                                             status.style.borderColor = "red";
                                                         }
+                                                        else if (typeof pay1 === 'undefined') {
+                                                            alert("No file selected for Pay Slip One");
+                                                          }
+                                                          else if (typeof pay2 === 'undefined') {
+                                                            alert("No file selected for for Pay Slip Two");
+                                                          }
+                                                          else if (typeof pay3 === 'undefined') {
+                                                            alert("No file selected for for Pay Slip Three");
+                                                          }
+                                                          else if (typeof letter === 'undefined') {
+                                                            alert("No file selected for Business Certification");
+                                                          }
+                                                          else if (typeof proof_of_addr === 'undefined') {
+                                                            alert("No file selected for Business Certification");
+                                                          }
                                                         else{
+                                                        
+                                                            sessionStorage.setItem("employer_name",employer.value);
+                                                            sessionStorage.setItem("job_title",title.value);
+                                                            sessionStorage.setItem("start_date",start_date.value);
+                                                            sessionStorage.setItem("Address1 of Work",address1.value);
+                                                            sessionStorage.setItem("Address2 of Work",address2.value);
+                                                            sessionStorage.setItem("Country of work",country.value);
+                                                            sessionStorage.setItem("Employment status",status.value);
+                                                            sessionStorage.setItem("Number of Business",num.value);
+                                                                
+    
+                                                            var formData = new FormData();
+                                                            formData.append("pay_1",pay1);
+                                                            formData.append("pay_2",pay2);
+                                                            formData.append("pay_3",pay3);
+                                                            formData.append("job_letter",letter);
+                                                            formData.append("proof_of_addr",proof_of_addr);
+    
+                                                            for(i=0;  i<Object.keys(sessionStorage).length; i++){
+                                                                var name = Object.keys(sessionStorage)[i]
+                                                                var val = sessionStorage.getItem(name);
+                                                                formData.append(name,val);
+                                                            }
+    
+    
+    
+                                                            $.ajax({
+                                                                type: "POST",
+                                                                url: "php/sendPersonalLoan.php",
+                                                                data: formData,
+                                                                processData: false,
+                                                                contentType: false
+                                                                }).done(function(response){
+                                                                    console.log(response);
+                                                                });
+
                                                             result = getFormPage('../php/forms/employment-details-form.php', 'POST');
                                                         }
                                                     })
@@ -652,10 +821,10 @@ window.onload = function(){
                                                     
                                                         var business_name = document.getElementById("business_name");
                                                         var date_est = document.getElementById("date_established");
-                                                        var desc = document.getElementById("businss_desc");
-                                                        var cert = document.getElementById("cert");
+                                                        var desc = document.getElementById("business_desc").value;
+                                                        var cert = document.getElementById("cert").files[0];
                                                         var trn = document.getElementById("trn");
-                                                        var income = document.getElementById("income");
+                                                        var income = document.getElementById("income").files[0];
                                                         var address1 = document.getElementById("address1");
                                                         var address2 = document.getElementById("address2");
                                                         var city = document.getElementById("city");
@@ -669,17 +838,17 @@ window.onload = function(){
                                                         else if(date_est.value == ""){
                                                             date_est.style.borderColor = "red";
                                                         }
-                                                        else if(desc.value == ""){
+                                                        else if(desc == ""){
                                                             desc.style.borderColor = "red";
                                                         }
-                                                        else if(cert.value == null){
-                                                            cert.style.borderColor = "red";
-                                                        }
+                                                        else if (typeof cert === 'undefined') {
+                                                            alert("No file selected for Business Certification");
+                                                          }
                                                         else if(trn.value == ""){
                                                             trn.style.borderColor = "red";
                                                         }
-                                                        else if(income.value == ""){
-                                                            income.style.borderColor = "red";
+                                                        else if(typeof income === 'undefined'){
+                                                            alert("No file selected for Business Income Statement");
                                                         }
                                                         else if(address1.value == ""){
                                                             address1.style.borderColor = "red";
@@ -697,6 +866,37 @@ window.onload = function(){
                                                             num.style.borderColor = "red";
                                                         }
                                                         else{
+                                                        
+                                                        sessionStorage.setItem("Name of Business",business_name.value);
+                                                        sessionStorage.setItem("Date Established",date_est.value);
+                                                        sessionStorage.setItem("Business Description",desc);
+                                                        sessionStorage.setItem("Address1 of Business",address1.value);
+                                                        sessionStorage.setItem("Address2 of Business",address2.value);
+                                                        sessionStorage.setItem("City of Business",city.value);
+                                                        sessionStorage.setItem("County of Busiess",country.value);
+                                                        sessionStorage.setItem("Number of Business",num.value);
+
+                                                        var formData = new FormData();
+                                                        formData.append("income",income);
+                                                        formData.append("cert",cert);
+                                                        formData.append("trn",trn.value);
+
+                                                        for(i=0;  i<Object.keys(sessionStorage).length; i++){
+                                                            var name = Object.keys(sessionStorage)[i]
+                                                            var val = sessionStorage.getItem(name);
+                                                            formData.append(name,val);
+                                                        }
+
+                                                        $.ajax({
+                                                            type: "POST",
+                                                            url: "php/sendEmail.php",
+                                                            data: formData,
+                                                            processData: false,
+                                                            contentType: false
+                                                            }).done(function(response){
+                                                                console.log(response);
+                                                            });
+
                                                             result = getFormPage('../php/forms/business-details.php', 'POST');
                                                         }   
                                                     })
