@@ -11,7 +11,11 @@
     <div class="application-heading text-center">
         <h1>Application</h1>
     </div>
+    
     <div class="main-content container">
+        <div class="flash container mt-5">
+                <!-- Flashes go here -->
+        </div>
         <form class="needs-validation"  action="php/verify.php" Content-Type="multipart/form-data" method="post">
             <h2 class="text-success">Contact Details</h2><br>
             <div class="form-row">
@@ -337,8 +341,8 @@
     
             <div class="form-row">
                 <div class="col">
-                    <label for="trn">Tax Registration Number (TRN)</label>
-                      <input type="text" id="trn" name="trn" placeholder="123-456-789" value="">
+                    <label for="trn">Tax Registration Number (TRN)</label><br>
+                    <input type="text" id="trn" name="trn" placeholder="123-456-789" value="">
                 </div>
                 <div class="col"></div>
             </div>
@@ -366,7 +370,7 @@
     
             <div class="form-row">
                 <div class="col">
-                    <label for="makel">Make</label><br>
+                    <label for="make">Make</label><br>
                     <input type="text" id="make" name="make" placeholder="Product Make"><br><br>
                 </div>
     
@@ -405,7 +409,7 @@
             
 
             <label for="signature">Signature</label><br>
-                <input type="text" id="signature" name="signature" placeholder="J.Brown"><br><br>
+            <input type="text" id="signature" name="signature" placeholder="J.Brown"><br><br>
 
             <div class="text-center"><button id="pawnSubmit" class="btn btn-success btn-lg" type="button">Submit</button></div>
         </form>

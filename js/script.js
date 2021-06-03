@@ -124,62 +124,114 @@ window.onload = function(){
                         var payment_method = document.getElementById("");
                         var bank = document.getElementById("bank");
                         var acc_number = document.getElementById("acc_num");
-
+                        let errors = []
                         if(fname.value == ""){
-                            fname.style.borderColor = "red";
+                            makeAlert(fname);
+                            let error = "First Name is Required!";
+                            errors.push(error)
                         }
-                        else if(mname.value == ""){
-                            mname.style.borderColor = "red";
+                        if(mname.value == ""){
+                            makeAlert(mname);
+                            let error = "Middle Name is Required!";
+                            errors.push(error)
                         }
-                        else if(lname.value == ""){
-                            lname.style.borderColor = "red";
+                        if(lname.value == ""){
+                            makeAlert(lname);
+                            let error = "Last Name is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(mobile.value == ""){
-                            mobile.style.borderColor = "red";
+                        if(mobile.value == ""){
+                            makeAlert(mobile);
+                            let error = "Mobile Number is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(email.value == ""){
-                            email.style.borderColor = "red";
+                        if(email.value == ""){
+                            makeAlert(email);
+                            let error = "Email is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(address1.value == ""){
-                            address1.style.borderColor = "red";
+                        if(address1.value == ""){
+                            makeAlert(address1);
+                            let error = "Address 1 is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(address2.value == ""){
-                            address2.style.borderColor = "red";
+                        if(address2.value == ""){
+                            makeAlert(address2);
+                            let error = "Address 2 is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(city.value == ""){
-                            city.style.borderColor = "red";
+                        if(city.value == ""){
+                            makeAlert(city);
+                            let error = "City is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(employer_name.value == ""){
-                            employer_name.style.borderColor = "red";
+                        if(employer_name.value == ""){
+                            makeAlert(employer_name);
+                            let error = "Employer Name is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(job_title.value == ""){
-                            job_title.style.borderColor = "red";
+                        if(job_title.value == ""){
+                            makeAlert(job_title);
+                            let error = "Job Title is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(start_date.value == ""){
-                            start_date.style.borderColor = "red";
+                        if(start_date.value == ""){
+                            makeAlert(start_date);
+                            let error = "Start Date is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(work_address_line_1.value == ""){
-                            work_address_line_1.style.borderColor = "red";
+                        if(work_address_line_1.value == ""){
+                            makeAlert(work_address_line_1);
+                            let error = "Work Address 1 is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(work_address_line_2.value == ""){
-                            work_address_line_2.style.borderColor = "red";
+                        if(work_address_line_2.value == ""){
+                            makeAlert(work_address_line_2);
+                            let error = "Work Address 2 is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(work_city.value == ""){
-                            work_city.style.borderColor = "red";
+                        if(work_city.value == ""){
+                            makeAlert(work_city);
+                            let error = "Work City is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(trn.value == ""){
-                            trn.style.borderColor = "red";
+                        if(trn.value == ""){
+                            makeAlert(trn);
+                            let error = "TRN is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(work_number.value == ""){
-                            work_number.style.borderColor = "red";
+                        if(work_number.value == ""){
+                            makeAlert(work_number);
+                            let error = "Work Number is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(draw_date.value == ""){
-                            draw_date.style.borderColor = "red";
+                        if(draw_date.value == ""){
+                            makeAlert(draw_date);
+                            let error = "Draw Date is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(plan_amt.value == ""){
-                            plan_amt.style.borderColor = "red";
+                        if(plan_amt.value == ""){
+                            makeAlert(plan_amt);
+                            let error = "Plan Amount is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else{
+                        if(errors.length == 0){
                             result = getPage('../php/forms/partnerPlan-form.php', 'POST');
                         }
        
@@ -224,50 +276,92 @@ window.onload = function(){
                         var  sig = document.getElementById("signature");
                         var  trn = document.getElementById("trn");
                         var  id = document.getElementById("id");
-
+                        let errors = [];
                         if(fname.value == ""){
-                            fname.style.borderColor = "red";
+                            makeAlert(fname);
+                            let error = "First Name is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(mname.value = ""){
-                            mname.style.borderColor = "red";
+                        if(mname.value = ""){
+                            makeAlert(mname);
+                            let error = "Middle Name is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(lname.value == ""){
-                            lname.style.borderColor = "red";
+                        if(lname.value == ""){
+                            makeAlert(lname);
+                            let error = "Last Name is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(mobile.value == ""){
-                            mobile.style.borderColor = "red";
+                        if(mobile.value == ""){
+                            makeAlert(mobile);
+                            let error = "Mobile Number is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(address1.value == ""){
-                            address1.style.borderColor = "red";
+                        if(address1.value == ""){
+                            makeAlert(address1);
+                            let error = "Address 1 is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(address2.value == ""){
-                            address2.style.borderColor = "red";
+                        if(address2.value == ""){
+                            makeAlert(address2);
+                            let error = "Address 2 is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(city.value == ""){
-                            city.style.borderColor = "red";
+                        if(city.value == ""){
+                            makeAlert(city);
+                            let error = "City is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(email.value == ""){
-                            email.style.borderColor = "red";
+                        if(email.value == ""){
+                            makeAlert(email);
+                            let error = "Email Address is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(description.value == ""){
-                            description.style.borderColor = "red";
+                        if(description.value == ""){
+                            makeAlert(description);
+                            let error = "Description is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(make.value == ""){
-                            make.style.borderColor = "red";
+                        if(make.value == ""){
+                            makeAlert(make);
+                            let error = "Make is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(model.value == ""){
-                            model.style.borderColor = "red";
+                        if(model.value == ""){
+                            makeAlert(model);
+                            let error = "Model is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(serial_num.value == ""){
-                            serial_num.style.borderColor = "red";
+                        if(serial_num.value == ""){
+                            makeAlert(serial_num);
+                            let error = "Serial Number is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(trn.value == ""){
-                            trn.style.borderColor = "red";
+                        if(trn.value == ""){
+                            makeAlert(trn);
+                            let error = "TRN is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else if(sig.value == ""){
-                            sig.style.borderColor = "red";
+                        if(sig.value == ""){
+                            makeAlert(sig);
+                            let error = "Signature is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
-                        else {        
+                        if(errors.length == 0){        
                             result = getPage('../php/forms/pawn-form.php', 'POST');
                         }
                     
@@ -320,8 +414,8 @@ window.onload = function(){
             newspace.innerHTML = data;
             addClass(newspace, "appearRight");
             scrollTop();
+            document.querySelector(".flash").innerHTML ="";
             return 0;
-            
         })
         .catch(error => {
             this.alert(error);
@@ -349,223 +443,346 @@ window.onload = function(){
                         this.document.getElementById("loanPurposeSubmit").addEventListener('click', () => {
                             var amount = document.getElementById("loan_amt");
                             var loan_type = document.getElementById("type").value;
+                            let errors = [];
                             if(amount.value == ""){
-                                amount.style.borderColor = "red";
-                            } else {
-                                result = getFormPage('../php/forms/general-info-form.php', 'GET');
+                                makeAlert(amount);
+                                let error = "Loan Amount is Required!";
+                                errors.push(error)
+                                flashErrors(errors)
                             }
-                            
-                            result.then(() => {
-                                if (document.title != "CreditLine | General Info") {
-                                    document.title = "CreditLine | General Info";
-                                }
-                                //$('meta[name="description"]').attr("content", newDescription);
-                                this.document.getElementById("generalInfoSubmit").addEventListener('click', () => {
-                                    var fname = document.getElementById("fname");
-                                    var mname = document.getElementById("mname");
-                                    var lname = document.getElementById("lname");
-                                    var dob = document.getElementById("dob");
-                                    var pob = document.getElementById("pob");
-                                    var mothers_maiden = document.getElementById("mothers_maiden");
-                                    var num_of_dependents = document.getElementById("dependents");
-                                    var id_type = document.getElementById("id_type");
-                                    var id_num = document.getElementById("id_num");
-                                    var id_expiration = document.getElementById("id_expire");
-                            
-                                    if(fname.value == ""){
-                                        fname.style.borderColor = "red";
+                            if(errors.length == 0){
+                                result = getFormPage('../php/forms/general-info-form.php', 'GET');
+                                result.then(() => {
+                                    if (document.title != "CreditLine | General Info") {
+                                        document.title = "CreditLine | General Info";
                                     }
-                                    else if(mname.value == ""){
-                                        mname.style.borderColor = "red";
-                                    }  
-                                    else if(lname.value == ""){
-                                        lname.style.borderColor = "red";
-                                    }  
-                                    else if(dob.value == ""){
-                                        dob.style.borderColor = "red";
-                                    }  
-                                    else if(pob.value == ""){
-                                        pob.style.borderColor = "red";
-                                    }  
-                                    else if(mothers_maiden.value == ""){
-                                        mothers_maiden.style.borderColor = "red";
-                                    }  
-                                    else if(num_of_dependents.value == ""){
-                                        num_of_dependents.style.borderColor = "red";
-                                    }  
-                                    else if(id_type.value == ""){
-                                        id_type.style.borderColor = "red";
-                                    }  
-                                    else if(id_expiration.value == ""){
-                                        id_expiration.style.borderColor = "red";
-                                    }  
-                                    else if(id_num.value == ""){
-                                        id_num.style.borderColor = "red";
-                                    }  
-                                    else{
-                                        result = getFormPage('../php/forms/contact-details-form.php', 'GET');
-                                    }    
-                                    result.then(() => {
-                                        if (document.title != "CreditLine | Contact Details") {
-                                            document.title = "CreditLine | Contact Details";
+                                    //$('meta[name="description"]').attr("content", newDescription);
+                                    this.document.getElementById("generalInfoSubmit").addEventListener('click', () => {
+                                        var fname = document.getElementById("fname");
+                                        var mname = document.getElementById("mname");
+                                        var lname = document.getElementById("lname");
+                                        var dob = document.getElementById("dob");
+                                        var pob = document.getElementById("pob");
+                                        var mothers_maiden = document.getElementById("mothers_maiden");
+                                        var num_of_dependents = document.getElementById("dependents");
+                                        var id_type = document.getElementById("id_type");
+                                        var id_num = document.getElementById("id_num");
+                                        var id_expiration = document.getElementById("id_expire");
+                                        let errors = [];
+                                        if(fname.value == ""){
+                                            makeAlert(fname);
+                                            let error = "First Name is Required!";
+                                            errors.push(error)
+                                            flashErrors(errors)
                                         }
-                                        //$('meta[name="description"]').attr("content", newDescription);
-                                        this.document.getElementById("contactDetailsSubmit").addEventListener('click', () => {
-
-                                            var moblie = document.getElementById("mobile_number");
-                                            var email = document.getElementById("email");
-                                            var street1 = document.getElementById("address1");
-                                            var street2 = document.getElementById("address2");
-                                            var city = document.getElementById("district");
-                                            var country = document.getElementById("citi");
-                                            var E_fname = document.getElementById("emergency_contact_fname");
-                                            var E_mname = document.getElementById("emergency_contact_mname");
-                                            var E_lname = document.getElementById("emergency_contact_lname");
-                                            var E_mobile = document.getElementById("emergency_contact_mobile_number");
-
-                                            if(moblie.value == ""){
-                                                moblie.style.borderColor = "red";
-                                            }
-                                            else if(email.value == ""){
-                                                email.style.borderColor = "red";
-                                            }
-                                            else if(street1.value == ""){
-                                                street1.style.borderColor = "red";
-                                            }
-                                            else if(street2.value == ""){
-                                                street2.style.borderColor = "red";
-                                            }
-                                            else if(city.value == ""){
-                                                city.style.borderColor = "red";
-                                            }
-                                            else if(country.value == ""){
-                                                country.style.borderColor = "red";
-                                            }
-                                            else if(E_fname.value == ""){
-                                                E_fname.style.borderColor = "red";
-                                            }
-                                            else if(E_mname.value == ""){
-                                                E_mname.style.borderColor = "red";
-                                            }
-                                            else if(E_lname.value == ""){
-                                                E_lname.style.borderColor = "red";
-                                            }
-                                            else if(E_mobile.value == ""){
-                                                E_mobile.style.borderColor = "red";
-                                            }
-                                            else{
-                                                if(loan_type === "Payday Loan"){
-                                                    result = getFormPage('../php/forms/employment-details-form.php', 'GET');
-                                                } else if(loan_type === "Business Loan"){
-                                                    result = getFormPage('../php/forms/business-details.php', 'GET');
-                                                }
-                                            }                                          
+                                        if(mname.value == ""){
+                                            makeAlert(mname);
+                                            let error = "Middle Name is Required!";
+                                            errors.push(error)
+                                            flashErrors(errors)
+                                        }  
+                                        if(lname.value == ""){
+                                            makeAlert(lname);
+                                            let error = "Last Name is Required!";
+                                            errors.push(error)
+                                            flashErrors(errors)
+                                        }  
+                                        if(dob.value == ""){
+                                            makeAlert(dob);
+                                            let error = "Date of Birth is Required!";
+                                            errors.push(error)
+                                            flashErrors(errors)
+                                        }  
+                                        if(pob.value == ""){
+                                            makeAlert(pob);
+                                            let error = "Place of Birth is Required!";
+                                            errors.push(error)
+                                            flashErrors(errors)
+                                        }  
+                                        if(mothers_maiden.value == ""){
+                                            makeAlert(mothers_maiden);
+                                            let error = "Mother's Maiden Name is Required!";
+                                            errors.push(error)
+                                            flashErrors(errors)
+                                        }  
+                                        if(num_of_dependents.value == ""){
+                                            makeAlert(num_of_dependents);
+                                            let error = "Number of Dependents is Required!";
+                                            errors.push(error)
+                                            flashErrors(errors)
+                                        }  
+                                        if(id_type.value == ""){
+                                            makeAlert(id_type);
+                                            let error = "ID Type is Required!";
+                                            errors.push(error)
+                                            flashErrors(errors)
+                                        }  
+                                        if(id_expiration.value == ""){
+                                            makeAlert(id_expiration);
+                                            let error = "ID Expiration Date is Required!";
+                                            errors.push(error)
+                                            flashErrors(errors)
+                                        }  
+                                        if(id_num.value == ""){
+                                            makeAlert(id_num);
+                                            let error = "ID Number is Required!";
+                                            errors.push(error)
+                                            flashErrors(errors)
+                                        }  
+                                        if(errors.length == 0){
+                                            result = getFormPage('../php/forms/contact-details-form.php', 'GET');
                                             result.then(() => {
-                                                if (document.title != "CreditLine | Employment Details" && loan_type === "Payday Loan") {
-                                                    document.title = "CreditLine | Employment Details";
-                                                    this.document.getElementById("empDetailsSubmit").addEventListener('click', () => {
-                                                    
-                                                        var employer = document.getElementById("employer_name");
-                                                        var title = document.getElementById("job_title");
-                                                        var start_date = document.getElementById("start_date");
-                                                        var address1 = document.getElementById("address1");
-                                                        var address2 = document.getElementById("address2");
-                                                        var city = document.getElementById("city");
-                                                        var country = document.getElementById("country");
-                                                        var num = document.getElementById("business_number");
-                                                        var status = document.getElementById("status");
-    
-                                                        if(employer.value == ""){
-                                                            employer.style.borderColor = "red";
-                                                        }
-                                                        else if(title.value == ""){
-                                                            title.style.borderColor = "red";
-                                                        }
-                                                        else if(start_date.value == ""){
-                                                            start_date.style.borderColor = "red";
-                                                        }
-                                                        else if(address1.value == ""){
-                                                            address1.style.borderColor = "red";
-                                                        }
-                                                        else if(address2.value == ""){
-                                                            address2.style.borderColor = "red";
-                                                        }
-                                                        else if(city.value == ""){
-                                                            city.style.borderColor = "red";
-                                                        }
-                                                        else if(country.value == ""){
-                                                            country.style.borderColor = "red";
-                                                        }
-                                                        else if(num.value == ""){
-                                                            num.style.borderColor = "red";
-                                                        }
-                                                        else if(status.value == ""){
-                                                            status.style.borderColor = "red";
-                                                        }
-                                                        else{
-                                                            result = getFormPage('../php/forms/employment-details-form.php', 'POST');
-                                                        }
-                                                    })
-                                                } else if(loan_type === "Business Loan"){
-                                                    document.title = "Creditline | Business Details";
-                                                    this.document.getElementById("busDetailsSubmit").addEventListener('click', () => {
-                                                    
-                                                        var business_name = document.getElementById("business_name");
-                                                        var date_est = document.getElementById("date_established");
-                                                        var desc = document.getElementById("businss_desc");
-                                                        var cert = document.getElementById("cert");
-                                                        var trn = document.getElementById("trn");
-                                                        var income = document.getElementById("income");
-                                                        var address1 = document.getElementById("address1");
-                                                        var address2 = document.getElementById("address2");
-                                                        var city = document.getElementById("city");
-                                                        var country = document.getElementById("country");
-                                                        var num = document.getElementById("business_number");
-                                                        
-    
-                                                        if(business_name.value == ""){
-                                                            business_name.style.borderColor = "red";
-                                                        }
-                                                        else if(date_est.value == ""){
-                                                            date_est.style.borderColor = "red";
-                                                        }
-                                                        else if(desc.value == ""){
-                                                            desc.style.borderColor = "red";
-                                                        }
-                                                        else if(cert.value == null){
-                                                            cert.style.borderColor = "red";
-                                                        }
-                                                        else if(trn.value == ""){
-                                                            trn.style.borderColor = "red";
-                                                        }
-                                                        else if(income.value == ""){
-                                                            income.style.borderColor = "red";
-                                                        }
-                                                        else if(address1.value == ""){
-                                                            address1.style.borderColor = "red";
-                                                        }
-                                                        else if(address2.value == ""){
-                                                            address2.style.borderColor = "red";
-                                                        }
-                                                        else if(city.value == ""){
-                                                            city.style.borderColor = "red";
-                                                        }
-                                                        else if(country.value == ""){
-                                                            country.style.borderColor = "red";
-                                                        }
-                                                        else if(num.value == ""){
-                                                            num.style.borderColor = "red";
-                                                        }
-                                                        else{
-                                                            result = getFormPage('../php/forms/business-details.php', 'POST');
-                                                        }   
-                                                    })
+                                                if (document.title != "CreditLine | Contact Details") {
+                                                    document.title = "CreditLine | Contact Details";
                                                 }
+                                                //$('meta[name="description"]').attr("content", newDescription);
+                                                this.document.getElementById("contactDetailsSubmit").addEventListener('click', () => {
+        
+                                                    var mobile = document.getElementById("mobile_number");
+                                                    var email = document.getElementById("email");
+                                                    var street1 = document.getElementById("address1");
+                                                    var street2 = document.getElementById("address2");
+                                                    var city = document.getElementById("district");
+                                                    var country = document.getElementById("citi");
+                                                    var E_fname = document.getElementById("emergency_contact_fname");
+                                                    var E_mname = document.getElementById("emergency_contact_mname");
+                                                    var E_lname = document.getElementById("emergency_contact_lname");
+                                                    var E_mobile = document.getElementById("emergency_contact_mobile_number");
+                                                    let errors = [];
+                                                    if(mobile.value == ""){
+                                                        makeAlert(mobile);
+                                                        let error = "Mobile Number is Required!";
+                                                        errors.push(error)
+                                                        flashErrors(errors)
+                                                    }
+                                                    if(email.value == ""){
+                                                        makeAlert(email);
+                                                        let error = "Email Address is Required!";
+                                                        errors.push(error)
+                                                        flashErrors(errors)
+                                                    }
+                                                    if(street1.value == ""){
+                                                        makeAlert(street1);
+                                                        let error = "Street 1 is Required!";
+                                                        errors.push(error)
+                                                        flashErrors(errors)
+                                                    }
+                                                    if(street2.value == ""){
+                                                        makeAlert(street2);
+                                                        let error = "Street 2 is Required!";
+                                                        errors.push(error)
+                                                        flashErrors(errors)
+                                                    }
+                                                    if(city.value == ""){
+                                                        makeAlert(city);
+                                                        let error = "City is Required!";
+                                                        errors.push(error)
+                                                        flashErrors(errors)
+                                                    }
+                                                    if(country.value == ""){
+                                                        makeAlert(country);
+                                                        let error = "Country is Required!";
+                                                        errors.push(error)
+                                                        flashErrors(errors)
+                                                    }
+                                                    if(E_fname.value == ""){
+                                                        makeAlert(E_fname);
+                                                        let error = "Emergency Contact First Name is Required!";
+                                                        errors.push(error)
+                                                        flashErrors(errors)
+                                                    }
+                                                    if(E_mname.value == ""){
+                                                        makeAlert(E_mname);
+                                                        let error = "Emergency Contact Middle Name is Required!";
+                                                        errors.push(error)
+                                                        flashErrors(errors)
+                                                    }
+                                                    if(E_lname.value == ""){
+                                                        makeAlert(E_lname);
+                                                        let error = "Emergency Contact Last Name is Required!";
+                                                        errors.push(error)
+                                                        flashErrors(errors)
+                                                    }
+                                                    if(E_mobile.value == ""){
+                                                        makeAlert(E_mobile);
+                                                        let error = "Emergency Contact Number is Required!";
+                                                        errors.push(error)
+                                                        flashErrors(errors)
+                                                    }
+                                                    if(errors.length == 0){
+                                                        if(loan_type === "Payday Loan"){
+                                                            result = getFormPage('../php/forms/employment-details-form.php', 'GET');
+                                                        } else if(loan_type === "Business Loan"){
+                                                            result = getFormPage('../php/forms/business-details.php', 'GET');
+                                                        }
+                                                        result.then(() => {
+                                                            if (document.title != "CreditLine | Employment Details" && loan_type === "Payday Loan") {
+                                                                document.title = "CreditLine | Employment Details";
+                                                                this.document.getElementById("empDetailsSubmit").addEventListener('click', () => {
+                                                                
+                                                                    var employer = document.getElementById("employer_name");
+                                                                    var title = document.getElementById("job_title");
+                                                                    var start_date = document.getElementById("start_date");
+                                                                    var address1 = document.getElementById("address1");
+                                                                    var address2 = document.getElementById("address2");
+                                                                    var city = document.getElementById("city");
+                                                                    var country = document.getElementById("country");
+                                                                    var num = document.getElementById("business_number");
+                                                                    var status = document.getElementById("status");
+                                                                    let errors =[];
+                                                                    if(employer.value == ""){
+                                                                        makeAlert(employer);
+                                                                        let error = "Employer Name is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(title.value == ""){
+                                                                        makeAlert(title);
+                                                                        let error = "Job Title is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(start_date.value == ""){
+                                                                        makeAlert(start_date);
+                                                                        let error = "Start Date is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(address1.value == ""){
+                                                                        makeAlert(address1);
+                                                                        let error = "Address 1 is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(address2.value == ""){
+                                                                        makeAlert(address2);
+                                                                        let error = "Address 2 is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(city.value == ""){
+                                                                        makeAlert(city);
+                                                                        let error = "City is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(country.value == ""){
+                                                                        makeAlert(country);
+                                                                        let error = "Country is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(num.value == ""){
+                                                                        makeAlert(num);
+                                                                        let error = "Business Number is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(status.value == ""){
+                                                                        makeAlert(status);
+                                                                        let error = "Status is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(errors.length == 0){
+                                                                        result = getFormPage('../php/forms/employment-details-form.php', 'POST');
+                                                                    }
+                                                                })
+                                                            } else if(loan_type === "Business Loan"){
+                                                                document.title = "Creditline | Business Details";
+                                                                this.document.getElementById("busDetailsSubmit").addEventListener('click', () => {
+                                                                
+                                                                    var business_name = document.getElementById("business_name");
+                                                                    var date_est = document.getElementById("date_established");
+                                                                    var desc = document.getElementById("businss_desc");
+                                                                    var cert = document.getElementById("cert");
+                                                                    var trn = document.getElementById("trn");
+                                                                    var income = document.getElementById("income");
+                                                                    var address1 = document.getElementById("address1");
+                                                                    var address2 = document.getElementById("address2");
+                                                                    var city = document.getElementById("city");
+                                                                    var country = document.getElementById("country");
+                                                                    var num = document.getElementById("business_number");
+                                                                    let errors = [];
+                                                                    if(business_name.value == ""){
+                                                                        makeAlert(business_name);
+                                                                        let error = "Business Name is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(date_est.value == ""){
+                                                                        makeAlert(date_est);
+                                                                        let error = "Date Established is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(desc.value == ""){
+                                                                        makeAlert(desc);
+                                                                        let error = "Description is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(cert.value == null){
+                                                                        makeAlert(cert);
+                                                                        let error = "Certificate is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(trn.value == ""){
+                                                                        makeAlert(trn);
+                                                                        let error = "TRN is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(income.value == ""){
+                                                                        makeAlert(income);
+                                                                        let error = "Income is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(address1.value == ""){
+                                                                        makeAlert(address1);
+                                                                        let error = "Address 1 is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(address2.value == ""){
+                                                                        makeAlert(address2);
+                                                                        let error = "Address 2 is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(city.value == ""){
+                                                                        makeAlert(city);
+                                                                        let error = "City is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(country.value == ""){
+                                                                        makeAlert(country);
+                                                                        let error = "Country is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(num.value == ""){
+                                                                        makeAlert(num);
+                                                                        let error = "Business Number is Required!";
+                                                                        errors.push(error)
+                                                                        flashErrors(errors)
+                                                                    }
+                                                                    if(errors.length == 0){
+                                                                        result = getFormPage('../php/forms/business-details.php', 'POST');
+                                                                    }   
+                                                                })
+                                                            }
+                                                        })
+                                                    }                                          
+                                                })
                                             })
-                                        })
+                                        }    
                                     })
                                 })
-                            })
+                            }
                         })
                     })
                 })
@@ -630,6 +847,22 @@ window.onload = function(){
             behavior: 'smooth'
           });
     };
+
+    var makeAlert = (element) =>{
+        element.classList.add("border", "border-danger","rounded","border-3");
+    }
+    
+    var flashErrors = (errors) => {
+        let flash_area = document.querySelector("div.flash");
+        flash_area.innerHTML = "";
+        errors.forEach(error => {
+            let new_flash = document.createElement("div");
+            new_flash.classList.add("alert", "alert-danger");
+            new_flash.innerHTML = error;
+            flash_area.appendChild(new_flash);
+        });
+        scrollTop();
+    }
 
     var changeFilename = (Myfile) => {
         var file = myFile.files[0];  

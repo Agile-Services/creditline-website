@@ -18,6 +18,9 @@
             <div><p class="num">&nbsp 4 &nbsp</p><em class="desc">Employment Details</em></div>
         </div>
     </div>
+    <div class="flash container mt-5">
+                <!-- Flashes go here -->
+        </div>
     <div class="main-content container">
         <!-- Form will load here --> 
     </div>

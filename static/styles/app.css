@@ -709,3 +709,7 @@ footer div div:nth-child(3) ul li p{
         transform: translateX(0%);
 	}
  }
+
+ .border-3 {
+    border-width:3px !important;
+}

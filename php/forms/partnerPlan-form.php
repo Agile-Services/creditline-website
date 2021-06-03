@@ -9,6 +9,9 @@
         <h1>Application</h1>
     </div>
     <div class="main-content container">
+    <div class="flash container mt-5">
+            <!-- Flashes go here -->
+    </div>
         <form id="partnerPlan_form" action="php/verify.php" method="post" enctype="multipart/form-data">
             <h2 class="text-success">Contact Details</h2><br>
             <div class="form-row">
