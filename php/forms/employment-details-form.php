@@ -327,40 +327,71 @@
 
         </div>
 
+        <h2>Upload Last 3 Payslips</h2><br>
         <div class="form-row">
-        <label for="pay">Upload Last 3 Payslips</label><br>
-        <div class="col m-3">
-                <label for="id">Pay Slip 1:</label><br>
-                <input type="file" id="pay_slip1" name="pay_slip1">
+            <div class="col m-3">
+                <p class="font-weight-bold">Pay Slip 1</p>
+                <div class="custom-file">
+                    <label class="custom-file-label" for="pay_slip1"></label><br>
+                    <input class="custom-file-input" type="file" id="pay_slip1" name="pay_slip1" onchange="
+                    var file = this.files[0];  
+                    var filename = file.name;
+                    var label = document.querySelector(`[for='${this.id}']`);
+                    label.innerHTML = filename"><br><br>
+                </div>
             </div>
 
+            <div class="col m-3">
+                <p class="font-weight-bold">Pay Slip 2</p>
+                <div class="custom-file">
+                    <label class="custom-file-label" for="pay_slip2"></label><br>
+                    <input class="custom-file-input" type="file" id="pay_slip2" name="pay_slip2" onchange="
+                    var file = this.files[0];  
+                    var filename = file.name;
+                    var label = document.querySelector(`[for='${this.id}']`);
+                    label.innerHTML = filename"><br><br>
+                </div>
+            </div>
+
+        </div>
+
         <div class="col m-3">
-            <label for="expire">>Pay Slip 2:</label><br>
-            <input type="file" id="pay_slip2" name="pay_slip2">
+            <p class="font-weight-bold">Pay Slip 3</p>
+            <div class="custom-file">
+                <label class="custom-file-label" for="pay_slip3"></label><br>
+                <input class="custom-file-input" type="file" id="pay_slip3" name="pay_slip3" onchange="
+                var file = this.files[0];  
+                var filename = file.name;
+                var label = document.querySelector(`[for='${this.id}']`);
+                label.innerHTML = filename"><br><br>
+            </div>
         </div>
 
         </div>
-
-        <div class="col m-3">
-                <label for="id">Pay Slip 3:</label><br>
-                <input type="file" id="pay_slip3" name="pay_slip3">
-            </div>
-
-    </div>
-    <div class="form-row">
-            
+        <div class="form-row">
             <div class="col m-2">
-                    <label for="id">Job Letter:</label><br>
-                    <input type="file" id="job_letter" name="job_letter">
+                <p class="font-weight-bold">Job Letter</p>
+                <div class="custom-file">
+                    <label class="custom-file-label" for="job_letter"></label><br>
+                    <input class="custom-file-input" type="file" id="job_letter" name="job_letter" onchange="
+                    var file = this.files[0];  
+                    var filename = file.name;
+                    var label = document.querySelector(`[for='${this.id}']`);
+                    label.innerHTML = filename"><br><br>
                 </div>
-    
-                <div class="col m-2">
-                    <label for="expire">Proof of Address (Bill in your name):</label><br>
-                    <input type="file" id="proof_of_address" name="proof_of_address">
-                </div>
-    
             </div>
     
+            <div class="col m-2">
+                <p class="font-weight-bold">Proof of Address (Bill in your name)</p>
+                <div class="custom-file">
+                    <label class="custom-file-label" for="proof_of_address"></label><br>
+                    <input class="custom-file-input" type="file" id="proof_of_address" name="proof_of_address" onchange="
+                    var file = this.files[0];  
+                    var filename = file.name;
+                    var label = document.querySelector(`[for='${this.id}']`);
+                    label.innerHTML = filename"><br><br>
+                </div>
+            </div>
         </div>
         <div class="text-center"><button id="empDetailsSubmit" class="btn btn-success" type="button">Submit</button></div>
 

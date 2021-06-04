@@ -580,13 +580,27 @@
         <div class="form-row">
 
             <div class="col m-3">
-                <label for="id">Government Issued Identification 1:</label><br>
-                <input type="file" id="id" name="id">
+                <p class="font-weight-bold">Government Issued Identification 1:</p>
+                <div class="custom-file">
+                    <label class="custom-file-label" for="id"></label><br>
+                    <input class="custom-file-input" type="file" id="id" name="id" onchange="
+                    var file = this.files[0];  
+                    var filename = file.name;
+                    var label = document.querySelector(`[for='${this.id}']`);
+                    label.innerHTML = filename"><br><br>
+                </div>
             </div>
 
             <div class="col m-3">
-                <label for="expire">Government Issued Identification 2:</label><br>
-                <input type="file" id="id2" name="id2">
+                <p class="font-weight-bold">Government Issued Identification 2:</p>
+                <div class="custom-file">
+                    <label class="custom-file-label" for="id2"></label><br>
+                    <input class="custom-file-input" type="file" id="id2" name="id2" onchange="
+                    var file = this.files[0];  
+                    var filename = file.name;
+                    var label = document.querySelector(`[for='${this.id}']`);
+                    label.innerHTML = filename"><br><br>
+                </div>
             </div>
 
             <div class="col m-3">

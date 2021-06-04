@@ -134,10 +134,18 @@ window.onload = function(){
                         let errors = [];
 
                         if(cash.checked == false && bank_transfer.checked == false){
-                            document.getElementById("error1").innerHTML = "Please mark one of the checkboxs";  
+                            makeAlert(cash);
+                            let error = "Payment Method is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
+                            makeAlert(bank_transfer);
                         }
                         else if(cash.checked == true && bank_transfer.checked == true){
-                            document.getElementById("error1").innerHTML = "Please mark only one of the checkboxs";  
+                            makeAlert(cash);
+                            makeAlert(bank_transfer);
+                            let error = "Please mark only one of the checkboxs.";
+                            errors.push(error)
+                            flashErrors(errors)  
                         }
                         else if(cash.checked == true && bank_transfer.checked == false){
                             payment_method=cash.value;
@@ -148,10 +156,20 @@ window.onload = function(){
 
 
                         if(weekly.checked == false && fortnight.checked == false && monthly.checked == false){
-                            return document.getElementById("error").innerHTML = "Please mark one of the checkboxs";  
+                            makeAlert(weekly);
+                            makeAlert(fortnight); 
+                            makeAlert(monthly); 
+                            let error = "Payment Plan is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
                         else if(weekly.checked == true && fortnight.checked == true && monthly.checked == true){
-                            return document.getElementById("error").innerHTML = "Please mark only one of the checkboxs";  
+                            makeAlert(weekly);
+                            makeAlert(fortnight); 
+                            makeAlert(monthly); 
+                            let error = "Please mark only one of the checkboxs.";
+                            errors.push(error)
+                            flashErrors(errors) 
                         }
                         else if(weekly.checked == true && fortnight.checked == false && monthly.checked == false){
                             payment_plan=weekly.value;
@@ -164,10 +182,20 @@ window.onload = function(){
                         }
 
                         if(full_time.checked == false && part_time.checked == false && self_employed.checked == false){
-                            return document.getElementById("error2").innerHTML = "Please mark one of the checkboxs";  
+                            makeAlert(full_time);
+                            makeAlert(part_time); 
+                            makeAlert(self_employed); 
+                            let error = "Employment Status is Required!";
+                            errors.push(error)
+                            flashErrors(errors) 
                         }
                         else if(full_time.checked == true && part_time.checked == true && self_employed.checked == true){
-                            return document.getElementById("error2").innerHTML = "Please mark only one of the checkboxs";  
+                            makeAlert(full_time);
+                            makeAlert(part_time); 
+                            makeAlert(self_employed); 
+                            let error = "Please mark only one of the checkboxs.";
+                            errors.push(error)
+                            flashErrors(errors) 
                         }
                         else if(full_time.checked == true && part_time.checked == false && self_employed.checked == false){
                             emp_status=full_time.value;
@@ -603,8 +631,8 @@ window.onload = function(){
                                     var mothers_maiden = document.getElementById("mothers_maiden");
                                     var num_of_dependents = document.getElementById("dependents");
                                     var trn = document.getElementById("trn");
-                                    var id = document.getElementById("id").files[0];
-                                    var id2= document.getElementById("id2").files[0];
+                                    var id = document.getElementById("id");
+                                    var id2= document.getElementById("id2");
                                     let errors = [];
                                     if(fname.value == ""){
                                         makeAlert(fname);
@@ -648,13 +676,13 @@ window.onload = function(){
                                         errors.push(error)
                                         flashErrors(errors)
                                     }     
-                                    if(typeof id === 'undefined'){
+                                    if(typeof id.files[0] === 'undefined'){
                                         makeAlert(id);
                                         let error = "ID is Required!";
                                         errors.push(error)
                                         flashErrors(errors)
                                     }
-                                    if(typeof id2 === 'undefined'){
+                                    if(typeof id2.files[0] === 'undefined'){
                                         makeAlert(id2);
                                         let error = "Second ID is Required!";
                                         errors.push(error)
@@ -859,116 +887,247 @@ window.onload = function(){
                                                     } else if(loan_type === "Business Loan"){
                                                         result = getFormPage('../php/forms/business-details.php', 'GET');
                                                     }
-                                                }                                          
-                                                result.then(() => {
-                                                    console.log(loan_type);
-                                                    if (document.title != "CreditLine | Employment Details" && loan_type === "Payday Loan") {
-                                                        document.title = "CreditLine | Employment Details";
-                                                        this.document.getElementById("empDetailsSubmit").addEventListener('click', () => {
-                                                        
-                                                            var employer = document.getElementById("employer_name");
-                                                            var title = document.getElementById("job_title");
-                                                            var start_date = document.getElementById("start_date");
-                                                            var address1 = document.getElementById("address1");
-                                                            var address2 = document.getElementById("address2");
-                                                            var city = document.getElementById("city");
-                                                            var country = document.getElementById("country");
-                                                            var num = document.getElementById("business_number");
-                                                            var status = document.getElementById("status");
-                                                            var pay1 = document.getElementById("pay_slip1").files[0];
-                                                            var pay2 = document.getElementById("pay_slip2").files[0];
-                                                            var pay3 = document.getElementById("pay_slip3").files[0];
-                                                            var letter = document.getElementById("job_letter").files[0];
-                                                            var proof_of_addr = document.getElementById("proof_of_address").files[0]                  
-                                                            let errors = [];
-        
-                                                            if(employer.value == ""){
-                                                                makeAlert(employer);
-                                                                let error = "Employer is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if(title.value == ""){
-                                                                makeAlert(title);
-                                                                let error = "Title is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if(start_date.value == ""){
-                                                                makeAlert(start_date);
-                                                                let error = "Start Date is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if(address1.value == ""){
-                                                                makeAlert(address1);
-                                                                let error = "Address 1 is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if(address2.value == ""){
-                                                                makeAlert(address2);
-                                                                let error = "Address 2 is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if(city.value == ""){
-                                                                makeAlert(city);
-                                                                let error = "City is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if(country.value == ""){
-                                                                makeAlert(country);
-                                                                let error = "Country is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if(num.value == ""){
-                                                                makeAlert(num);
-                                                                let error = "Employer Number is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if(status.value == ""){
-                                                                makeAlert(status);
-                                                                let error = "Work Status is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if (typeof pay1 === 'undefined') {
-                                                                alert("No file selected for Pay Slip One");
-                                                            }
-                                                            if (typeof pay2 === 'undefined') {
-                                                                alert("No file selected for for Pay Slip Two");
-                                                            }
-                                                            if (typeof pay3 === 'undefined') {
-                                                                alert("No file selected for for Pay Slip Three");
-                                                            }
-                                                            if (typeof letter === 'undefined') {
-                                                                alert("No file selected for Business Certification");
-                                                            }
-                                                            if (typeof proof_of_addr === 'undefined') {
-                                                                alert("No file selected for Business Certification");
-                                                            }
-                                                            if(errors.length == 0){
+                                                    result.then(() => {
+                                                        console.log(loan_type);
+                                                        if (document.title != "CreditLine | Employment Details" && loan_type === "Payday Loan") {
+                                                            document.title = "CreditLine | Employment Details";
+                                                            this.document.getElementById("empDetailsSubmit").addEventListener('click', () => {
                                                             
-                                                                sessionStorage.setItem("employer_name",employer.value);
-                                                                sessionStorage.setItem("job_title",title.value);
-                                                                sessionStorage.setItem("start_date",start_date.value);
-                                                                sessionStorage.setItem("Address1 of Work",address1.value);
-                                                                sessionStorage.setItem("Address2 of Work",address2.value);
-                                                                sessionStorage.setItem("Country of work",country.value);
-                                                                sessionStorage.setItem("Employment status",status.value);
+                                                                var employer = document.getElementById("employer_name");
+                                                                var title = document.getElementById("job_title");
+                                                                var start_date = document.getElementById("start_date");
+                                                                var address1 = document.getElementById("address1");
+                                                                var address2 = document.getElementById("address2");
+                                                                var city = document.getElementById("city");
+                                                                var country = document.getElementById("country");
+                                                                var num = document.getElementById("business_number");
+                                                                var status = document.getElementById("status");
+                                                                var pay1 = document.getElementById("pay_slip1");
+                                                                var pay2 = document.getElementById("pay_slip2");
+                                                                var pay3 = document.getElementById("pay_slip3");
+                                                                var letter = document.getElementById("job_letter");
+                                                                var proof_of_addr = document.getElementById("proof_of_address");                  
+                                                                let errors = [];
+            
+                                                                if(employer.value == ""){
+                                                                    makeAlert(employer);
+                                                                    let error = "Employer is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(title.value == ""){
+                                                                    makeAlert(title);
+                                                                    let error = "Title is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(start_date.value == ""){
+                                                                    makeAlert(start_date);
+                                                                    let error = "Start Date is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(address1.value == ""){
+                                                                    makeAlert(address1);
+                                                                    let error = "Address 1 is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(address2.value == ""){
+                                                                    makeAlert(address2);
+                                                                    let error = "Address 2 is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(city.value == ""){
+                                                                    makeAlert(city);
+                                                                    let error = "City is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(country.value == ""){
+                                                                    makeAlert(country);
+                                                                    let error = "Country is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(num.value == ""){
+                                                                    makeAlert(num);
+                                                                    let error = "Business Number is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(status.value == ""){
+                                                                    makeAlert(status);
+                                                                    let error = "Work Status is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if (typeof pay1.files[0] === 'undefined') {
+                                                                    makeAlert(pay1);
+                                                                    let error = "Pay Slip 1 is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if (typeof pay2.files[0] === 'undefined') {
+                                                                    makeAlert(pay2);
+                                                                    let error = "Pay Slip 2 is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if (typeof pay3.files[0] === 'undefined') {
+                                                                    makeAlert(pay3);
+                                                                    let error = "Pay Slip 3 is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if (typeof letter.files[0] === 'undefined') {
+                                                                    makeAlert(letter);
+                                                                    let error = "Job Letter is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if (typeof proof_of_addr.files[0] === 'undefined') {
+                                                                    makeAlert(proof_of_addr);
+                                                                    let error = "Proof of Address is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(errors.length == 0){
+                                                                
+                                                                    sessionStorage.setItem("employer_name",employer.value);
+                                                                    sessionStorage.setItem("job_title",title.value);
+                                                                    sessionStorage.setItem("start_date",start_date.value);
+                                                                    sessionStorage.setItem("Address1 of Work",address1.value);
+                                                                    sessionStorage.setItem("Address2 of Work",address2.value);
+                                                                    sessionStorage.setItem("Country of work",country.value);
+                                                                    sessionStorage.setItem("Employment status",status.value);
+                                                                    sessionStorage.setItem("Number of Business",num.value);
+                                                                        
+            
+                                                                    var formData = new FormData();
+                                                                    formData.append("pay_1",pay1);
+                                                                    formData.append("pay_2",pay2);
+                                                                    formData.append("pay_3",pay3);
+                                                                    formData.append("job_letter",letter);
+                                                                    formData.append("proof_of_addr",proof_of_addr);
+            
+                                                                    for(i=0;  i<Object.keys(sessionStorage).length; i++){
+                                                                        var name = Object.keys(sessionStorage)[i]
+                                                                        var val = sessionStorage.getItem(name);
+                                                                        formData.append(name,val);
+                                                                    }
+            
+                                                                    $.ajax({
+                                                                        type: "POST",
+                                                                        url: "php/sendPersonalLoan.php",
+                                                                        data: formData,
+                                                                        processData: false,
+                                                                        contentType: false
+                                                                        }).done(function(response){
+                                                                            console.log(response);
+                                                                        });
+        
+                                                                    result = getFormPage('../php/forms/employment-details-form.php', 'POST');
+                                                                }
+                                                            })
+                                                        } else if(loan_type === "Business Loan"){
+                                                            document.title = "Creditline | Business Details";
+                                                            this.document.getElementById("busDetailsSubmit").addEventListener('click', () => {
+                                                            
+                                                                var business_name = document.getElementById("business_name");
+                                                                var date_est = document.getElementById("date_established");
+                                                                var desc = document.getElementById("business_desc").value;
+                                                                var cert = document.getElementById("cert").files[0];
+                                                                var trn = document.getElementById("trn");
+                                                                var income = document.getElementById("income").files[0];
+                                                                var address1 = document.getElementById("address1");
+                                                                var address2 = document.getElementById("address2");
+                                                                var city = document.getElementById("city");
+                                                                var country = document.getElementById("country");
+                                                                var num = document.getElementById("business_number");
+                                                                let errors = [];
+                                                                if(business_name.value == ""){
+                                                                    makeAlert(business_name);
+                                                                    let error = "Business Name is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(date_est.value == ""){
+                                                                    makeAlert(date_est);
+                                                                    let error = "Date Established is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(desc.value == ""){
+                                                                    makeAlert(desc);
+                                                                    let error = "Description is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(cert.value == null || typeof cert === 'undefined'){
+                                                                    makeAlert(cert);
+                                                                    let error = "Certificate is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(trn.value == ""){
+                                                                    makeAlert(trn);
+                                                                    let error = "TRN is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(income.value == "" || typeof income === 'undefined'){
+                                                                    makeAlert(income);
+                                                                    let error = "Income is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(address1.value == ""){
+                                                                    makeAlert(address1);
+                                                                    let error = "Address 1 is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(address2.value == ""){
+                                                                    makeAlert(address2);
+                                                                    let error = "Address 2 is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(city.value == ""){
+                                                                    makeAlert(city);
+                                                                    let error = "City is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(country.value == ""){
+                                                                    makeAlert(country);
+                                                                    let error = "Country is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(num.value == ""){
+                                                                    makeAlert(num);
+                                                                    let error = "Business Number is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }                                                          
+                                                                if(errors.length == 0){
+                                                                
+                                                                sessionStorage.setItem("Name of Business",business_name.value);
+                                                                sessionStorage.setItem("Date Established",date_est.value);
+                                                                sessionStorage.setItem("Business Description",desc);
+                                                                sessionStorage.setItem("Address1 of Business",address1.value);
+                                                                sessionStorage.setItem("Address2 of Business",address2.value);
+                                                                sessionStorage.setItem("City of Business",city.value);
+                                                                sessionStorage.setItem("County of Busiess",country.value);
                                                                 sessionStorage.setItem("Number of Business",num.value);
-                                                                    
         
                                                                 var formData = new FormData();
-                                                                formData.append("pay_1",pay1);
-                                                                formData.append("pay_2",pay2);
-                                                                formData.append("pay_3",pay3);
-                                                                formData.append("job_letter",letter);
-                                                                formData.append("proof_of_addr",proof_of_addr);
+                                                                formData.append("income",income);
+                                                                formData.append("cert",cert);
+                                                                formData.append("trn",trn.value);
         
                                                                 for(i=0;  i<Object.keys(sessionStorage).length; i++){
                                                                     var name = Object.keys(sessionStorage)[i]
@@ -978,136 +1137,20 @@ window.onload = function(){
         
                                                                 $.ajax({
                                                                     type: "POST",
-                                                                    url: "php/sendPersonalLoan.php",
+                                                                    url: "php/sendEmail.php",
                                                                     data: formData,
                                                                     processData: false,
                                                                     contentType: false
                                                                     }).done(function(response){
                                                                         console.log(response);
                                                                     });
-    
-                                                                result = getFormPage('../php/forms/employment-details-form.php', 'POST');
-                                                            }
-                                                        })
-                                                    } else if(loan_type === "Business Loan"){
-                                                        document.title = "Creditline | Business Details";
-                                                        this.document.getElementById("busDetailsSubmit").addEventListener('click', () => {
-                                                        
-                                                            var business_name = document.getElementById("business_name");
-                                                            var date_est = document.getElementById("date_established");
-                                                            var desc = document.getElementById("business_desc").value;
-                                                            var cert = document.getElementById("cert").files[0];
-                                                            var trn = document.getElementById("trn");
-                                                            var income = document.getElementById("income").files[0];
-                                                            var address1 = document.getElementById("address1");
-                                                            var address2 = document.getElementById("address2");
-                                                            var city = document.getElementById("city");
-                                                            var country = document.getElementById("country");
-                                                            var num = document.getElementById("business_number");
-                                                            let errors = [];
-                                                            if(business_name.value == ""){
-                                                                makeAlert(business_name);
-                                                                let error = "Business Name is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if(date_est.value == ""){
-                                                                makeAlert(date_est);
-                                                                let error = "Date Established is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if(desc.value == ""){
-                                                                makeAlert(desc);
-                                                                let error = "Description is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if(cert.value == null || typeof cert === 'undefined'){
-                                                                makeAlert(cert);
-                                                                let error = "Certificate is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if(trn.value == ""){
-                                                                makeAlert(trn);
-                                                                let error = "TRN is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if(income.value == "" || typeof income === 'undefined'){
-                                                                makeAlert(income);
-                                                                let error = "Income is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if(address1.value == ""){
-                                                                makeAlert(address1);
-                                                                let error = "Address 1 is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if(address2.value == ""){
-                                                                makeAlert(address2);
-                                                                let error = "Address 2 is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if(city.value == ""){
-                                                                makeAlert(city);
-                                                                let error = "City is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if(country.value == ""){
-                                                                makeAlert(country);
-                                                                let error = "Country is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }
-                                                            if(num.value == ""){
-                                                                makeAlert(num);
-                                                                let error = "Business Number is Required!";
-                                                                errors.push(error)
-                                                                flashErrors(errors)
-                                                            }                                                          
-                                                            if(errors.length == 0){
-                                                            
-                                                            sessionStorage.setItem("Name of Business",business_name.value);
-                                                            sessionStorage.setItem("Date Established",date_est.value);
-                                                            sessionStorage.setItem("Business Description",desc);
-                                                            sessionStorage.setItem("Address1 of Business",address1.value);
-                                                            sessionStorage.setItem("Address2 of Business",address2.value);
-                                                            sessionStorage.setItem("City of Business",city.value);
-                                                            sessionStorage.setItem("County of Busiess",country.value);
-                                                            sessionStorage.setItem("Number of Business",num.value);
-    
-                                                            var formData = new FormData();
-                                                            formData.append("income",income);
-                                                            formData.append("cert",cert);
-                                                            formData.append("trn",trn.value);
-    
-                                                            for(i=0;  i<Object.keys(sessionStorage).length; i++){
-                                                                var name = Object.keys(sessionStorage)[i]
-                                                                var val = sessionStorage.getItem(name);
-                                                                formData.append(name,val);
-                                                            }
-    
-                                                            $.ajax({
-                                                                type: "POST",
-                                                                url: "php/sendEmail.php",
-                                                                data: formData,
-                                                                processData: false,
-                                                                contentType: false
-                                                                }).done(function(response){
-                                                                    console.log(response);
-                                                                });
-    
-                                                                result = getFormPage('../php/forms/business-details.php', 'POST');
-                                                            }   
-                                                        })
-                                                    }
-                                                })
+        
+                                                                    result = getFormPage('../php/forms/business-details.php', 'POST');
+                                                                }   
+                                                            })
+                                                        }
+                                                    })
+                                                }                                          
                                             })    
                                         })
                                     }
