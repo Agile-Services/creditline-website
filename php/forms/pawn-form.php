@@ -16,7 +16,8 @@
         <div class="flash container mt-5">
                 <!-- Flashes go here -->
         </div>
-        <form class="needs-validation"  action="php/verify.php" Content-Type="multipart/form-data" method="post">
+        <!-- <form class="needs-validation"  action="php/verify.php" Content-Type="multipart/form-data" method="post"> -->
+        <form id="pawn_form"  enctype="multipart/form-data">
             <h2 class="text-success">Contact Details</h2><br>
             <div class="form-row">
                 <div class="col col-md-4 mb-3">
@@ -401,7 +402,7 @@
             <div class="form-row">
             <div class="form-group">
                 <label for="exampleFormControlFile1">Upload Images of Product</label>
-                <input type="file" class="form-control-file" id="product_img">
+                <input type="file" class="form-control-file" id="product_img" name="product_img">
             </div>   
             </div><br>
             

@@ -578,24 +578,20 @@
         </div>
         
         <div class="form-row">
+
             <div class="col m-3">
-                <label for="cars">Identification Type</label>
-                <input class="form-control" list="ID" id="id_type" placeholder="Identification Type">
-                <datalist name="ID">
-                <option value="Driver's License"></option>
-                <option value="Passport"></option>
-                <option value="National I.D"></option>
-                </datalist><br><br>
+                <label for="id">Government Issued Identification 1:</label><br>
+                <input type="file" id="id" name="id">
             </div>
 
             <div class="col m-3">
-                <label for="id">Identification Number:</label><br>
-                <input class="form-control" type="text" id="id_num" name="id" placeholder="Identification Number" value=""><br><br>
+                <label for="expire">Government Issued Identification 2:</label><br>
+                <input type="file" id="id2" name="id2">
             </div>
 
             <div class="col m-3">
-                <label for="expire">Expiration Date:</label><br>
-                <input class="form-control" type="date" id="id_expire" name="expire" value=""><br><br>
+                <label for="dependents">Tax Registration Number (TRN):</label><br>
+                <input class="form-control" type="text" id="trn" name="trn" placeholder="Tax Registration Number" value=""><br><br>
             </div>
 
             <div class="col m-3">
