@@ -1038,9 +1038,9 @@ window.onload = function(){
                                                                 var business_name = document.getElementById("business_name");
                                                                 var date_est = document.getElementById("date_established");
                                                                 var desc = document.getElementById("business_desc").value;
-                                                                var cert = document.getElementById("cert").files[0];
+                                                                var cert = document.getElementById("cert");
                                                                 var trn = document.getElementById("trn");
-                                                                var income = document.getElementById("income").files[0];
+                                                                var income = document.getElementById("income");
                                                                 var address1 = document.getElementById("address1");
                                                                 var address2 = document.getElementById("address2");
                                                                 var city = document.getElementById("city");
@@ -1065,7 +1065,7 @@ window.onload = function(){
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                if(cert.value == null || typeof cert === 'undefined'){
+                                                                if(cert.files[0] == null){
                                                                     makeAlert(cert);
                                                                     let error = "Certificate is Required!";
                                                                     errors.push(error)
@@ -1077,9 +1077,10 @@ window.onload = function(){
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                if(income.value == "" || typeof income === 'undefined'){
+                                                                console.log(income.files[0]);
+                                                                if(income.files[0] == null){
                                                                     makeAlert(income);
-                                                                    let error = "Income is Required!";
+                                                                    let error = "Income Statement is Required!";
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
