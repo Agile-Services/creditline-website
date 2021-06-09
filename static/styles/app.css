@@ -561,23 +561,23 @@ footer div div:nth-child(3) ul li p{
 
 #applyNow{
     transform: scale(1);
-	animation: pulse 2s infinite;
+	animation: mypulse 2s infinite;
 }
 
-@keyframes pulse {
+@keyframes mypulse {
 	0% {
 		transform: scale(1.5);
-		box-shadow: 0 0 0 0 rgba(22, 144, 0, 0.7);
+		/* box-shadow: 0 0 0 0 rgba(22, 144, 0, 0.7); */
 	}
 
 	50% {
 		transform: scale(2);
-		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+		/* box-shadow: 0 0 0 10px rgba(0, 0, 0, 0); */
 	}
 
 	100% {
 		transform: scale(1.5);
-		box-shadow: 0 0 0 0 rgba(22, 144, 0, 0.349);
+		/* box-shadow: 0 0 0 0 rgba(22, 144, 0, 0.349); */
 	}
 }
 
