@@ -296,6 +296,12 @@ window.onload = function(){
                             errors.push(error)
                             flashErrors(errors)
                         }
+                        if(!/[0-9]+-[0-9]+-[0-9]+/.test(trn.value)){
+                            makeAlert(trn);
+                            let error = "TRN does not meet the format of a real TRN! Check for spaces and letters in the TRN entered...";
+                            errors.push(error)
+                            flashErrors(errors)
+                        }
                         if(work_number.value == ""){
                             makeAlert(work_number);
                             let error = "Work Number is Required!";
@@ -359,12 +365,20 @@ window.onload = function(){
                                 processData: false,
                                 contentType: false
                             }).done(function(response){
-                                    console.log(response);
+                                console.log(response);
+                                if(response == "Message has been sent"){ 
+                                    result = getFormPage('../php/successpage.php', 'GET');
+                                    result.then(() => {
+                                        flashSuccesses(["Success!"]);
+                                    })
+                                } else {
+                                    result = getFormPage('../php/errorpage.php','GET');
+                                    result.then(() => {
+                                        flashErrors([response]);
+                                    })
+                                }
                             });
-                    //  }
-                            result = getPage('../php/forms/partnerPlan-form.php', 'POST');
                         }
-       
                     })
                 })
             })
@@ -485,6 +499,12 @@ window.onload = function(){
                             errors.push(error)
                             flashErrors(errors)
                         }
+                        if(!/[0-9]+-[0-9]+-[0-9]+/.test(trn.value)){
+                            makeAlert(trn);
+                            let error = "TRN does not meet the format of a real TRN! Check for spaces and letters in the TRN entered...";
+                            errors.push(error)
+                            flashErrors(errors)
+                        }
                         if(sig.value == ""){
                             makeAlert(sig);
                             let error = "Signature is Required!";
@@ -525,8 +545,18 @@ window.onload = function(){
                                 contentType: false
                                 }).done(function(response){
                                     console.log(response);
+                                    if(response == "Message has been sent"){ 
+                                        result = getFormPage('../php/successpage.php', 'GET');
+                                        result.then(() => {
+                                            flashSuccesses(["Success!"]);
+                                        })
+                                    } else {
+                                        result = getFormPage('../php/errorpage.php','GET');
+                                        result.then(() => {
+                                            flashErrors([response]);
+                                        })
+                                    }
                                 });
-                            result = getPage('../php/forms/pawn-form.php', 'POST');
                         }                    
                     })
                 })
@@ -691,6 +721,12 @@ window.onload = function(){
                                     if(trn.value == ""){
                                         makeAlert(trn);
                                         let error = "TRN is Required!";
+                                        errors.push(error)
+                                        flashErrors(errors)
+                                    }
+                                    if(!/[0-9]+-[0-9]+-[0-9]+/.test(trn.value)){
+                                        makeAlert(trn);
+                                        let error = "TRN does not meet the format of a real TRN! Check for spaces and letters in the TRN entered...";
                                         errors.push(error)
                                         flashErrors(errors)
                                     }
@@ -1026,9 +1062,18 @@ window.onload = function(){
                                                                         contentType: false
                                                                         }).done(function(response){
                                                                             console.log(response);
+                                                                            if(response == "Message has been sent"){ 
+                                                                                result = getFormPage('../php/successpage.php', 'GET');
+                                                                                result.then(() => {
+                                                                                    flashSuccesses(["Success!"]);
+                                                                                })
+                                                                            } else {
+                                                                                result = getFormPage('../php/errorpage.php','GET');
+                                                                                result.then(() => {
+                                                                                    flashErrors([response]);
+                                                                                })
+                                                                            }
                                                                         });
-        
-                                                                    result = getFormPage('../php/forms/employment-details-form.php', 'POST');
                                                                 }
                                                             })
                                                         } else if(loan_type === "Business Loan"){
@@ -1074,6 +1119,12 @@ window.onload = function(){
                                                                 if(trn.value == ""){
                                                                     makeAlert(trn);
                                                                     let error = "TRN is Required!";
+                                                                    errors.push(error)
+                                                                    flashErrors(errors)
+                                                                }
+                                                                if(!/[0-9]+-[0-9]+-[0-9]+/.test(trn.value)){
+                                                                    makeAlert(trn);
+                                                                    let error = "TRN does not meet the format of a real TRN! Check for spaces and letters in the TRN entered...";
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
@@ -1144,9 +1195,18 @@ window.onload = function(){
                                                                     contentType: false
                                                                     }).done(function(response){
                                                                         console.log(response);
+                                                                        if(response == "Message has been sent"){ 
+                                                                            result = getFormPage('../php/successpage.php', 'GET');
+                                                                            result.then(() => {
+                                                                                flashSuccesses(["Success!"]);
+                                                                            })
+                                                                        } else {
+                                                                            result = getFormPage('../php/errorpage.php','GET');
+                                                                            result.then(() => {
+                                                                                flashErrors([response]);
+                                                                            })
+                                                                        }
                                                                     });
-        
-                                                                    result = getFormPage('../php/forms/business-details.php', 'POST');
                                                                 }   
                                                             })
                                                         }
@@ -1234,6 +1294,18 @@ window.onload = function(){
             let new_flash = document.createElement("div");
             new_flash.classList.add("alert", "alert-danger");
             new_flash.innerHTML = error;
+            flash_area.appendChild(new_flash);
+        });
+        scrollTop();
+    }
+
+    var flashSuccesses = (successes) => {
+        let flash_area = document.querySelector("div.flash");
+        flash_area.innerHTML = "";
+        successes.forEach(success => {
+            let new_flash = document.createElement("div");
+            new_flash.classList.add("alert", "alert-danger");
+            new_flash.innerHTML = success;
             flash_area.appendChild(new_flash);
         });
         scrollTop();

@@ -605,7 +605,7 @@
 
             <div class="col m-3">
                 <label for="dependents">Tax Registration Number (TRN):</label><br>
-                <input class="form-control" type="text" id="trn" name="trn" placeholder="Tax Registration Number" value=""><br><br>
+                <input class="form-control" type="text" id="trn" name="trn" placeholder="***-***-***" value=""><br><br>
             </div>
 
             <div class="col m-3">
