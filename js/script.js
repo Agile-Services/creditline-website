@@ -369,7 +369,7 @@ window.onload = function(){
                                 if(response == "Message has been sent"){ 
                                     result = getFormPage('../php/successpage.php', 'GET');
                                     result.then(() => {
-                                        flashSuccesses(["Success!"]);
+                                        flashSuccesses([response]);
                                     })
                                 } else {
                                     result = getFormPage('../php/errorpage.php','GET');
@@ -548,7 +548,7 @@ window.onload = function(){
                                     if(response == "Message has been sent"){ 
                                         result = getFormPage('../php/successpage.php', 'GET');
                                         result.then(() => {
-                                            flashSuccesses(["Success!"]);
+                                            flashSuccesses([response]);
                                         })
                                     } else {
                                         result = getFormPage('../php/errorpage.php','GET');
@@ -1065,7 +1065,7 @@ window.onload = function(){
                                                                             if(response == "Message has been sent"){ 
                                                                                 result = getFormPage('../php/successpage.php', 'GET');
                                                                                 result.then(() => {
-                                                                                    flashSuccesses(["Success!"]);
+                                                                                    flashSuccesses([response]);
                                                                                 })
                                                                             } else {
                                                                                 result = getFormPage('../php/errorpage.php','GET');
@@ -1198,7 +1198,7 @@ window.onload = function(){
                                                                         if(response == "Message has been sent"){ 
                                                                             result = getFormPage('../php/successpage.php', 'GET');
                                                                             result.then(() => {
-                                                                                flashSuccesses(["Success!"]);
+                                                                                flashSuccesses([response]);
                                                                             })
                                                                         } else {
                                                                             result = getFormPage('../php/errorpage.php','GET');
