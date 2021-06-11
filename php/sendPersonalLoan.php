@@ -122,7 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                 $fileNameNew = uniqid('',true).".".$job_letter_actualFileExt;
                 $fileDestination = 'uploads/'.$fileNameNew;
                 if(move_uploaded_file($job_letter_fieTempname,$fileDestination) ){
-                    echo "File name: ".$job_letter_fieTempname." File Path: ".$fileDestination."<br>";    
+                    // echo "File name: ".$job_letter_fieTempname." File Path: ".$fileDestination."<br>";    
                  }
             }
             else{
@@ -144,7 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                  $pay1_fileNameNew2 = uniqid('',true).".".$pay1_fileActualExt;
                  $pay1_fileDestination2 = 'uploads/'.$pay1_fileNameNew2;
                  if(move_uploaded_file($pay1_fileTempname,$pay1_fileDestination2) ){
-                    echo "File name: ".$pay1_fileTempname." File Path: ".$pay1_fileDestination2."<br>";   
+                    // echo "File name: ".$pay1_fileTempname." File Path: ".$pay1_fileDestination2."<br>";   
                 }
              }
              else{
@@ -167,7 +167,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                  $pay2_fileNameNew = uniqid('',true).".".$pay2_fileActualExt;
                  $pay2_fileDestination = 'uploads/'.$pay2_fileNameNew;
                  if(move_uploaded_file($pay2_fileTempname,$pay2_fileDestination) ){
-                     echo "File name: ".$pay2_fileTempname." File Path: ".$pay2_fileDestination."<br>";    
+                    //  echo "File name: ".$pay2_fileTempname." File Path: ".$pay2_fileDestination."<br>";    
                   }
              }
              else{
@@ -189,7 +189,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                  $pay3_fileNameNew = uniqid('',true).".".$pay3_fileActualExt;
                  $pay3_fileDestination = 'uploads/'.$pay3_fileNameNew;
                  if(move_uploaded_file($pay3_fileTempname,$pay3_fileDestination) ){
-                     echo "File name: ".$pay3_fileTempname." File Path: ".$pay3_fileDestination."<br>";    
+                    //  echo "File name: ".$pay3_fileTempname." File Path: ".$pay3_fileDestination."<br>";    
                   }
              }
              else{
@@ -210,7 +210,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                  $addr_fileNameNew = uniqid('',true).".".$addr_fileActualExt;
                  $addr_fileDestination = 'uploads/'.$addr_fileNameNew;
                  if(move_uploaded_file($addr_fileTempname,$addr_fileDestination) ){
-                     echo "File name: ".$addr_fileTempname." File Path: ".$addr_fileDestination."<br>";    
+                    //  echo "File name: ".$addr_fileTempname." File Path: ".$addr_fileDestination."<br>";    
                   }
              }
              else{
@@ -232,18 +232,18 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    $mail->SMTPDebug = SMTP::DEBUG_OFF;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'nathanielbedassie@gmail.com';                     //SMTP username
-    $mail->Password   = 'fditjqzqsbhxbgkh';                               //SMTP password
+    $mail->Username   = '';                     //SMTP username
+    $mail->Password   = '';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
     $mail->setFrom('info@example.com', 'Mailer');
-    $mail->addAddress('nathanielbedassie@gmail.com', 'Joe User');     //Add a recipient
+    $mail->addAddress('', 'Joe User');     //Add a recipient
 
 
     //Add attachments
@@ -263,9 +263,9 @@ try {
     $mail->AltBody = $message;
 
     $mail->send();
-    echo 'Message has been sent';
+    echo json_encode('Message has been sent');
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        echo json_encode("Message could not be sent. Mailer Error: {$mail->ErrorInfo}");
     }
   
 }

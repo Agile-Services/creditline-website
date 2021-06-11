@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                 $fileNameNew = uniqid('',true).".".$fileActualExt;
                 $fileDestination = 'uploads/'.$fileNameNew;
                 if(move_uploaded_file($fileTempname,$fileDestination) ){
-                    echo "Upload 1 Successful";    
+                    // echo "Upload 1 Successful";    
                  }
             }
             else{
@@ -90,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                  $fileNameNew2 = uniqid('',true).".".$fileActualExt2;
                  $fileDestination2 = 'uploads/'.$fileNameNew2;
                  if(move_uploaded_file($fileTempname2,$fileDestination2)){
-                     echo "Upload 2 Successful";    
+                    //  echo "Upload 2 Successful";    
                         }
                 }
              else{
@@ -113,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                  $invoice_fileNameNew2 = uniqid('',true).".".$invoice_fileActualExt;
                  $invoice_fileDestination2 = 'uploads/'.$invoice_fileNameNew2;
                  if(move_uploaded_file($invoice_fileTempname,$invoice_fileDestination2) ){
-                     echo "Upload 3 Successful";    
+                    //  echo "Upload 3 Successful";    
                 }
              }
              else{
@@ -137,12 +137,13 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    $mail->SMTPDebug = SMTP::DEBUG_OFF;   
+    $mail->SMTPDebug =                    //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'nathanielbedassie@gmail.com';                     //SMTP username
-    $mail->Password   = 'fditjqzqsbhxbgkh';                               //SMTP password
+    $mail->Password   = 'hxdhjxggcwhyqevw';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
@@ -164,9 +165,9 @@ try {
     $mail->AltBody = $message;
 
     $mail->send();
-    echo 'Message has been sent';
+    echo json_encode('Message has been sent');
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        echo json_encode("Message could not be sent. Mailer Error: {$mail->ErrorInfo}");
     }
     }
 ?>

@@ -10,6 +10,8 @@
                 <!-- Flashes go here -->
         </div>
         <h2 class="text-success">Your Application has been Submitted.</h2>
+        <br>
+        <div class="text-center"><button id="returnToHome" class="btn btn-lg btn-success" type="button">Return to Home Page</button></div>
         <script type="text/javascript" src="js/collectionScript.js"></script>  
         <script type="text/javascript" src="js/script.js"></script>
     </div>

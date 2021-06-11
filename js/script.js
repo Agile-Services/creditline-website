@@ -365,16 +365,42 @@ window.onload = function(){
                                 processData: false,
                                 contentType: false
                             }).done(function(response){
-                                console.log(response);
-                                if(response == "Message has been sent"){ 
+                                let text = response;
+                                console.log(text);
+                                if(text == "\"Message has been sent\""){  
                                     result = getFormPage('../php/successpage.php', 'GET');
                                     result.then(() => {
-                                        flashSuccesses([response]);
+                                        flashSuccesses(["Application Submitted."]);
+
+                                        let btn = document.getElementById("returnToHome");
+                                        btn.addEventListener('click',() => {
+                                            let result = getPage('../php/home.php', 'GET');
+                                            result.then(() => {
+                                                if (document.title != "Home | CreditLine") {
+                                                    document.title = "Home | CreditLine";
+                                                }
+                                                this.document.getElementById("applyNow").addEventListener('click', () => {
+                                                    apply_loan("Apply | Creditline", result)
+                                                })
+                                            })
+                                        })
                                     })
                                 } else {
                                     result = getFormPage('../php/errorpage.php','GET');
                                     result.then(() => {
-                                        flashErrors([response]);
+                                        flashErrors(["An error has occured."]);
+                                        let btn = document.getElementById("returnToHome");
+                                        btn.addEventListener('click',() => {
+                                            let result = getPage('../php/home.php', 'GET');
+                                            result.then(() => {
+                                                if (document.title != "Home | CreditLine") {
+                                                    document.title = "Home | CreditLine";
+                                                }
+                                                this.document.getElementById("applyNow").addEventListener('click', () => {
+                                                    apply_loan("Apply | Creditline", result)
+                                                })
+                                            })
+                                        })
                                     })
                                 }
                             });
@@ -544,16 +570,42 @@ window.onload = function(){
                                 processData: false,
                                 contentType: false
                                 }).done(function(response){
-                                    console.log(response);
-                                    if(response == "Message has been sent"){ 
+                                    let text = response;
+                                    console.log(text);
+                                    if(text == "\"Message has been sent\""){ 
                                         result = getFormPage('../php/successpage.php', 'GET');
                                         result.then(() => {
-                                            flashSuccesses([response]);
+                                            flashSuccesses(["Application Submitted."]);
+
+                                            let btn = document.getElementById("returnToHome");
+                                            btn.addEventListener('click',() => {
+                                                let result = getPage('../php/home.php', 'GET');
+                                                result.then(() => {
+                                                    if (document.title != "Home | CreditLine") {
+                                                        document.title = "Home | CreditLine";
+                                                    }
+                                                    this.document.getElementById("applyNow").addEventListener('click', () => {
+                                                        apply_loan("Apply | Creditline", result)
+                                                    })
+                                                })
+                                            })
                                         })
                                     } else {
                                         result = getFormPage('../php/errorpage.php','GET');
                                         result.then(() => {
-                                            flashErrors([response]);
+                                            flashErrors(["An error has occured."]);
+                                            let btn = document.getElementById("returnToHome");
+                                        btn.addEventListener('click',() => {
+                                            let result = getPage('../php/home.php', 'GET');
+                                            result.then(() => {
+                                                if (document.title != "Home | CreditLine") {
+                                                    document.title = "Home | CreditLine";
+                                                }
+                                                this.document.getElementById("applyNow").addEventListener('click', () => {
+                                                    apply_loan("Apply | Creditline", result)
+                                                })
+                                            })
+                                        })
                                         })
                                     }
                                 });
@@ -1061,16 +1113,41 @@ window.onload = function(){
                                                                         processData: false,
                                                                         contentType: false
                                                                         }).done(function(response){
-                                                                            console.log(response);
-                                                                            if(response == "Message has been sent"){ 
+                                                                            let text = response;
+                                                                            console.log(text);
+                                                                            if(text == "\"Message has been sent\""){  
                                                                                 result = getFormPage('../php/successpage.php', 'GET');
                                                                                 result.then(() => {
-                                                                                    flashSuccesses([response]);
+                                                                                    flashSuccesses(["Application Submitted."]);
+                                                                                    let btn = document.getElementById("returnToHome");
+                                                                                    btn.addEventListener('click',() => {
+                                                                                        let result = getPage('../php/home.php', 'GET');
+                                                                                        result.then(() => {
+                                                                                            if (document.title != "Home | CreditLine") {
+                                                                                                document.title = "Home | CreditLine";
+                                                                                            }
+                                                                                            this.document.getElementById("applyNow").addEventListener('click', () => {
+                                                                                                apply_loan("Apply | Creditline", result)
+                                                                                            })
+                                                                                        })
+                                                                                    })
                                                                                 })
                                                                             } else {
                                                                                 result = getFormPage('../php/errorpage.php','GET');
                                                                                 result.then(() => {
-                                                                                    flashErrors([response]);
+                                                                                    flashErrors(["An error has occured."]);
+                                                                                    let btn = document.getElementById("returnToHome");
+                                                                                    btn.addEventListener('click',() => {
+                                                                                        let result = getPage('../php/home.php', 'GET');
+                                                                                        result.then(() => {
+                                                                                            if (document.title != "Home | CreditLine") {
+                                                                                                document.title = "Home | CreditLine";
+                                                                                            }
+                                                                                            this.document.getElementById("applyNow").addEventListener('click', () => {
+                                                                                                apply_loan("Apply | Creditline", result)
+                                                                                            })
+                                                                                        })
+                                                                                    })
                                                                                 })
                                                                             }
                                                                         });
@@ -1194,16 +1271,42 @@ window.onload = function(){
                                                                     processData: false,
                                                                     contentType: false
                                                                     }).done(function(response){
-                                                                        console.log(response);
-                                                                        if(response == "Message has been sent"){ 
+                                                                        let text = response;
+                                                                        console.log(text);
+                                                                        if(text == "\"Message has been sent\""){ 
                                                                             result = getFormPage('../php/successpage.php', 'GET');
                                                                             result.then(() => {
-                                                                                flashSuccesses([response]);
+                                                                                flashSuccesses(["Application Submitted."]);
+
+                                                                                let btn = document.getElementById("returnToHome");
+                                                                                btn.addEventListener('click',() => {
+                                                                                    let result = getPage('../php/home.php', 'GET');
+                                                                                    result.then(() => {
+                                                                                        if (document.title != "Home | CreditLine") {
+                                                                                            document.title = "Home | CreditLine";
+                                                                                        }
+                                                                                        this.document.getElementById("applyNow").addEventListener('click', () => {
+                                                                                            apply_loan("Apply | Creditline", result)
+                                                                                        })
+                                                                                    })
+                                                                                })
                                                                             })
                                                                         } else {
                                                                             result = getFormPage('../php/errorpage.php','GET');
                                                                             result.then(() => {
-                                                                                flashErrors([response]);
+                                                                                flashErrors(["An error has occured."]);
+                                                                                let btn = document.getElementById("returnToHome");
+                                                                                btn.addEventListener('click',() => {
+                                                                                    let result = getPage('../php/home.php', 'GET');
+                                                                                    result.then(() => {
+                                                                                        if (document.title != "Home | CreditLine") {
+                                                                                            document.title = "Home | CreditLine";
+                                                                                        }
+                                                                                        this.document.getElementById("applyNow").addEventListener('click', () => {
+                                                                                            apply_loan("Apply | Creditline", result)
+                                                                                        })
+                                                                                    })
+                                                                                })
                                                                             })
                                                                         }
                                                                     });
@@ -1304,7 +1407,7 @@ window.onload = function(){
         flash_area.innerHTML = "";
         successes.forEach(success => {
             let new_flash = document.createElement("div");
-            new_flash.classList.add("alert", "alert-danger");
+            new_flash.classList.add("alert", "alert-success");
             new_flash.innerHTML = success;
             flash_area.appendChild(new_flash);
         });

@@ -13,6 +13,8 @@
         <p>Please contact us at:<br><br>
         Email: creditlinemicrofinancing@gmail.com<br>
         Phone 1: (876) 828-4552 </p>
+        <br>
+        <div class="text-center"><button id="returnToHome" class="btn btn-lg btn-success" type="button">Return to Home Page</button></div>
         <script type="text/javascript" src="js/collectionScript.js"></script>  
         <script type="text/javascript" src="js/script.js"></script>
     </div>
