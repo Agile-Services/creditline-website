@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                 $fileNameNew = uniqid('',true).".".$fileActualExt;
                 $fileDestination = 'uploads/'.$fileNameNew;
                 if(move_uploaded_file($fileTempname,$fileDestination) ){
-                    echo "File name: ".$fileTempname." File Path: ".$fileDestination."<br>";    
+                    // echo "File name: ".$fileTempname." File Path: ".$fileDestination."<br>";    
                  }
             }
             else{
@@ -110,7 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                  $cert_fileNameNew2 = uniqid('',true).".".$cert_fileActualExt;
                  $cert_fileDestination2 = 'uploads/'.$cert_fileNameNew2;
                  if(move_uploaded_file($cert_fileTempname,$cert_fileDestination2) ){
-                    echo "File name: ".$cert_fileTempname." File Path: ".$cert_fileDestination2."<br>";   
+                    // echo "File name: ".$cert_fileTempname." File Path: ".$cert_fileDestination2."<br>";   
                 }
              }
              else{
