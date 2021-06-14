@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     //Income Statement 
     if(in_array($fileActualExt,$allowed)){
        if($fileError === 0){
-            if($fileSize < 500000){
+            if($fileSize < 5000000){
                 $fileNameNew = uniqid('',true).".".$fileActualExt;
                 $fileDestination = 'uploads/'.$fileNameNew;
                 if(move_uploaded_file($fileTempname,$fileDestination) ){
@@ -106,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
      //Business Certification
      if(in_array($cert_fileActualExt,$allowed)){
         if($cert_fileError === 0){
-             if($cert_fileSize < 500000){
+             if($cert_fileSize < 5000000){
                  $cert_fileNameNew2 = uniqid('',true).".".$cert_fileActualExt;
                  $cert_fileDestination2 = 'uploads/'.$cert_fileNameNew2;
                  if(move_uploaded_file($cert_fileTempname,$cert_fileDestination2) ){
@@ -133,7 +133,8 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_OFF;                      //Enable verbose debug output
+    //$mail->SMTPDebug = SMTP::DEBUG_OFF;                      //Enable verbose debug output
+    $mail->SMTPDebug = true;
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication

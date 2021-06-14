@@ -713,8 +713,8 @@ window.onload = function(){
                                     var mothers_maiden = document.getElementById("mothers_maiden");
                                     var num_of_dependents = document.getElementById("dependents");
                                     var trn = document.getElementById("trn");
-                                    var id = document.getElementById("id");
-                                    var id2= document.getElementById("id2");
+                                    var id = document.getElementById("id").files[0];
+                                    var id2= document.getElementById("id2").files[0];
                                     let errors = [];
                                     if(fname.value == ""){
                                         makeAlert(fname);
@@ -758,13 +758,13 @@ window.onload = function(){
                                         errors.push(error)
                                         flashErrors(errors)
                                     }     
-                                    if(typeof id.files[0] === 'undefined'){
+                                    if(typeof id === 'undefined'){
                                         makeAlert(id);
                                         let error = "ID is Required!";
                                         errors.push(error)
                                         flashErrors(errors)
                                     }
-                                    if(typeof id2.files[0] === 'undefined'){
+                                    if(typeof id2 === 'undefined'){
                                         makeAlert(id2);
                                         let error = "Second ID is Required!";
                                         errors.push(error)
@@ -990,11 +990,11 @@ window.onload = function(){
                                                                 var country = document.getElementById("country");
                                                                 var num = document.getElementById("business_number");
                                                                 var status = document.getElementById("status");
-                                                                var pay1 = document.getElementById("pay_slip1");
-                                                                var pay2 = document.getElementById("pay_slip2");
-                                                                var pay3 = document.getElementById("pay_slip3");
-                                                                var letter = document.getElementById("job_letter");
-                                                                var proof_of_addr = document.getElementById("proof_of_address");                  
+                                                                var pay1 = document.getElementById("pay_slip1").files[0];
+                                                                var pay2 = document.getElementById("pay_slip2").files[0];
+                                                                var pay3 = document.getElementById("pay_slip3").files[0];
+                                                                var letter = document.getElementById("job_letter").files[0];
+                                                                var proof_of_addr = document.getElementById("proof_of_address").files[0];                  
                                                                 let errors = [];
             
                                                                 if(employer.value == ""){
@@ -1051,31 +1051,31 @@ window.onload = function(){
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                if (typeof pay1.files[0] === 'undefined') {
+                                                                if (typeof pay1 === 'undefined') {
                                                                     makeAlert(pay1);
                                                                     let error = "Pay Slip 1 is Required!";
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                if (typeof pay2.files[0] === 'undefined') {
+                                                                if (typeof pay2 === 'undefined') {
                                                                     makeAlert(pay2);
                                                                     let error = "Pay Slip 2 is Required!";
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                if (typeof pay3.files[0] === 'undefined') {
+                                                                if (typeof pay3 === 'undefined') {
                                                                     makeAlert(pay3);
                                                                     let error = "Pay Slip 3 is Required!";
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                if (typeof letter.files[0] === 'undefined') {
+                                                                if (typeof letter === 'undefined') {
                                                                     makeAlert(letter);
                                                                     let error = "Job Letter is Required!";
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                if (typeof proof_of_addr.files[0] === 'undefined') {
+                                                                if (typeof proof_of_addr === 'undefined') {
                                                                     makeAlert(proof_of_addr);
                                                                     let error = "Proof of Address is Required!";
                                                                     errors.push(error)
@@ -1160,9 +1160,9 @@ window.onload = function(){
                                                                 var business_name = document.getElementById("business_name");
                                                                 var date_est = document.getElementById("date_established");
                                                                 var desc = document.getElementById("business_desc").value;
-                                                                var cert = document.getElementById("cert");
+                                                                var cert = document.getElementById("cert").files[0];
                                                                 var trn = document.getElementById("trn");
-                                                                var income = document.getElementById("income");
+                                                                var income = document.getElementById("income").files[0];
                                                                 var address1 = document.getElementById("address1");
                                                                 var address2 = document.getElementById("address2");
                                                                 var city = document.getElementById("city");
@@ -1187,7 +1187,7 @@ window.onload = function(){
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                if(cert.files[0] == null){
+                                                                if(cert == null){
                                                                     makeAlert(cert);
                                                                     let error = "Certificate is Required!";
                                                                     errors.push(error)
@@ -1205,8 +1205,8 @@ window.onload = function(){
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                console.log(income.files[0]);
-                                                                if(income.files[0] == null){
+                                                                console.log(income);
+                                                                if(income == null){
                                                                     makeAlert(income);
                                                                     let error = "Income Statement is Required!";
                                                                     errors.push(error)

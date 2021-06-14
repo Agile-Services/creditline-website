@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     //id
     if(in_array($fileActualExt,$allowed)){
        if($fileError === 0){
-            if($fileSize < 500000){
+            if($fileSize < 5000000){
                 $fileNameNew = uniqid('',true).".".$fileActualExt;
                 $fileDestination = 'uploads/'.$fileNameNew;
                 if(move_uploaded_file($fileTempname,$fileDestination) ){
@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     //product image
     if(in_array($fileActualExt2,$allowed)){
         if($fileError2 === 0){
-             if($fileError2 < 500000){
+             if($fileError2 < 5000000){
                  $fileNameNew2 = uniqid('',true).".".$fileActualExt2;
                  $fileDestination2 = 'uploads/'.$fileNameNew2;
                  if(move_uploaded_file($fileTempname2,$fileDestination2)){
@@ -109,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
      //invoice
      if(in_array($invoice_fileActualExt,$allowed)){
         if($invoice_fileError === 0){
-             if($invoice_fileSize < 500000){
+             if($invoice_fileSize < 5000000){
                  $invoice_fileNameNew2 = uniqid('',true).".".$invoice_fileActualExt;
                  $invoice_fileDestination2 = 'uploads/'.$invoice_fileNameNew2;
                  if(move_uploaded_file($invoice_fileTempname,$invoice_fileDestination2) ){

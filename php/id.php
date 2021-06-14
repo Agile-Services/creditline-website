@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         //Income Statement 
         if(in_array($gov_fileActualExt,$allowed)){
             if($gov_fileError === 0){
-                 if($gov_fileSize < 500000){
+                 if($gov_fileSize < 5000000){
                      $gov_id1_fileNameNew = uniqid('',true).".".$gov_fileActualExt;
                      $gov_id1_fileDestination = 'uploads/'.$gov_id1_fileNameNew;
                      if(move_uploaded_file($gov_fileTempname,$gov_id1_fileDestination) ){
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         if(in_array($gov_id2_fileActualExt,$allowed)){
            if($gov_id2_fileError === 0){
-                if($gov_id2_fileSize < 500000){
+                if($gov_id2_fileSize < 5000000){
                     $gov_id2_fileNameNew = uniqid('',true).".".$gov_id2_fileActualExt;
                     $gov_id2_fileDestination = 'uploads/'.$gov_id2_fileNameNew;
                     if(move_uploaded_file($gov_id2_fileTempname,$gov_id2_fileDestination) ){

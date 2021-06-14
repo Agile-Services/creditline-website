@@ -118,7 +118,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     //Income Statement 
     if(in_array($job_letter_actualFileExt,$allowed)){
        if($job_letter_fileError === 0){
-            if($job_letter_filesize < 500000){
+            if($job_letter_filesize < 5000000){
                 $fileNameNew = uniqid('',true).".".$job_letter_actualFileExt;
                 $fileDestination = 'uploads/'.$fileNameNew;
                 if(move_uploaded_file($job_letter_fieTempname,$fileDestination) ){
@@ -140,7 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
    
      if(in_array($pay1_fileActualExt,$allowed)){
         if($pay1_fileError === 0){
-             if($pay1_filesize < 500000){
+             if($pay1_filesize < 5000000){
                  $pay1_fileNameNew2 = uniqid('',true).".".$pay1_fileActualExt;
                  $pay1_fileDestination2 = 'uploads/'.$pay1_fileNameNew2;
                  if(move_uploaded_file($pay1_fileTempname,$pay1_fileDestination2) ){
@@ -163,7 +163,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
      if(in_array($pay2_fileActualExt,$allowed)){
         if($pay2_fileError === 0){
-             if($pay2_filesize < 500000){
+             if($pay2_filesize < 5000000){
                  $pay2_fileNameNew = uniqid('',true).".".$pay2_fileActualExt;
                  $pay2_fileDestination = 'uploads/'.$pay2_fileNameNew;
                  if(move_uploaded_file($pay2_fileTempname,$pay2_fileDestination) ){
@@ -185,7 +185,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
      if(in_array($pay3_fileActualExt,$allowed)){
         if($pay3_fileError === 0){
-             if($pay3_filesize < 500000){
+             if($pay3_filesize < 5000000){
                  $pay3_fileNameNew = uniqid('',true).".".$pay3_fileActualExt;
                  $pay3_fileDestination = 'uploads/'.$pay3_fileNameNew;
                  if(move_uploaded_file($pay3_fileTempname,$pay3_fileDestination) ){
@@ -206,7 +206,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
      if(in_array($addr_fileActualExt,$allowed)){
         if($addr_fileError === 0){
-             if($addr_filesize < 500000){
+             if($addr_filesize < 5000000){
                  $addr_fileNameNew = uniqid('',true).".".$addr_fileActualExt;
                  $addr_fileDestination = 'uploads/'.$addr_fileNameNew;
                  if(move_uploaded_file($addr_fileTempname,$addr_fileDestination) ){
