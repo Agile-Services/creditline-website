@@ -296,7 +296,7 @@ window.onload = function(){
                             errors.push(error)
                             flashErrors(errors)
                         }
-                        if(!/[0-9]+-[0-9]+-[0-9]+/.test(trn.value)){
+                        if(!/^[0-9]{3}-[0-9]{3}-[0-9]{3}$/.test(trn.value)){
                             makeAlert(trn);
                             let error = "TRN does not meet the format of a real TRN! Check for spaces and letters in the TRN entered...";
                             errors.push(error)
@@ -367,7 +367,7 @@ window.onload = function(){
                             }).done(function(response){
                                 let text = response;
                                 console.log(text);
-                                if(text == "\"Message has been sent\""){  
+                                if("\"Message has been sent\" ".localeCompare(text)){  
                                     result = getFormPage('../php/successpage.php', 'GET');
                                     result.then(() => {
                                         flashSuccesses(["Application Submitted."]);
@@ -525,7 +525,7 @@ window.onload = function(){
                             errors.push(error)
                             flashErrors(errors)
                         }
-                        if(!/[0-9]+-[0-9]+-[0-9]+/.test(trn.value)){
+                        if(!/^[0-9]{3}-[0-9]{3}-[0-9]{3}$/.test(trn.value)){
                             makeAlert(trn);
                             let error = "TRN does not meet the format of a real TRN! Check for spaces and letters in the TRN entered...";
                             errors.push(error)
@@ -776,7 +776,7 @@ window.onload = function(){
                                         errors.push(error)
                                         flashErrors(errors)
                                     }
-                                    if(!/[0-9]+-[0-9]+-[0-9]+/.test(trn.value)){
+                                    if(!/^[0-9]{3}-[0-9]{3}-[0-9]{3}$/.test(trn.value)){
                                         makeAlert(trn);
                                         let error = "TRN does not meet the format of a real TRN! Check for spaces and letters in the TRN entered...";
                                         errors.push(error)
@@ -1199,7 +1199,7 @@ window.onload = function(){
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                if(!/[0-9]+-[0-9]+-[0-9]+/.test(trn.value)){
+                                                                if(!/^[0-9]{3}-[0-9]{3}-[0-9]{3}$/.test(trn.value)){
                                                                     makeAlert(trn);
                                                                     let error = "TRN does not meet the format of a real TRN! Check for spaces and letters in the TRN entered...";
                                                                     errors.push(error)
