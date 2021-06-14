@@ -44,7 +44,7 @@
         <div class="form-row">
             <div class="col w-100">
                 <label for="address1">Business TRN</label><br>
-                <input type="text"  class='formVal'id="trn" name="trn" placeholder="TRN" Address 1" value=""><br><br>
+                <input type="text"  class='formVal'id="trn" name="trn" placeholder="***-***-***" Address 1" value=""><br><br>
             </div>
         </div>
 

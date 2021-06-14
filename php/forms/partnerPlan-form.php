@@ -711,7 +711,7 @@
             <div class="form-row">
                 <div class="col">
                     <label for="bank">Tax Registration Number (TRN)</label>
-                    <input type="text" id="trn" name="trn" >
+                    <input type="text" id="trn" name="trn" placeholder="***-***-***">
                 </div>
             </div>
             <br>

@@ -343,7 +343,7 @@
             <div class="form-row">
                 <div class="col">
                     <label for="trn">Tax Registration Number (TRN)</label><br>
-                    <input type="text" id="trn" name="trn" placeholder="123-456-789" value="">
+                    <input type="text" id="trn" name="trn" placeholder="***-***-***" value="">
                 </div>
                 <div class="col"></div>
             </div>

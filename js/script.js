@@ -713,8 +713,8 @@ window.onload = function(){
                                     var mothers_maiden = document.getElementById("mothers_maiden");
                                     var num_of_dependents = document.getElementById("dependents");
                                     var trn = document.getElementById("trn");
-                                    var id = document.getElementById("id").files[0];
-                                    var id2= document.getElementById("id2").files[0];
+                                    var id = document.getElementById("id");
+                                    var id2= document.getElementById("id2");
                                     let errors = [];
                                     if(fname.value == ""){
                                         makeAlert(fname);
@@ -758,13 +758,13 @@ window.onload = function(){
                                         errors.push(error)
                                         flashErrors(errors)
                                     }     
-                                    if(typeof id === 'undefined'){
+                                    if(typeof id.files[0] === 'undefined'){
                                         makeAlert(id);
                                         let error = "ID is Required!";
                                         errors.push(error)
                                         flashErrors(errors)
                                     }
-                                    if(typeof id2 === 'undefined'){
+                                    if(typeof id2.files[0] === 'undefined'){
                                         makeAlert(id2);
                                         let error = "Second ID is Required!";
                                         errors.push(error)
@@ -1162,7 +1162,7 @@ window.onload = function(){
                                                                 var desc = document.getElementById("business_desc").value;
                                                                 var cert = document.getElementById("cert").files[0];
                                                                 var trn = document.getElementById("trn");
-                                                                var income = document.getElementById("income").files[0];
+                                                                var income = document.getElementById("income");
                                                                 var address1 = document.getElementById("address1");
                                                                 var address2 = document.getElementById("address2");
                                                                 var city = document.getElementById("city");
@@ -1205,8 +1205,7 @@ window.onload = function(){
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                console.log(income);
-                                                                if(income == null){
+                                                                if(typeof income.files[0] == undefined){
                                                                     makeAlert(income);
                                                                     let error = "Income Statement is Required!";
                                                                     errors.push(error)
