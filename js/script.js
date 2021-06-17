@@ -152,7 +152,27 @@ window.onload = function(){
                         }
                         else if(cash.checked == false && bank_transfer.checked == true){
                             payment_method=bank_transfer.value;
+                            
                         }
+
+                        //This is where I was trying to get the site to display flash messsages if the person selects bank transfer 
+                        //but did not put in banking information and its not working im not sure why
+
+                        if(payment_method === "bank_transfer"){
+                            if(bank == "") {
+                                makeAlert(bank);
+                                let error = "Name of Bank is Required!";
+                                errors.push(error)
+                                flashErrors(errors)  
+
+                            }
+                            if(acc_number == ""){
+                                makeAlert(acc_number);
+                                let error = "Account Number is Required!";
+                                errors.push(error)
+                                flashErrors(errors)  
+                        }
+                    }
 
 
                         if(weekly.checked == false && fortnight.checked == false && monthly.checked == false){
@@ -320,11 +340,20 @@ window.onload = function(){
                             errors.push(error)
                             flashErrors(errors)
                         }
+                        //I sent off a doc and didnt upload any image so this doesnt work
                         if(document.getElementById("id").fileslength == 0){
                             return document.getElementById("error3").innerHTML = "No Files have been selected";
                         }
                         if(errors.length == 0){
                             var id = document.getElementById("id").files[0];
+                            
+                            //this is where I'm trying to ensure that they upload and ID 
+                            if(typeof id === undefined){
+                                makeAlert(id);
+                                let error = "Identification is Required!";
+                                errors.push(error)
+                                flashErrors(errors)
+                            }
                             console.log(id);
                             var formData = new FormData();
                             formData.set("id", id);
@@ -713,8 +742,8 @@ window.onload = function(){
                                     var mothers_maiden = document.getElementById("mothers_maiden");
                                     var num_of_dependents = document.getElementById("dependents");
                                     var trn = document.getElementById("trn");
-                                    var id = document.getElementById("id");
-                                    var id2= document.getElementById("id2");
+                                    var id = document.getElementById("id").files[0];
+                                    var id2= document.getElementById("id2").files[0];
                                     let errors = [];
                                     if(fname.value == ""){
                                         makeAlert(fname);
@@ -758,13 +787,13 @@ window.onload = function(){
                                         errors.push(error)
                                         flashErrors(errors)
                                     }     
-                                    if(typeof id.files[0] === 'undefined'){
+                                    if(typeof id === 'undefined'){
                                         makeAlert(id);
                                         let error = "ID is Required!";
                                         errors.push(error)
                                         flashErrors(errors)
                                     }
-                                    if(typeof id2.files[0] === 'undefined'){
+                                    if(typeof id2 === 'undefined'){
                                         makeAlert(id2);
                                         let error = "Second ID is Required!";
                                         errors.push(error)
@@ -976,7 +1005,6 @@ window.onload = function(){
                                                         result = getFormPage('../php/forms/business-details.php', 'GET');
                                                     }
                                                     result.then(() => {
-                                                        console.log(loan_type);
                                                         if (document.title != "CreditLine | Employment Details" && loan_type === "Payday Loan") {
                                                             document.title = "CreditLine | Employment Details";
                                                             this.document.getElementById("empDetailsSubmit").addEventListener('click', () => {
@@ -1162,7 +1190,7 @@ window.onload = function(){
                                                                 var desc = document.getElementById("business_desc").value;
                                                                 var cert = document.getElementById("cert").files[0];
                                                                 var trn = document.getElementById("trn");
-                                                                var income = document.getElementById("income");
+                                                                var income = document.getElementById("income").files[0] ;
                                                                 var address1 = document.getElementById("address1");
                                                                 var address2 = document.getElementById("address2");
                                                                 var city = document.getElementById("city");
@@ -1187,7 +1215,7 @@ window.onload = function(){
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                if(cert == null){
+                                                                if(typeof cert == undefined){
                                                                     makeAlert(cert);
                                                                     let error = "Certificate is Required!";
                                                                     errors.push(error)
@@ -1205,7 +1233,7 @@ window.onload = function(){
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                if(typeof income.files[0] == undefined){
+                                                                if(typeof income == undefined){
                                                                     makeAlert(income);
                                                                     let error = "Income Statement is Required!";
                                                                     errors.push(error)
