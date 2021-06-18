@@ -131,6 +131,7 @@ window.onload = function(){
                         var full_time = document.getElementById("employement_status");
                         var part_time = document.getElementById("employement_status_Time")
                         var self_employed = document.getElementById("self_employement_status")
+                        var id = document.getElementById("id");
                         let errors = [];
 
                         if(cash.checked == false && bank_transfer.checked == false){
@@ -159,14 +160,14 @@ window.onload = function(){
                         //but did not put in banking information and its not working im not sure why
 
                         if(payment_method === "bank_transfer"){
-                            if(bank == "") {
+                            if(bank.value == "") {
                                 makeAlert(bank);
                                 let error = "Name of Bank is Required!";
                                 errors.push(error)
                                 flashErrors(errors)  
 
                             }
-                            if(acc_number == ""){
+                            if(acc_number.value == ""){
                                 makeAlert(acc_number);
                                 let error = "Account Number is Required!";
                                 errors.push(error)
@@ -340,23 +341,19 @@ window.onload = function(){
                             errors.push(error)
                             flashErrors(errors)
                         }
-                        //I sent off a doc and didnt upload any image so this doesnt work
-                        if(document.getElementById("id").fileslength == 0){
-                            return document.getElementById("error3").innerHTML = "No Files have been selected";
+                        if(typeof id.files[0] == 'undefined'){
+                            makeAlert(id);
+                            let error = "Identification is Required!";
+                            errors.push(error)
+                            flashErrors(errors)
                         }
+                        //I sent off a doc and didnt upload any image so this doesnt work
+                        // if(document.getElementById("id").fileslength == 0){
+                        //     return document.getElementById("error3").innerHTML = "No Files have been selected";
+                        // }
                         if(errors.length == 0){
-                            var id = document.getElementById("id").files[0];
-                            
-                            //this is where I'm trying to ensure that they upload and ID 
-                            if(typeof id === undefined){
-                                makeAlert(id);
-                                let error = "Identification is Required!";
-                                errors.push(error)
-                                flashErrors(errors)
-                            }
-                            console.log(id);
                             var formData = new FormData();
-                            formData.set("id", id);
+                            formData.set("id", id.files[0]);
                             formData.append("fname",fname.value);
                             formData.append("mname",mname.value);
                             formData.append("lname",lname.value);
@@ -396,7 +393,7 @@ window.onload = function(){
                             }).done(function(response){
                                 let text = response;
                                 console.log(text);
-                                if("\"Message has been sent\" ".localeCompare(text)){  
+                                if("\"Message has been sent\" ".localeCompare(text) == 0){  
                                     result = getFormPage('../php/successpage.php', 'GET');
                                     result.then(() => {
                                         flashSuccesses(["Application Submitted."]);
@@ -742,8 +739,8 @@ window.onload = function(){
                                     var mothers_maiden = document.getElementById("mothers_maiden");
                                     var num_of_dependents = document.getElementById("dependents");
                                     var trn = document.getElementById("trn");
-                                    var id = document.getElementById("id").files[0];
-                                    var id2= document.getElementById("id2").files[0];
+                                    var id = document.getElementById("id");
+                                    var id2= document.getElementById("id2");
                                     let errors = [];
                                     if(fname.value == ""){
                                         makeAlert(fname);
@@ -787,13 +784,13 @@ window.onload = function(){
                                         errors.push(error)
                                         flashErrors(errors)
                                     }     
-                                    if(typeof id === 'undefined'){
+                                    if(typeof id.files[0] === 'undefined'){
                                         makeAlert(id);
                                         let error = "ID is Required!";
                                         errors.push(error)
                                         flashErrors(errors)
                                     }
-                                    if(typeof id2 === 'undefined'){
+                                    if(typeof id2.files[0] === 'undefined'){
                                         makeAlert(id2);
                                         let error = "Second ID is Required!";
                                         errors.push(error)
@@ -855,8 +852,8 @@ window.onload = function(){
                                         sessionStorage.setItem("trn",trn);
 
                                         var formData = new FormData();
-                                        formData.append("id",id);
-                                        formData.append("id2",id2);
+                                        formData.append("id",id.files[0]);
+                                        formData.append("id2",id2.files[0]);
                                         
                                         $.ajax({
                                             type: "POST",
