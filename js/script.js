@@ -1015,11 +1015,11 @@ window.onload = function(){
                                                                 var country = document.getElementById("country");
                                                                 var num = document.getElementById("business_number");
                                                                 var status = document.getElementById("status");
-                                                                var pay1 = document.getElementById("pay_slip1").files[0];
-                                                                var pay2 = document.getElementById("pay_slip2").files[0];
-                                                                var pay3 = document.getElementById("pay_slip3").files[0];
-                                                                var letter = document.getElementById("job_letter").files[0];
-                                                                var proof_of_addr = document.getElementById("proof_of_address").files[0];                  
+                                                                var pay1 = document.getElementById("pay_slip1");
+                                                                var pay2 = document.getElementById("pay_slip2");
+                                                                var pay3 = document.getElementById("pay_slip3");
+                                                                var letter = document.getElementById("job_letter");
+                                                                var proof_of_addr = document.getElementById("proof_of_address");                  
                                                                 let errors = [];
             
                                                                 if(employer.value == ""){
@@ -1076,31 +1076,31 @@ window.onload = function(){
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                if (typeof pay1 === 'undefined') {
+                                                                if (typeof pay1.files[0] === 'undefined') {
                                                                     makeAlert(pay1);
                                                                     let error = "Pay Slip 1 is Required!";
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                if (typeof pay2 === 'undefined') {
+                                                                if (typeof pay2.files[0] === 'undefined') {
                                                                     makeAlert(pay2);
                                                                     let error = "Pay Slip 2 is Required!";
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                if (typeof pay3 === 'undefined') {
+                                                                if (typeof pay3.files[0] === 'undefined') {
                                                                     makeAlert(pay3);
                                                                     let error = "Pay Slip 3 is Required!";
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                if (typeof letter === 'undefined') {
+                                                                if (typeof letter.files[0] === 'undefined') {
                                                                     makeAlert(letter);
                                                                     let error = "Job Letter is Required!";
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                if (typeof proof_of_addr === 'undefined') {
+                                                                if (typeof proof_of_addr.files[0] === 'undefined') {
                                                                     makeAlert(proof_of_addr);
                                                                     let error = "Proof of Address is Required!";
                                                                     errors.push(error)
@@ -1119,11 +1119,11 @@ window.onload = function(){
                                                                         
             
                                                                     var formData = new FormData();
-                                                                    formData.append("pay_1",pay1);
-                                                                    formData.append("pay_2",pay2);
-                                                                    formData.append("pay_3",pay3);
-                                                                    formData.append("job_letter",letter);
-                                                                    formData.append("proof_of_addr",proof_of_addr);
+                                                                    formData.append("pay_1",pay1.files[0]);
+                                                                    formData.append("pay_2",pay2.files[0]);
+                                                                    formData.append("pay_3",pay3.files[0]);
+                                                                    formData.append("job_letter",letter.files[0]);
+                                                                    formData.append("proof_of_addr",proof_of_addr.files[0]);
             
                                                                     for(i=0;  i<Object.keys(sessionStorage).length; i++){
                                                                         var name = Object.keys(sessionStorage)[i]
@@ -1184,10 +1184,10 @@ window.onload = function(){
                                                             
                                                                 var business_name = document.getElementById("business_name");
                                                                 var date_est = document.getElementById("date_established");
-                                                                var desc = document.getElementById("business_desc").value;
-                                                                var cert = document.getElementById("cert").files[0];
+                                                                var desc = document.getElementById("business_desc");
+                                                                var cert = document.getElementById("cert");
                                                                 var trn = document.getElementById("trn");
-                                                                var income = document.getElementById("income").files[0] ;
+                                                                var income = document.getElementById("income");
                                                                 var address1 = document.getElementById("address1");
                                                                 var address2 = document.getElementById("address2");
                                                                 var city = document.getElementById("city");
@@ -1212,7 +1212,7 @@ window.onload = function(){
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                if(typeof cert == undefined){
+                                                                if(typeof cert.files[0] == 'undefined'){
                                                                     makeAlert(cert);
                                                                     let error = "Certificate is Required!";
                                                                     errors.push(error)
@@ -1230,7 +1230,7 @@ window.onload = function(){
                                                                     errors.push(error)
                                                                     flashErrors(errors)
                                                                 }
-                                                                if(typeof income == undefined){
+                                                                if(typeof income.files[0] == 'undefined'){
                                                                     makeAlert(income);
                                                                     let error = "Income Statement is Required!";
                                                                     errors.push(error)
@@ -1278,8 +1278,8 @@ window.onload = function(){
                                                                 sessionStorage.setItem("Number of Business",num.value);
         
                                                                 var formData = new FormData();
-                                                                formData.append("income",income);
-                                                                formData.append("cert",cert);
+                                                                formData.append("income",income.files[0]);
+                                                                formData.append("cert",cert.files[0]);
                                                                 formData.append("trn",trn.value);
         
                                                                 for(i=0;  i<Object.keys(sessionStorage).length; i++){
