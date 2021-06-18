@@ -391,9 +391,11 @@ window.onload = function(){
                                 processData: false,
                                 contentType: false
                             }).done(function(response){
-                                let text = response;
-                                console.log(text);
-                                if("\"Message has been sent\" ".localeCompare(text) == 0){  
+                                let text = response.trim();
+                                console.log(new String(text).valueOf());
+                                console.log(new String("\"Message has been sent\"").valueOf())
+                                console.log(new String("\"Message has been sent\"").valueOf() == new String(text).valueOf())
+                                if(new String("\"Message has been sent\"").valueOf() === new String(text).valueOf()){  
                                     result = getFormPage('../php/successpage.php', 'GET');
                                     result.then(() => {
                                         flashSuccesses(["Application Submitted."]);
