@@ -209,6 +209,22 @@ footer div div:nth-child(3) ul li p{
     -o-animation: appearLeft 1.5s ease-in-out 1;
 }
 
+@media screen and (max-width: 767px){
+    .appearRightService{
+        animation: appearRight 1.5s ease-in-out 1;
+        -moz-animation: appearRight 1.5s ease-in-out 1;
+        -webkit-animation: appearRight 1.5s ease-in-out 1;
+        -o-animation: appearRight 1.5s ease-in-out 1;
+    }
+    
+    .appearLeftService{
+        animation: appearLeft 1.5s ease-in-out 1;
+        -moz-animation: appearLeft 1.5s ease-in-out 1;
+        -webkit-animation: appearLeft 1.5s ease-in-out 1;
+        -o-animation: appearLeft 1.5s ease-in-out 1;
+    }
+}
+
 @keyframes appear {
 	0% {
         opacity: 0;
@@ -526,6 +542,16 @@ footer div div:nth-child(3) ul li p{
     margin: 0;
     color: #009900;
     text-shadow: 2px 2px 3px #fff;
+}
+
+#aboutus_services img {
+    height: 20em;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px .5px rgba(71, 71, 71, 0.42);
+    -webkit-box-shadow: 0px 0px 1px .5px rgba(71, 71, 71, 0.42);
+    -moz-box-shadow: 0px 0px 1px .5px rgba(71, 71, 71, 0.42);
 }
 
 .main-content{

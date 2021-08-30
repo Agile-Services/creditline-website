@@ -650,6 +650,24 @@ window.onload = function(){
             if (document.title != "Services | CreditLine") {
                 document.title = "Services | CreditLine";
             }
+            document.addEventListener("scroll", function(event) {               
+                let leftAnimatedBoxes = Array.prototype.slice.call(document.querySelectorAll(".service"));
+                const windowOffsetTop = window.innerHeight + window.scrollY;
+
+                let i = 0;
+                Array.prototype.forEach.call(leftAnimatedBoxes, (animatedBox) => {
+                    const animatedBoxOffsetTop = animatedBox.offsetTop;
+                    
+                    if( i !== 0){
+                        if (windowOffsetTop >= animatedBoxOffsetTop && i % 2 == 0) {
+                            addClass(animatedBox, "appearLeftService");
+                        } else if(windowOffsetTop >= animatedBoxOffsetTop && i % 2 == 1) {
+                            addClass(animatedBox, "appearRightService");
+                        }
+                    }
+                    i = i + 1;
+                });
+            });
         })
     })
 
