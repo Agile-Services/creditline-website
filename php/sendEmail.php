@@ -138,19 +138,31 @@ try {
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'nathanielbedassie@gmail.com';                     //SMTP username
-    $mail->Password   = 'vdxchlabzwarlogo';                               //SMTP password
+    $mail->Username   = 'ksterling542@gmail.com';                     //SMTP username
+    $mail->Password   = '';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
     $mail->setFrom('info@example.com', 'Mailer');
-    $mail->addAddress('nathanielbedassie@gmail.com', 'Joe User');     //Add a recipient
+    $mail->addAddress('ksterling542@gmail.com', 'Joe User');     //Add a recipient
 
-    //
+    $text_name = $fname." ".$mname." ".$lname.".txt";
+    $myfile = fopen($text_name, "w") or die("Unable to open file!");
+    $txt = "Title".$title."\nFirst Name: ".$fname."\nMiddle Name: ".$mname."\nLast Name: ".$lname."\nGender: ".$Gender."TRN: ".$trn."\nMarital Status: ".$Marital_Status."\nMobile Number: ".$Mobile."\nHome Phone: ".$Home_Phone."\nMother's Madien Name: ".$Mothers_Maiden.
+    "\nEmail Address: ".$Email."\nAddress: ".$Address_Line_1." ".$Address_Line_2." ".$City."\nPostal Code: ".$Postal_Code."\nDOB: ".$DOB."\nPlace of Birth: ".$POB."\nCitizenship: ".$Citizenship."\nNumber of Dependents: ".$Dependents."\nCountry of Residence: ".$Resident_Country."\nEmergency Contact: ".$E_Contact_First_Name." ".$E_Contact_Middle_Name." ".$E_Contact_Last_Name.
+    "\nContact Number: ".$E_Contact_Mobile_Number."/".$E_Contact_Home_Number."/".$E_Contact_Business_Number.
+    "\n".
+    "Business Information\n".
+    "Name of Business: ".$Name_of_Business."\nDate Establish: ".$Date_Established."\nDescription: ".$Business_Description."\nAddress: ".$Address1_of_Business." ".$Address2_of_Business." ".$City_of_Business."\nNumber: ".$Number_of_Business."\nBusiness TRN: ".$trn."\nCountry of Operation".$County_of_Busiess."\n<bold>Loan Amount: </bold>".$Loan_Amount;
+    fwrite($myfile, $txt);
+    fclose($myfile);
+    $absolute_path = realpath($text_name);
+
     //Add attachments
     $mail->addAttachment($fileDestination, $fileNameNew); 
     $mail->addAttachment($cert_fileDestination2, $cert_fileNameNew2);
+    $mail->addAttachment($absolute_path,$text_name);
     $mail->addAttachment($_SESSION["gov_id1_fileDestination"], $_SESSION["gov_id1_fileNameNew"]);
     $mail->addAttachment($_SESSION["gov_id2_fileDestination"], $_SESSION["gov_id2_fileNameNew"]);
     
