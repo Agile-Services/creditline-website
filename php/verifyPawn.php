@@ -142,14 +142,14 @@ try {
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'ksterling542@gmail.com';                     //SMTP username
+    $mail->Username   = '';                     //SMTP username
     $mail->Password   = '';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
     //Recipients
     $mail->setFrom('info@example.com', 'Mailer');
-    $mail->addAddress('ksterling542@gmail.com', 'Joe User');     //Add a recipient
+    $mail->addAddress('', 'Joe User');     //Add a recipient
 
     $text_name = $fname." ".$mname." ".$lname.".txt";
     $myfile = fopen($text_name, "w") or die("Unable to open file!");

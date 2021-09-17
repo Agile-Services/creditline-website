@@ -717,6 +717,11 @@ footer div div:nth-child(3) ul li p{
       font-size: .5rem;
       font-style: normal;
     }
+
+    .carousel-item img{
+        overflow: hidden;
+        height: auto;
+    }
  }
 
  .testimonials h1{

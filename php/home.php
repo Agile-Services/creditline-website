@@ -58,7 +58,7 @@
                     <li>No origination fees</li>
                 </ul>
             </section>
-            <div class="col imgbody"><img class="" src="../static/images/kevin-sanon-Qo-ddP65zmM-unsplash.jpg" alt="photo of kevin"></div>
+            <div class="col"><img class="" src="../static/images/Creditline img1.jpeg" alt="photo of kevin"></div>
         </div>
 
         <div class="container-fluid tags">
@@ -83,7 +83,8 @@
         </div>
 
         <div class="ad1 row">
-            <div class="col imgbody"><img src="../static/images/cameron-stewart-tr7tUNGZSoo-unsplash.jpg" alt="photo of taxi"></div>
+            <!-- <div class="col imgbody"><img src="../static/images/Creditline img2.jpeg" alt="photo of taxi"></div> -->
+            <div class="col"><img src="../static/images/Creditline img2.jpeg" alt="photo of taxi"></div>
             <section class="col"><p class="text-center font-weight-bold">Here when you need us most, super convenient hassle free loans</p></section>
         </div>
 
@@ -94,10 +95,38 @@
 
 
         <div class="testimonials">
-            <h1 class="text-success font-weight-bold">Our Valued Customers</h1>
-            <p>tag1</p>
+            <h2 class="text-success font-weight-bold">Our Valued Customers</h1>
+            <!-- <p>tag1</p>
             <p>tag2</p>
-            <p>tag2</p>
+            <p>tag2</p> -->
+            <div id="carousel-2" class="carousel slide pt-5" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                    <li data-target="#carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img class="" src="../static/images/kevin-sanon-Qo-ddP65zmM-unsplash.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                    <!-- <img class="d-block w-100" src="../static/images/cameron-stewart-tr7tUNGZSoo-unsplash.jpg" alt="Second slide"> -->
+                    <img class="" src="../static/images/cameron-stewart-tr7tUNGZSoo-unsplash.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                    <img  src="../static/images/saloon-pic.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" style="filter: invert(100%);" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-2" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" style="filter: invert(100%);" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
     </div>
     <?php
     } elseif($_SERVER["REQUEST_METHOD"] == "POST"){
