@@ -345,6 +345,14 @@ window.onload = function(){
                             return document.getElementById("error3").innerHTML = "No Files have been selected";
                         }
                         if(errors.length == 0){
+                            // Remove submit button
+                            let submit = document.getElementById('partnerPlanSubmit');
+                            submit.classList.remove('btn-success')
+                            submit.classList.add('btn-light')
+                            submit.style.color = 'black';
+                            submit.innerHTML= 'Please Wait...'
+                            submit.disabled = true;
+
                             var id = document.getElementById("id").files[0];
                             
                             //this is where I'm trying to ensure that they upload and ID 
@@ -566,7 +574,14 @@ window.onload = function(){
                             errors.push(error)
                             flashErrors(errors)
                         }
-                        if(errors.length == 0){        
+                        if(errors.length == 0){
+                            let submit = document.getElementById('pawnSubmit');
+                            submit.classList.remove('btn-success')
+                            submit.classList.add('btn-light')
+                            submit.style.color = 'black';
+                            submit.innerHTML= 'Please Wait...'
+                            submit.disabled = true;
+
                             var id = document.getElementById("id").files[0];
                             console.log(id);
                             var invoice = document.getElementById("invoice").files[0];
@@ -830,6 +845,12 @@ window.onload = function(){
                                         flashErrors(errors)
                                     }
                                     if(errors.length == 0){
+                                        let submit = document.getElementById('generalInfoSubmit');
+                                        submit.classList.remove('btn-success')
+                                        submit.classList.add('btn-light')
+                                        submit.style.color = 'black';
+                                        submit.innerHTML= 'Please Wait...'
+                                        submit.disabled = true;
                                         var title = document.getElementById("title").value;
                                         sessionStorage.setItem("Title",title);
                             
@@ -1128,7 +1149,12 @@ window.onload = function(){
                                                                     flashErrors(errors)
                                                                 }
                                                                 if(errors.length == 0){
-                                                                
+                                                                    let submit = document.getElementById('empDetailsSubmit');
+                                                                    submit.classList.remove('btn-success')
+                                                                    submit.classList.add('btn-light')
+                                                                    submit.style.color = 'black';
+                                                                    submit.innerHTML= 'Please Wait...'
+                                                                    submit.disabled = true;
                                                                     sessionStorage.setItem("employer_name",employer.value);
                                                                     sessionStorage.setItem("job_title",title.value);
                                                                     sessionStorage.setItem("start_date",start_date.value);
@@ -1288,7 +1314,12 @@ window.onload = function(){
                                                                     flashErrors(errors)
                                                                 }                                                          
                                                                 if(errors.length == 0){
-                                                                
+                                                                let submit = document.getElementById('busDetailsSubmit');
+                                                                submit.classList.remove('btn-success')
+                                                                submit.classList.add('btn-light')
+                                                                submit.style.color = 'black';
+                                                                submit.innerHTML= 'Please Wait...'
+                                                                submit.disabled = true;
                                                                 sessionStorage.setItem("Name of Business",business_name.value);
                                                                 sessionStorage.setItem("Date Established",date_est.value);
                                                                 sessionStorage.setItem("Business Description",desc);
